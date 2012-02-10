@@ -1,0 +1,14 @@
+[ui]
+username = William ONeill <William.ONeill@theice.com>
+merge = meld
+
+[extensions]
+fetch =
+extdiff =
+hgext.bookmarks =
+#hggit = 
+hgext.convert =
+hgext.graphlog =
+
+[extdiff]
+cmd.meld =

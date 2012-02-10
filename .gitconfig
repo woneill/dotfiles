@@ -1,0 +1,12 @@
+[user]
+	name = Bill ONeill
+	email = william.oneill@theice.com
+[core]
+	autocrlf = input
+	safecrlf = true
+[merge]
+	tool = kdiff3
+[mergetool]
+	prompt = false
+[push]
+	default = tracking
