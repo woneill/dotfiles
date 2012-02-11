@@ -1,0 +1,9 @@
+== Bill O'Neill's Dot Files
+
+  Note: these files should all be prefixed with '.' in a normal home dir
+
+== Installation
+
+  git clone git://git.intcx.net/woneill/dotfiles.git ~/.dotfiles
+  cd ~/.dotfiles
+  rake install
