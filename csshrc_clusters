@@ -82,23 +82,6 @@ icelink-rv-db rv-qa-ildb-01
 icelink-rv-am rv-qa-ilam-01 rv-qa-ilam-02
 icelink-rv-js rv-qa-iljs-01
 
-creditex-dm creditex-dm-as creditex-dm-am creditex-dm-db creditex-dm-js creditex-dm-nas creditex-dm-rp creditex-dm-ftp
-creditex-dm-as ll-dm-cxas-01 ll-dm-cxas-02
-creditex-dm-am ll-dm-cxam-01
-creditex-dm-db ll-dm-cxdb-01
-creditex-dm-js ll-dm-cxjs-01
-creditex-dm-nas ll-dm-cxnas-01
-creditex-dm-rp ll-dm-cxrp-01
-creditex-dm-ftp ll-dm-cxftp-01
-
-creditex-pm creditex-pm-as creditex-pm-nas creditex-pm-am creditex-pm-db creditex-pm-js creditex-pm-rp
-creditex-pm-as ll-pm-cxas-01 ll-pm-cxas-02
-creditex-pm-nas ll-pm-cxnas-01
-creditex-pm-am ll-pm-cxam-01
-creditex-pm-db ll-pm-cxdb-01
-creditex-pm-js ll-pm-cxjs-01
-creditex-pm-rp ll-pm-cxrp-01
-
 creditex-qa creditex-qa-as creditex-qa-dm creditex-qa-exp creditex-qa-js creditex-qa-nas
 creditex-qa-as ll-qa-cxas-01 ll-qa-cxas-02
 creditex-qa-dm ll-qa-cxdb-01
@@ -106,8 +89,7 @@ creditex-qa-exp ll-qa-cxexp-01
 creditex-qa-js ll-qa-cxjs-01
 creditex-qa-nas ll-qa-cxnas-01
 
-creditex-pdk creditex-pdk-as creditex-pdk-am creditex-pdk-db creditex-pdk-exp creditex-pdk-ftp creditex-pdk-js creditex-pdk-rp pdk-pt-cxnas-01
-creditex-pdk-as pdk-pt-cxas-01 pdk-pt-cxas-02 pdk-pt-cxas-03 pdk-pt-cxas-04 pdk-pt-cxas-05 pdk-pt-cxas-06 pdk-pt-cxas-07
+creditex-pdk creditex-pdk-as-s creditex-pdk-am creditex-pdk-db creditex-pdk-exp creditex-pdk-ftp creditex-pdk-js creditex-pdk-rp pdk-pt-cxnas-01
 creditex-pdk-as-s pdk-pt-cxas-s01 pdk-pt-cxas-s02 pdk-pt-cxas-s03 pdk-pt-cxas-s04 pdk-pt-cxas-s05 pdk-pt-cxas-s06 pdk-pt-cxas-s07
 creditex-pdk-am pdk-pt-cxam-01 pdk-pt-cxam-02
 creditex-pdk-db pdk-pt-cxdb-01 pdk-pt-cxdb-02 pdk-pt-cxdb-03 pdk-pt-cxdb-04
@@ -136,6 +118,9 @@ ord-dns ord-pr-dns-01 ord-pr-dns-02
 
 snat 10.6.144.30 10.6.144.40 10.6.145.56 10.6.147.27 10.6.144.81 10.6.144.48 10.6.145.46 10.6.144.42 10.6.147.21 10.6.144.28 10.6.144.56 10.6.144.102
 
-powertest powertest_linux powertest_solaris
-powertest_linux ord-mg-cemds-01 ord-mg-dcim-01 ord-mg-ddpf-01 ord-mg-ifbk-01 ord-mg-ifbk-02 ord-mg-oem-01 ord-mg-oem-02 ord-mg-osis-01 ord-mg-vcdb-01 ord-mn-lkup-01 ord-mn-spec-02 ord-pr-dns-01 ord-pr-dns-02
-powertest_solaris ord-if-indns-01 ord-mg-dply-02 ord-mg-pxe-01 ord-mn-cact-02 ord-mn-spec-01 ord-pr-nas-04 ord-pr-whrac-01 ord-pr-whrac-02 ord-pr-whrac-03 ord-pr-whrac-04
+puppet puppet-lb puppet-mq puppet-db puppet-cs puppet-masters
+puppet-lb rv-mg-puplb-01 rv-mg-puplb-02
+puppet-mq rv-mg-pupmq-01
+puppet-db rv-mg-pupdb-01
+puppet-cs rv-mg-pupcs-01
+puppet-masters rv-mg-pupm-01 rv-mg-pupm-02 rv-mg-osis-01
