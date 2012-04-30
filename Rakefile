@@ -1,6 +1,11 @@
 require 'rake'
 require 'erb'
 
+desc "Default task prints the possible targets."
+task :default do
+      sh %{rake -T}
+end
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
