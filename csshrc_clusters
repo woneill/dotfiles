@@ -82,13 +82,6 @@ icelink-rv-db rv-qa-ildb-01
 icelink-rv-am rv-qa-ilam-01 rv-qa-ilam-02
 icelink-rv-js rv-qa-iljs-01
 
-creditex-qa creditex-qa-as creditex-qa-dm creditex-qa-exp creditex-qa-js creditex-qa-nas
-creditex-qa-as ll-qa-cxas-01 ll-qa-cxas-02
-creditex-qa-dm ll-qa-cxdb-01
-creditex-qa-exp ll-qa-cxexp-01
-creditex-qa-js ll-qa-cxjs-01
-creditex-qa-nas ll-qa-cxnas-01
-
 creditex-pdk creditex-pdk-as-s creditex-pdk-am creditex-pdk-db creditex-pdk-exp creditex-pdk-ftp creditex-pdk-js creditex-pdk-rp pdk-pt-cxnas-01
 creditex-pdk-as-s pdk-pt-cxas-s01 pdk-pt-cxas-s02 pdk-pt-cxas-s03 pdk-pt-cxas-s04 pdk-pt-cxas-s05 pdk-pt-cxas-s06 pdk-pt-cxas-s07
 creditex-pdk-am pdk-pt-cxam-01 pdk-pt-cxam-02
