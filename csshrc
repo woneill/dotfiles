@@ -1,3 +1,0 @@
-extra_cluster_file=~/.csshrc_clusters
-send_menu_xml_file=/home/woneill/.csshrc_send_menu
-terminal_reserve_top=30
