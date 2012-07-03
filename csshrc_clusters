@@ -1,5 +1,5 @@
 icelink-ord icelink-ord-linux ord-pr-ilnas-01
-icelink-ord-linux icelink-ord-db icelink-ord-int icelink-ord-am icelink-ord-as icelink-ord-mq icelink-ord-mft
+icelink-ord-linux icelink-ord-db icelink-ord-int icelink-ord-am icelink-ord-as icelink-ord-mq icelink-ord-mft icelink-ord-js
 icelink-ord-db ord-pr-ildb-01 ord-pr-ildb-02 ord-pr-ildb-03 ord-pr-ildb-04
 icelink-ord-int ord-pr-ilin-01 ord-pr-ilin-02
 icelink-ord-am ord-pr-ilam-01 ord-pr-ilam-02
@@ -54,7 +54,7 @@ yj-cx-db cx-dv-yjdb-01 cx-dv-yjdb-02
 creditex-ord creditex-ord-linux creditex-ord-as ord-pr-cxnas-01
 creditex-ord-linux creditex-ord-db creditex-ord-rp creditex-ord-exp creditex-ord-ftp creditex-ord-js creditex-ord-am
 creditex-ord-as ord-pr-cxas-s01 ord-pr-cxas-s02 ord-pr-cxas-s03 ord-pr-cxas-s04 ord-pr-cxas-s05 ord-pr-cxas-s06
-creditex-ord-db ord-pr-cxdb-01 ord-pr-cxdb-02 ord-pr-cxdb-03 ord-pr-cxdb-04
+creditex-ord-db ord-pr-cxdb-01 ord-pr-cxdb-02 ord-pr-cxdb-03 ord-pr-cxdb-04 ord-pr-cxdb-05 ord-pr-cxdb-06
 creditex-ord-rp ord-pr-cxrp-01 ord-pr-cxrp-02
 creditex-ord-exp ord-pr-cxexp-01 ord-pr-cxexp-02
 creditex-ord-ftp ord-pr-cxftp-01 ord-pr-cxftp-02
