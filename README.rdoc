@@ -4,6 +4,6 @@
 
 == Installation
 
-  git clone git://git.intcx.net/woneill/dotfiles.git ~/.dotfiles
+  git clone --recursive git://github.com/woneill/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
   rake install
