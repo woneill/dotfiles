@@ -37,3 +37,16 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_json_checker="jsonlint"
+
+let g:WMGraphviz_output="svg"
+let g:WMGraphviz_viewer="open"
+
+"ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+""improve autocomplete menu color
+:highlight Pmenu ctermbg=238 gui=bold
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<C-X><C-O>"
