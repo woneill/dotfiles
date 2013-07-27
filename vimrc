@@ -10,6 +10,7 @@ set et
 set ruler
 set number
 set modeline
+set modelines=5
 filetype plugin indent on
 syntax on
 set nocompatible
