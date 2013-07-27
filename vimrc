@@ -1,6 +1,26 @@
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" My Bundles
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'rodjek/vim-puppet'
+Bundle 'wannesm/wmgraphviz.vim'
+Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/rubycomplete.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
+Bundle 'vim-ruby/vim-ruby'
+
+filetype plugin indent on
 set ts=4
 set sts=4
 set sw=4
@@ -11,9 +31,7 @@ set ruler
 set number
 set modeline
 set modelines=5
-filetype plugin indent on
 syntax on
-set nocompatible
 set t_Co=256
 set showmode
 set encoding=utf-8
