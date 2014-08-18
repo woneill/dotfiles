@@ -1,4 +1,5 @@
 alias vi=vim
+alias sed=gsed
 
 # Wrap git automatically by adding the following to ~/.bash_profile:
 
@@ -18,9 +19,13 @@ json_post() {
 
 source ~/.bashrc
 
+if [ -f ~/.bash_profile.$(uname -s) ]; then
+    source ~/.bash_profile.$(uname -s)
+fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# startup virtualenv-burrito
-if [ -f $HOME/.venvburrito/startup.sh ]; then
-    . $HOME/.venvburrito/startup.sh
+if [ -f ~/.bash_profile.work ]; then
+    source ~/.bash_profile.work
 fi

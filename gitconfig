@@ -4,6 +4,7 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+	editor = /usr/local/bin/vim
 [merge]
 	tool = kdiff3
 [mergetool]

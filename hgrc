@@ -1,0 +1,18 @@
+[ui]
+username = Bill O'Neill <bill.oneill@mailchimp.com>
+ignore = ~/.hgignore_global
+
+[extensions]
+color =
+graphlog =
+pager =
+mq =
+rebase =
+purge =
+convert =
+shelve = 
+transplant =
+
+[pager]
+pager = LESS='FSRX' less
+attend = cat, diff, glog, log, incoming, outgoing, lg, show, lga
