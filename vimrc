@@ -21,6 +21,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'xolox/vim-misc'
 Plugin 'easytags.vim'
+Plugin 'bling/vim-airline'
+Plugin 'mhinz/vim-signify'
 
 call vundle#end()
 filetype plugin indent on
@@ -78,3 +80,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 ""improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
+
+"airline
+set laststatus=2
+
+"signify
+let g:signify_vcs_list = [ 'hg', 'git' ]
