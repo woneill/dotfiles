@@ -1,6 +1,7 @@
 syntax: glob
 *~
 .DS_Store
+.env
 
 syntax: regexp
 ^buildbox
