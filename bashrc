@@ -1,6 +1,6 @@
 PATH="~/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
 RUBYOPT="-rubygems"
-export PROMPT_COMMAND="history -a; history -n"
+#export PROMPT_COMMAND="history -a; history -n"
 
 # pip should only run if there is a virtualenv currently activated
 #export PIP_REQUIRE_VIRTUALENV=true

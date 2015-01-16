@@ -12,7 +12,16 @@ purge =
 convert =
 shelve = 
 transplant =
+hgext.bookmarks =
+hggit =
+#extdiff =
+
+#[extdiff]
+#cmd.vdiff = meld
 
 [pager]
 pager = LESS='FSRX' less
 attend = cat, diff, glog, log, incoming, outgoing, lg, show, lga
+
+[web]
+cacerts = /usr/local/etc/openssl/cert.pem
