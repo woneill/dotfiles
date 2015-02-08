@@ -36,6 +36,11 @@ set smarttab
 set autoindent
 set smartindent
 
+" code folding
+set foldmethod=indent
+set foldlevel=2
+set foldnestmax=4
+
 set ruler
 set number
 syntax on
