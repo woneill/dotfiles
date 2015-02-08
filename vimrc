@@ -100,5 +100,5 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Don't store swap files in $CWD
-set backupdir=$TEMP//
-set directory=$TEMP//
+set backupdir=/tmp//
+set directory=/tmp//
