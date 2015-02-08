@@ -10,6 +10,12 @@ alias dns="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNS
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
+    source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+    export GIT_PS1_SHOWDIRTYSTATE=true
+    export GIT_PS1_SHOWUNTRACKEDFILES=true
+    export GIT_PS1_SHOWUPSTREAM='verbose name'
+    export GIT_PS1_SHOWCOLORHINTS=true
+    PROMPT_COMMAND='__git_ps1 "\h:\W" "\\\$ "'
 fi
 
 # A bash function to display a growl notification using iTerm's magic
