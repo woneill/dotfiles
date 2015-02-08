@@ -40,6 +40,8 @@ set smartindent
 set foldmethod=indent
 set foldlevel=2
 set foldnestmax=4
+" don't fold unless requested
+set nofoldenable
 
 set ruler
 set number
