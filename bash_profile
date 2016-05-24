@@ -23,9 +23,8 @@ if [ -f ~/.bash_profile.$(uname -s) ]; then
     source ~/.bash_profile.$(uname -s)
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 if [ -f ~/.bash_profile.work ]; then
     source ~/.bash_profile.work
 fi
+
+trap cleanup EXIT

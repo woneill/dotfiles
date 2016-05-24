@@ -22,3 +22,5 @@
 	tool = opendiff
 [difftool]
 	prompt = false
+[rerere]
+	enabled = true

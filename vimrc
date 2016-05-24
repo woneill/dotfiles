@@ -18,13 +18,14 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-fugitive'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'xolox/vim-misc'
 Plugin 'easytags.vim'
 Plugin 'bling/vim-airline'
-Plugin 'mhinz/vim-signify'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
@@ -73,6 +74,7 @@ set statusline+=%*
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_json_checkers=['jsonlint']
+let g:syntastic_yaml_checkers=['js-yaml']
 
 let g:WMGraphviz_output="svg"
 let g:WMGraphviz_viewer="open"
@@ -92,9 +94,7 @@ highlight Pmenu ctermbg=238 gui=bold
 
 "airline
 set laststatus=2
-
-"signify
-let g:signify_vcs_list = [ 'hg', 'git' ]
+let g:airline_powerline_fonts = 1
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']

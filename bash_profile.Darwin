@@ -1,3 +1,13 @@
+# Brew verison of openssh
+if [ -f $(brew --prefix)/bin/ssh-agent ]; then
+    eval $(ssh-agent)
+
+    function cleanup {
+        echo "Killing SSH-Agent"
+        $(brew --prefix)/bin/ssh-agent -k
+    }
+fi
+
 # startup autoenv
 if [ -f /usr/local/opt/autoenv/activate.sh ]; then
     source /usr/local/opt/autoenv/activate.sh
@@ -14,8 +24,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     export GIT_PS1_SHOWDIRTYSTATE=true
     export GIT_PS1_SHOWUNTRACKEDFILES=true
     export GIT_PS1_SHOWUPSTREAM='verbose name'
-    export GIT_PS1_SHOWCOLORHINTS=true
-    PROMPT_COMMAND='__git_ps1 "\h:\W" "\\\$ "'
+    #export GIT_PS1_SHOWCOLORHINTS=true
+    PS1='\h:\W$(__git_ps1 " (%s)")\$ '
 fi
 
 # A bash function to display a growl notification using iTerm's magic
@@ -31,3 +41,15 @@ growl() {
     esac
     return
 }
+
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# Vagrant
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
