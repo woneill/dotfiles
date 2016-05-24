@@ -5,7 +5,7 @@
 	autocrlf = input
 	safecrlf = true
 	editor = /usr/local/bin/vim
-	excludesfile = /Users/billoneill/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [merge]
 	tool = opendiff
 [mergetool]
