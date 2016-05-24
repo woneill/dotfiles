@@ -1,9 +1,0 @@
-== Bill O'Neill's Dot Files
-
-  Note: these files should all be prefixed with '.' in a normal home dir
-
-== Installation
-
-  git clone --recursive git://github.com/woneill/dotfiles.git ~/.dotfiles
-  cd ~/.dotfiles
-  rake install

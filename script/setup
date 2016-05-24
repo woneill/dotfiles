@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# script/setup: Set up application for the first time after cloning, or set it
+#               back to the initial first unused state.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+stow ack bash ctags git homebrew puppet screen script vim
+
+if [ -f "${HOME}/.Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
+  brew update
+
+  brew bundle check --global >/dev/null 2>&1  || {
+    echo "==> Installing Global Homebrew dependencies…"
+    brew bundle --global
+  }
+fi
+
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+  mkdir -p ~/.vim/bundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+fi
+
+echo "==> Ready to go!"
