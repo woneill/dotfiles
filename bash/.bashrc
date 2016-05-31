@@ -28,7 +28,7 @@ pathappend () {
 export -f pathremove pathprepend pathappend
 
 # Set the initial path
-export PATH=/bin:/usr/bin
+export PATH=/bin:/usr/bin:/usr/sbin
 
 pathprepend ~/bin:/usr/local/bin
 
