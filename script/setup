@@ -9,7 +9,7 @@ cd "$(dirname "$0")/.."
 
 script/bootstrap
 
-stow bash ctags direnv git homebrew puppet ruby screen script vim
+stow bash ctags direnv git homebrew puppet ruby screen vim
 
 if [ "$(uname -s)" = "Darwin" ]; then
     stow osx
