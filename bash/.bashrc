@@ -1,5 +1,38 @@
-PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-RUBYOPT="-rubygems"
+# Functions to help us manage paths.  Second argument is the name of the
+# path variable to be modified (default: PATH)
+pathremove () {
+    local IFS=':'
+    local NEWPATH
+    local DIR
+    local PATHVARIABLE=${2:-PATH}
+    for DIR in ${!PATHVARIABLE} ; do
+        if [ "$DIR" != "$1" ] ; then
+            NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
+        fi
+    done
+    export ${PATHVARIABLE}="$NEWPATH"
+}
+
+pathprepend () {
+    pathremove "$1" "$2"
+    local PATHVARIABLE=${2:-PATH}
+    export ${PATHVARIABLE}="$1${!PATHVARIABLE:+:${!PATHVARIABLE}}"
+}
+
+pathappend () {
+    pathremove "$1" "$2"
+    local PATHVARIABLE=${2:-PATH}
+    export ${PATHVARIABLE}="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
+}
+
+export -f pathremove pathprepend pathappend
+
+# Set the initial path
+export PATH=/bin:/usr/bin
+
+pathprepend ~/bin:/usr/local/bin
+
+export RUBYOPT="-rubygems"
 #export PROMPT_COMMAND="history -a; history -n"
 
 # pip should only run if there is a virtualenv currently activated
