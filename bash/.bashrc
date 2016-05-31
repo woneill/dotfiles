@@ -46,8 +46,9 @@ export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/Library/Python/2.7/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_CLONE=$HOME/Library/Python/2.7/bin/virtualenv-clone
 
-if [ -f $HOME/Library/Python/2.7/bin/virtualenvwrapper.sh ]; then
-    source $HOME/Library/Python/2.7/bin/virtualenvwrapper.sh
+if [ -f "$HOME/Library/Python/2.7/bin/virtualenvwrapper.sh" ]; then
+    # shellcheck source=/dev/null
+    source "$HOME/Library/Python/2.7/bin/virtualenvwrapper.sh"
 fi
 
 shopt -s histappend
@@ -56,5 +57,6 @@ eval "$(direnv hook bash)"
 
 # Increase API limit for brew
 if [ -f ~/.HOMEBREW_GITHUB_API_TOKEN ]; then
+    # shellcheck source=/dev/null
     source ~/.HOMEBREW_GITHUB_API_TOKEN
 fi
