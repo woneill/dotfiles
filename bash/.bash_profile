@@ -1,5 +1,6 @@
 alias vi=vim
 alias sed=gsed
+alias ack=ag
 
 # Wrap git automatically by adding the following to ~/.bash_profile:
 
