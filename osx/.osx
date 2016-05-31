@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo -n "What would you like the hostname to be? [$HOSTNAME]: "
+read -r COMPUTER_NAME
+COMPUTER_NAME=${COMPUTER_NAME:-$HOSTNAME}
+echo "Setting hostname to $COMPUTER_NAME"
+sudo scutil --set ComputerName "$COMPUTER_NAME"
+sudo scutil --set HostName "$COMPUTER_NAME"
+sudo scutil --set LocalHostName "$COMPUTER_NAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Save to disk, rather than iCloud, by default?
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Check for software updates daily, not just once per week"
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable the sudden motion sensor? (it's not useful for SSDs/current MacBooks)
+sudo pmset -a sms 0
+
+# Turn off keyboard illumination when computer is not used for 5 minutes
+defaults write com.apple.BezelServices kDimTime -int 300
+
+# Show icons for hard drives, servers, and removable media on the desktop?
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+
+# Display full POSIX path as Finder window title?
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Avoid creation of .DS_Store files on network volumes?
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+  "Terminal" "Transmission"; do
+  killall "${app}" > /dev/null 2>&1
+done
