@@ -1,0 +1,27 @@
+if [ -f ~/".bash_profile.$(uname -s)" ]; then
+    # shellcheck source=/dev/null
+    . ~/".bash_profile.$(uname -s)"
+fi
+
+if [ -f ~/.bash_profile.work ]; then
+    # shellcheck source=/dev/null
+    . ~/.bash_profile.work
+fi
+
+alias vi=vim
+alias sed=gsed
+alias ack=ag
+
+json_get() {
+  curl -s -X GET -H "Content-Type: application/json" "$1" | python -mjson.tool
+}
+
+json_put() {
+  curl -s -X PUT -H "Content-Type: application/json" "$1" -d "$2"
+}
+
+json_post() {
+  curl -s -X POST -H "Content-Type: application/json" "$1" -d "$2"
+}
+
+# vim: set filetype=sh:

@@ -1,31 +1,21 @@
-alias vi=vim
-alias sed=gsed
-alias ack=ag
+BASH_PROFILE_CONF_DIR="$HOME/.bash_profile.d"
 
-# Wrap git automatically by adding the following to ~/.bash_profile:
+if [ ! -d "$BASH_PROFILE_CONF_DIR" ]; then
+    # create the configuration directory
+    mkdir "$BASH_PROFILE_CONF_DIR"
+    chmod 700 "$BASH_PROFILE_CONF_DIR"
 
-eval "$(hub alias -s)"
+    # add a dummy file so the `ls` in the loop doesn't err out
+    touch "$BASH_PROFILE_CONF_DIR/default"
+fi
 
-json_get() {
-  curl -s -X GET -H "Content-Type: application/json" $1 | python -mjson.tool
-}
+for profile_file in $BASH_PROFILE_CONF_DIR/*; do
+    # shellcheck source=/dev/null
+    source "$profile_file"
+done
 
-json_put() {
-  curl -s -X PUT -H "Content-Type: application/json" $1 -d $2
-}
 
-json_post() {
-  curl -s -X POST -H "Content-Type: application/json" $1 -d $2
-}
-
+# shellcheck source=/dev/null
 source ~/.bashrc
-
-if [ -f ~/.bash_profile.$(uname -s) ]; then
-    source ~/.bash_profile.$(uname -s)
-fi
-
-if [ -f ~/.bash_profile.work ]; then
-    source ~/.bash_profile.work
-fi
 
 trap cleanup EXIT

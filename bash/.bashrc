@@ -32,7 +32,6 @@ export PATH=/bin:/usr/bin
 
 pathprepend ~/bin:/usr/local/bin
 
-export RUBYOPT="-rubygems"
 #export PROMPT_COMMAND="history -a; history -n"
 
 # pip should only run if there is a virtualenv currently activated
@@ -52,11 +51,3 @@ if [ -f "$HOME/Library/Python/2.7/bin/virtualenvwrapper.sh" ]; then
 fi
 
 shopt -s histappend
-
-eval "$(direnv hook bash)"
-
-# Increase API limit for brew
-if [ -f ~/.HOMEBREW_GITHUB_API_TOKEN ]; then
-    # shellcheck source=/dev/null
-    source ~/.HOMEBREW_GITHUB_API_TOKEN
-fi
