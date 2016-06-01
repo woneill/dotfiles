@@ -24,3 +24,5 @@
 	prompt = false
 [rerere]
 	enabled = true
+[hub]
+	protocol = https
