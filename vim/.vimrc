@@ -26,6 +26,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'easytags.vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'dougireton/vim-chef'
 
 call vundle#end()
 filetype plugin indent on
