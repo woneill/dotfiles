@@ -15,7 +15,7 @@ echo "==> Brew status..."
 brew bundle check --global
 
 echo "==> Stuff not in global brewfile..."
-rm /tmp/Brewfile*
+rm -f /tmp/Brewfile*
 brew bundle dump --file=/tmp/Brewfile
 sort /tmp/Brewfile > /tmp/Brewfile.srt
 sort homebrew/.Brewfile > /tmp/Brewfile.srt.orig
