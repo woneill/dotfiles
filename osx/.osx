@@ -39,9 +39,44 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# Remove unneeded applicatons from the dock
+dock_rm=(
+    "Safari"
+    "Notes"
+    "Reminders"
+    "Maps"
+    "Messages"
+    "FaceTime"
+    "iBooks"
+)
+for app in "${dock_rm[@]}"
+do
+    /usr/local/bin/dockutil --find "${app}" > /dev/null
+    if [ $? -eq 0 ]; then
+        /usr/local/bin/dockutil --remove "${app}" --no-restart
+    fi
+done
+
+# Add applications to the dock
+dock_apps=(
+    "iTerm:/Applications/iTerm.app"
+    "Google Chrome:/Applications/Google%20Chrome.app"
+    "Slack:/Applications/Slack.app"
+)
+for app in "${dock_apps[@]}"
+do
+    app_name="${app%%:*}"
+    app_path="${app#*:}"
+    /usr/local/bin/dockutil --find "${app_name}" > /dev/null
+    if [ $? -ne 0 ]; then
+        /usr/local/bin/dockutil --add "${app_path}" --no-restart
+    fi
+done
+
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission"; do
-  killall "${app}" > /dev/null 2>&1
+    "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+    "Terminal" "Transmission"
+do
+    killall "${app}" > /dev/null 2>&1
 done
