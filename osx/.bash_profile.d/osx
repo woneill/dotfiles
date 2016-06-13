@@ -43,10 +43,3 @@ growl() {
     esac
     return
 }
-
-# rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# Vagrant
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
