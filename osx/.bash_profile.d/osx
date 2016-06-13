@@ -1,3 +1,5 @@
+alias ack=ag
+
 # Brew verison of openssh
 if [ -f $(brew --prefix)/bin/ssh-agent ]; then
     eval $(ssh-agent)
@@ -45,11 +47,6 @@ growl() {
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Vagrant
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion

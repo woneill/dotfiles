@@ -1,21 +1,23 @@
+# Set the initial path
+export PATH=~/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin
+
 BASH_PROFILE_CONF_DIR="$HOME/.bash_profile.d"
 
 if [ ! -d "$BASH_PROFILE_CONF_DIR" ]; then
     # create the configuration directory
-    mkdir "$BASH_PROFILE_CONF_DIR"
-    chmod 700 "$BASH_PROFILE_CONF_DIR"
-
-    # add a dummy file so the `ls` in the loop doesn't err out
-    touch "$BASH_PROFILE_CONF_DIR/default"
+    # shellcheck disable=SC2174
+    mkdir -p -m 700 "$BASH_PROFILE_CONF_DIR"
 fi
 
+
 for profile_file in $BASH_PROFILE_CONF_DIR/*; do
-    # shellcheck source=/dev/null
-    source "$profile_file"
+    if [ -f "$profile_file" ]; then
+        # shellcheck source=/dev/null
+        source "$profile_file"
+    fi
 done
 
-
-# shellcheck source=/dev/null
-source ~/.bashrc
+# shellcheck source=./.bashrc
+source "$HOME/.bashrc"
 
 trap cleanup EXIT
