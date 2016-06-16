@@ -6,6 +6,7 @@
 	safecrlf = true
 	editor = /usr/local/bin/vim
 	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [merge]
 	tool = opendiff
 [mergetool]
@@ -20,9 +21,12 @@
 	default = simple
 [diff]
 	tool = opendiff
+	compactionHeuristic = true
 [difftool]
 	prompt = false
 [rerere]
 	enabled = true
 [hub]
 	protocol = https
+[interactive]
+	diffFilter = diff-so-fancy
