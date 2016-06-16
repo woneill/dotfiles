@@ -9,10 +9,10 @@ cd "$(dirname "$0")/.."
 
 script/bootstrap
 
-stow bash ctags direnv git homebrew puppet python ruby screen vagrant vim
+stow -R bash ctags direnv git homebrew puppet python ruby screen vagrant vim
 
 if [ "$(uname -s)" = "Darwin" ]; then
-    stow osx
+    stow -R osx
 
     if [ -f "${HOME}/.Brewfile" ]; then
       brew update
