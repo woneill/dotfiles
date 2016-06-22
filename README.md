@@ -34,3 +34,29 @@ script/bootstrap
 cd ~/dotfiles
 script/update
 ```
+
+## Manual Steps
+Some things aren't easily scripted or require outside dependencies. Open to ideas for automating these steps too!
+
+### Install license for vmware fusion and vagrant plugin
+
+```
+vagrant plugin install vagrant-vmware-fusion
+vagrant plugin license vagrant-vmware-fusion ~/license.lic
+```
+
+### Link in homebrew python to pyenv
+
+```
+ln -s $(brew --cellar python)/* /usr/local/var/pyenv/versions
+ln -s $(brew --cellar python3)/* /usr/local/var/pyenv/versions
+```
+
+### Link in homebrew ruby to rbenv
+
+```
+ln -s $(brew --cellar ruby)/* /usr/local/var/rbenv/versions
+```
+
+### Install Docker for Mac
+Follow instructions at [Docker for Mac](https://docs.docker.com/docker-for-mac/)
