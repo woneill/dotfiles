@@ -62,6 +62,7 @@ dock_apps=(
     "iTerm:/Applications/iTerm.app"
     "Google Chrome:/Applications/Google%20Chrome.app"
     "Slack:/Applications/Slack.app"
+    "Pocket:/Applications/Pocket.app"
 )
 for app in "${dock_apps[@]}"
 do
