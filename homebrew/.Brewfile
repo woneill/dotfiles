@@ -49,3 +49,4 @@ cask 'slack'
 cask 'vagrant'
 cask 'vmware-fusion'
 mas 'Pocket', id: 568494494
+mas 'Skitch', id: 425955336
