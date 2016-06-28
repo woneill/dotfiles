@@ -60,6 +60,7 @@ cask 'skype'
 cask 'slack'
 cask 'vagrant'
 cask 'vmware-fusion'
+cask 'wireshark'
 cask 'wkhtmltopdf'
 mas 'Pocket', id: 568494494
 mas 'Skitch', id: 425955336
