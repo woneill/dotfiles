@@ -27,6 +27,7 @@ Plugin 'easytags.vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'dougireton/vim-chef'
+Plugin 'lambdalisue/vim-pyenv'
 
 call vundle#end()
 filetype plugin indent on
@@ -96,6 +97,9 @@ highlight Pmenu ctermbg=238 gui=bold
 "airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+
+" set Python path in YCM
+let g:ycm_python_binary_path = 'python'
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
