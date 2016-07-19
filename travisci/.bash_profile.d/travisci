@@ -1,0 +1,5 @@
+if [ -f ~/.travis/travis.sh ]; then
+    source ~/.travis/travis.sh
+fi
+
+# vim: set filetype=sh:
