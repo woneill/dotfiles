@@ -22,15 +22,24 @@ if [ "$(uname -s)" = "Darwin" ]; then
         }
     fi
 
-    for src_completion in /Applications/Docker.app/Contents/Resources/etc/*.bash-completion ; do
-        dest_completion="/usr/local/etc/bash_completion.d/$(basename "$src_completion")"
-        if [[ ! ( -L "$dest_completion" || -e "$dest_completion" ) ]]; then
-            ln -s "$src_completion" "$dest_completion"
-        fi
-    done
+    if [ -f /Applications/Docker.app/Contents/Resources/etc ]; then
+        echo "==> Installing Docker bash completion…"
+        stow -R -t "$(brew --prefix)/etc/bash_completion.d" -d /Applications/Docker.app/Contents/Resources etc
+    fi
+
+    cellar=$(brew --cellar)
+    # Link brewed python versions into pyenv
+    echo "==> Linking python versions into pyenv…"
+    stow -R -t "${PYENV_ROOT:-/usr/local/var/pyenv}/versions" -d "$cellar" python python3
+
+    # Link brewed ruby versions into rbenv
+    echo "==> Linking ruby versions into rbenv…"
+    stow -R -t "${RBENV_ROOT:-/usr/local/var/rbenv}/versions" -d "$cellar" ruby
+
 fi
 
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    echo "==> Installing vim bundles…"
     mkdir -p ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
