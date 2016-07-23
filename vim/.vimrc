@@ -76,7 +76,7 @@ set statusline+=%*
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_json_checkers=['jsonlint']
-let g:syntastic_yaml_checkers=['js-yaml']
+let g:syntastic_yaml_checkers=['jsyaml']
 
 let g:WMGraphviz_output="svg"
 let g:WMGraphviz_viewer="open"

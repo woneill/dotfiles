@@ -3,9 +3,19 @@
 # script/setup: Set up application for the first time after cloning, or set it
 #               back to the initial first unused state.
 
-set -e
+on_err() {
+    local parent_lineno="$1"
+    local message="$2"
+    local code="${3:-1}"
+    if [[ -n "$message" ]] ; then
+        echo "Error on or near line ${parent_lineno}: ${message}; exiting with status ${code}"
+    else
+        echo "Error on or near line ${parent_lineno}; exiting with status ${code}"
+    fi
+    exit "${code}"
+}
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/.." || exit
 
 script/bootstrap
 
@@ -43,6 +53,20 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     mkdir -p ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
+fi
+
+npm list -g jsonlint &> /dev/null
+rc=$?
+if [[ $rc != 0 ]]; then
+    echo "==> Installing jsonlint…"
+    npm install -g jsonlint
+fi
+
+npm list -g js-yaml &> /dev/null
+rc=$?
+if [[ $rc != 0 ]]; then
+    echo "==> Installing js-yaml…"
+    npm install -g js-yaml
 fi
 
 echo "==> Ready to go!"
