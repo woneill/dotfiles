@@ -40,11 +40,15 @@ if [ "$(uname -s)" = "Darwin" ]; then
     cellar=$(brew --cellar)
     # Link brewed python versions into pyenv
     echo "==> Linking python versions into pyenv…"
-    stow -R -t "${PYENV_ROOT:-/usr/local/var/pyenv}/versions" -d "$cellar" python python3
+    pyenv_dest="${PYENV_ROOT:-/usr/local/var/pyenv}"
+    mkdir -p "${pyenv_dest}/versions"
+    stow -R -t "${pyenv_dest}/versions" -d "$cellar" python python3
 
     # Link brewed ruby versions into rbenv
     echo "==> Linking ruby versions into rbenv…"
-    stow -R -t "${RBENV_ROOT:-/usr/local/var/rbenv}/versions" -d "$cellar" ruby
+    rbenv_dest="${RBENV_ROOT:-/usr/local/var/rbenv}"
+    mkdir -p "${rbenv_dest}/versions"
+    stow -R -t "${rbenv_dest}/versions" -d "$cellar" ruby
 
 fi
 
