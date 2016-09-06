@@ -44,6 +44,3 @@ Some things aren't easily scripted or require outside dependencies. Open to idea
 vagrant plugin install vagrant-vmware-fusion
 vagrant plugin license vagrant-vmware-fusion ~/license.lic
 ```
-
-### Install Docker for Mac
-Follow instructions at [Docker for Mac](https://docs.docker.com/docker-for-mac/)
