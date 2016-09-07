@@ -42,6 +42,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# Setup BitBar plugin directory
+defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.bitbar_plugins/Enabled"
+
 # Remove unneeded applicatons from the dock
 dock_rm=(
     "Safari"

@@ -18,7 +18,7 @@ Installation is based off of GitHub's [Scripts to Rule Them All](http://githuben
 
 ### Initial installation
 ```
-git clone https://github.com/woneill/dotfiles.git ~/dotfiles
+git clone --recursive https://github.com/woneill/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 script/setup
 ```
