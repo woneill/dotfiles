@@ -49,7 +49,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
     rbenv_dest="${RBENV_ROOT:-/usr/local/var/rbenv}"
     mkdir -p "${rbenv_dest}/versions"
     stow -R -t "${rbenv_dest}/versions" -d "$cellar" ruby
-
 fi
 
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -72,5 +71,7 @@ if [[ $rc != 0 ]]; then
     echo "==> Installing js-yaml…"
     npm install -g js-yaml
 fi
+
+[ -x script/setup.work."$(uname -s)" ] && script/setup.work."$(uname -s)"
 
 echo "==> Ready to go!"
