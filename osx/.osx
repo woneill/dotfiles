@@ -63,7 +63,7 @@ done
 # Add applications to the dock
 dock_apps=(
     "iTerm:/Applications/iTerm.app"
-    "Google Chrome:/Applications/Google%20Chrome.app"
+    "Google Chrome:/Applications/Google Chrome.app"
     "Slack:/Applications/Slack.app"
     "Pocket:/Applications/Pocket.app"
 )
@@ -73,7 +73,7 @@ do
     app_path="${app#*:}"
     /usr/local/bin/dockutil --find "${app_name}" > /dev/null
     if [ $? -ne 0 ]; then
-        /usr/local/bin/dockutil --add "${app_path}" --no-restart
+        /usr/local/bin/dockutil --add "${app_path}" --label "${app_name}" --no-restart
     fi
 done
 
