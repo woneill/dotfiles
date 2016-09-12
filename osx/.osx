@@ -45,6 +45,9 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Setup BitBar plugin directory
 defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.bitbar_plugins/Enabled"
 
+# Configure XQuartz
+defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
+
 # Remove unneeded applicatons from the dock
 dock_rm=(
     "Safari"
