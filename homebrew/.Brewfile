@@ -3,6 +3,7 @@ tap 'caskroom/fonts'
 tap 'homebrew/bundle'
 tap 'homebrew/completions'
 tap 'homebrew/core'
+tap 'homebrew/x11'
 brew 'autoconf'
 brew 'bash-completion'
 brew 'ctags'
@@ -69,6 +70,7 @@ cask 'vagrant'
 cask 'vmware-fusion'
 cask 'wireshark'
 cask 'wkhtmltopdf'
+cask 'xquartz'
 mas 'Pocket', id: 568494494
 mas 'Skitch', id: 425955336
 mas 'Xcode', id: 497799835
