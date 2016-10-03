@@ -42,7 +42,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     echo "==> Linking python versions into pyenv…"
     pyenv_dest="${PYENV_ROOT:-/usr/local/var/pyenv}"
     mkdir -p "${pyenv_dest}"/{plugins,versions}
-    if [ -f "${pyenv_dest}/plugins/pyenv-register" ]; then
+    if [ ! -d "${pyenv_dest}/plugins/pyenv-register" ]; then
         echo "==> Installing pyenv register plugin..."
         git clone https://github.com/doloopwhile/pyenv-register.git "${pyenv_dest}"/plugins/pyenv-register
     fi
