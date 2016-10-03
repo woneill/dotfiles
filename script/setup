@@ -28,7 +28,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
         brew update
         brew bundle check --global >/dev/null 2>&1  || {
             echo "==> Installing Global Homebrew dependencies…"
-            brew bundle --global
+            brew bundle -v --global
         }
     fi
 
@@ -41,8 +41,14 @@ if [ "$(uname -s)" = "Darwin" ]; then
     # Link brewed python versions into pyenv
     echo "==> Linking python versions into pyenv…"
     pyenv_dest="${PYENV_ROOT:-/usr/local/var/pyenv}"
-    mkdir -p "${pyenv_dest}/versions"
-    stow -R -t "${pyenv_dest}/versions" -d "$cellar" python python3
+    mkdir -p "${pyenv_dest}"/{plugins,versions}
+    if [ -f "${pyenv_dest}/plugins/pyenv-register" ]; then
+        echo "==> Installing pyenv register plugin..."
+        git clone https://github.com/doloopwhile/pyenv-register.git "${pyenv_dest}"/plugins/pyenv-register
+    fi
+    for python_binary in $(brew --cellar)/python*/*/bin/python[2,3]; do
+        pyenv register --force "$python_binary"
+    done
 
     # Link brewed ruby versions into rbenv
     echo "==> Linking ruby versions into rbenv…"
