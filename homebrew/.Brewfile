@@ -81,6 +81,5 @@ cask 'vmware-fusion'
 cask 'wireshark'
 cask 'wkhtmltopdf'
 cask 'xquartz'
-mas 'Pocket (1.6.2)', id: 568494494
-mas 'Skitch (2.7.8)', id: 425955336
-mas 'Xcode (8.0)', id: 497799835
+mas 'Pocket', id: 568494494
+mas 'Skitch', id: 425955336
