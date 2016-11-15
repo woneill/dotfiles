@@ -34,7 +34,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
     if [ -f /Applications/Docker.app/Contents/Resources/etc ]; then
         echo "==> Installing Docker bash completion…"
-        stow -R -t "$(brew --prefix)/etc/bash_completion.d" -d /Applications/Docker.app/Contents/Resources etc
+        stow -R -t "$(brew --prefix)/etc/bash_completion.d" -d /Applications/Docker.app/Contents/Resources --ignore='.*zsh.*' etc
     fi
 
     cellar=$(brew --cellar)
