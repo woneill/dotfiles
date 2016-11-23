@@ -83,6 +83,12 @@ do
     fi
 done
 
+/usr/local/bin/dockutil --find 'Documents' > /dev/null
+if [ $? -ne 0 ]; then
+    # shellcheck disable=SC2088
+    /usr/local/bin/dockutil --add '~/Documents' --before 'Downloads' --view fan --no-restart
+fi
+
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
     "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
