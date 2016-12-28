@@ -40,14 +40,9 @@ if [ "$(uname -s)" = "Darwin" ]; then
     cellar=$(brew --cellar)
     # Link brewed python versions into pyenv
     echo "==> Linking python versions into pyenv…"
-    pyenv_dest="${PYENV_ROOT:-${HOME}/.pyenv}"
-    mkdir -p "${pyenv_dest}"/{plugins,versions}
-    if [ ! -d "${pyenv_dest}/plugins/pyenv-register" ]; then
-        echo "==> Installing pyenv register plugin..."
-        git clone https://github.com/doloopwhile/pyenv-register.git "${pyenv_dest}"/plugins/pyenv-register
-    fi
     for python_binary in $(brew --cellar)/python*/*/bin/python[2,3]; do
-        pyenv register --force "$python_binary"
+        python_version=$(basename "$(grealpath -Lm "${python_binary}/../..")")
+        pyenv virtualenv -p "$python_binary" system-"${python_version}"
     done
 
     # Link brewed ruby versions into rbenv
