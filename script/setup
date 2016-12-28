@@ -40,7 +40,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     cellar=$(brew --cellar)
     # Link brewed python versions into pyenv
     echo "==> Linking python versions into pyenv…"
-    pyenv_dest="${PYENV_ROOT:-/usr/local/var/pyenv}"
+    pyenv_dest="${PYENV_ROOT:-${HOME}/.pyenv}"
     mkdir -p "${pyenv_dest}"/{plugins,versions}
     if [ ! -d "${pyenv_dest}/plugins/pyenv-register" ]; then
         echo "==> Installing pyenv register plugin..."
