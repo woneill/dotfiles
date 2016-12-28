@@ -98,3 +98,4 @@ cask 'wkhtmltopdf'
 cask 'xquartz'
 mas 'Pocket', id: 568494494
 mas 'Skitch', id: 425955336
+mas 'Xcode', id: 497799835
