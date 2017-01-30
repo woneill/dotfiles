@@ -28,9 +28,9 @@ if [ "$(uname -s)" = "Darwin" ]; then
         brew update
 
         # Uninstall deprecated tap
-        brew tap | grep completions
+        brew tap | grep -q completions
         rc=$?
-        if [[ $rc != 0 ]]; then
+        if [[ $rc == 0 ]]; then
             brew untap homebrew/completions
         fi
 
