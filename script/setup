@@ -26,6 +26,14 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
     if [ -f "${HOME}/.Brewfile" ]; then
         brew update
+
+        # Uninstall deprecated tap
+        brew tap | grep completions
+        rc=$?
+        if [[ $rc != 0 ]]; then
+            brew untap homebrew/completions
+        fi
+
         brew bundle check --global >/dev/null 2>&1  || {
             echo "==> Installing Global Homebrew dependencies…"
             brew bundle -v --global
