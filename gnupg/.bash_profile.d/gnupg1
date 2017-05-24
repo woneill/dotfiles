@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+GPG1_DIR=$(brew --prefix gpg1)/libexec/gpgbin
+
+if [ -d "${GPG1_DIR}" ]; then
+    pathprepend "${GPG1_DIR}"
+fi
