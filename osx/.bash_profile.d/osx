@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 alias ack=ag
 
 # Brew verison of openssh
@@ -20,8 +21,10 @@ export EDITOR=/usr/local/bin/vim
 
 alias dns="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist; sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist"
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    # shellcheck source=/usr/local/etc/bash_completion
     . $(brew --prefix)/etc/bash_completion
+    # shellcheck source=/usr/local/etc/bash_completion.d/git-prompt.sh
     source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE=true
     export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -34,12 +37,5 @@ fi
 # escape sequence. This version will work under screen.
 
 growl() {
-    local msg="\\e]9;\n\n${*}\\007"
-    case $TERM in
-        screen*)
-            echo -ne '\eP'${msg}'\e\\' ;;
-        *)
-            echo -ne ${msg} ;;
-    esac
-    return
+    terminal-notifier -activate com.googlecode.iterm2 -title "Pssssst !!" -subtitle "A message from your shell:" -message "$@"
 }
