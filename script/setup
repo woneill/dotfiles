@@ -19,7 +19,7 @@ cd "$(dirname "$0")/.." || exit
 
 script/bootstrap
 
-stow -R bash bitbar ctags direnv docker git gnupg homebrew puppet pwdhash python ruby screen travisci vagrant vim
+stow -R autoenv bash bitbar ctags direnv docker git gnupg homebrew puppet pwdhash python ruby screen travisci vagrant vim
 
 if [ "$(uname -s)" = "Darwin" ]; then
     stow -R osx

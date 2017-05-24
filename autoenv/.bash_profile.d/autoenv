@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if [ -f /usr/local/opt/autoenv/activate.sh ]; then
+    # shellcheck disable=SC1091
+    source /usr/local/opt/autoenv/activate.sh
+fi

@@ -9,11 +9,7 @@ if [ -f $(brew --prefix)/bin/ssh-agent ]; then
         $(brew --prefix)/bin/ssh-agent -k
     }
 fi
-
-# startup autoenv
-if [ -f /usr/local/opt/autoenv/activate.sh ]; then
-    source /usr/local/opt/autoenv/activate.sh
-fi
+echo "openssh end"
 
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 export EDITOR=/usr/local/bin/vim
