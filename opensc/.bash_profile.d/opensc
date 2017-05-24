@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export OPENSC_PKCS11
+OPENSC_PKCS11=$(realpath "$(brew --prefix)/lib/opensc-pkcs11.so")
