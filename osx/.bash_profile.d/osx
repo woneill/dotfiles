@@ -1,15 +1,19 @@
 alias ack=ag
 
 # Brew verison of openssh
-if [ -f $(brew --prefix)/bin/ssh-agent ]; then
-    eval $(ssh-agent)
+if [ -f "$(brew --prefix)/bin/ssh-agent" ]; then
+    args=()
+    if [ -f "${OPENSC_PKCS11}" ]; then
+        pkcs11_whitelist="/usr/lib/*,/usr/local/lib/*,${OPENSC_PKCS11}"
+        args+=(-P ${pkcs11_whitelist})
+    fi
+    eval "$(ssh-agent "${args[@]}")"
 
     function cleanup {
         echo "Killing SSH-Agent"
-        $(brew --prefix)/bin/ssh-agent -k
+        "$(brew --prefix)/bin/ssh-agent" -k
     }
 fi
-echo "openssh end"
 
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 export EDITOR=/usr/local/bin/vim
