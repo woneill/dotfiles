@@ -1,33 +1,33 @@
 [user]
-	name = Bill ONeill
-    email = woneill@pobox.com
+  name = Bill ONeill
+  email = woneill@pobox.com
 [core]
-	autocrlf = input
-	safecrlf = true
-	editor = /usr/local/bin/vim
-	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  autocrlf = input
+  safecrlf = true
+  editor = /usr/local/bin/vim
+  excludesfile = ~/.gitignore_global
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [merge]
-	tool = opendiff
+  tool = opendiff
 [mergetool]
-	prompt = false
+  prompt = false
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
 [push]
-	default = simple
+  default = simple
 [diff]
-	tool = opendiff
-	compactionHeuristic = true
+  tool = opendiff
+  compactionHeuristic = true
 [difftool]
-	prompt = false
+  prompt = false
 [rerere]
-	enabled = true
+  enabled = true
 [hub]
     protocol = https
 
 [includeIf "gitdir:~/work/"]
-	path = ~/.gitconfig-work
+  path = ~/.gitconfig-work
