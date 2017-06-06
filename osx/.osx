@@ -48,6 +48,12 @@ defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.bitbar_plugins/Enab
 # Configure XQuartz
 defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
 
+# Configure iterm2
+# shellcheck disable=SC2088
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.config/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 # Remove unneeded applicatons from the dock
 dock_rm=(
     "Safari"
