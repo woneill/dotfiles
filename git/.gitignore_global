@@ -2,7 +2,7 @@ syntax: glob
 *~
 .DS_Store
 .env
-.tags
+.tags*
 
 syntax: regexp
 ^buildbox
