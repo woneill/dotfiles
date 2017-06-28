@@ -58,16 +58,18 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>836 282 445 103 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-207 1332 796 473 -412 1050 2560 1057 </string>
+	<string>704 503 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>540 1213 570 473 -412 1050 2560 1057 </string>
+	<string>189 204 1178 624 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>28 191 955 775 0 0 1680 1027 </string>
+	<string>1022 457 570 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1186 1238 850 520 -412 1050 2560 1057 </string>
+	<string>906 526 759 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>56 508 1116 503 0 0 1680 1027 </string>
+	<string>258 259 570 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>409 440 570 452 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -607,7 +609,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>Hack-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -732,7 +734,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-06T14:47:55Z</date>
+	<date>2017-06-28T21:20:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>UseBorder</key>
