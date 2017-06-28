@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'godlygeek/tabular'
 Plugin 'taglist.vim'
 Plugin 'rodjek/vim-puppet'
@@ -70,14 +70,6 @@ nmap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
 :highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_auto_jump=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_json_checkers=['jsonlint']
-let g:syntastic_yaml_checkers=['jsyaml']
-
 let g:WMGraphviz_output="svg"
 let g:WMGraphviz_viewer="open"
 
@@ -97,6 +89,7 @@ highlight Pmenu ctermbg=238 gui=bold
 "airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
