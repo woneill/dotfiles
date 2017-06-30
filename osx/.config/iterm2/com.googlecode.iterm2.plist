@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>CheckTestRelease</key>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>AD556229-A940-4B04-9A87-F09D5AAD29E0</string>
 	<key>HideScrollbar</key>
@@ -60,12 +62,14 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>836 282 445 103 0 0 1680 1027 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>109 600 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>704 503 796 473 0 0 1680 1027 </string>
+	<string>341 405 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>189 204 1178 624 0 0 1680 1027 </string>
+	<string>53 294 914 624 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1022 457 570 473 0 0 1680 1027 </string>
+	<string>66 81 1026 720 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>906 526 759 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -676,6 +680,8 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -730,11 +736,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=8</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=8</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-28T21:20:50Z</date>
+	<date>2017-06-30T13:46:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>UseBorder</key>
