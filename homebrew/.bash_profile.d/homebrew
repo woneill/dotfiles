@@ -1,7 +1,0 @@
-# Increase API limit for brew
-if [ -f ~/.HOMEBREW_GITHUB_API_TOKEN ]; then
-    # shellcheck source=/dev/null
-    source ~/.HOMEBREW_GITHUB_API_TOKEN
-fi
-
-# vim: set filetype=sh:

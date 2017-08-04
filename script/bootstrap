@@ -7,10 +7,6 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-if [ -d work ]; then
-  stow -R work
-fi
-
 if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   # Are Xcode CLI tools installed?
   xcode-select -p &> /dev/null || {
