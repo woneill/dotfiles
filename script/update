@@ -14,9 +14,10 @@ git status
 echo "==> Brew status..."
 brew bundle check --global || true
 
-echo "==> Stuff not in global brewfile..."
 rm -f /tmp/Brewfile*
-brew bundle dump --file=/tmp/Brewfile
-sort /tmp/Brewfile > /tmp/Brewfile.srt
-sort homebrew/.Brewfile > /tmp/Brewfile.srt.orig
-sdiff /tmp/Brewfile.srt /tmp/Brewfile.srt.orig
+brew bundle dump --file=- | sort > /tmp/Brewfile.current
+sort ~/.Brewfile > /tmp/Brewfile.global
+echo "==> Stuff installed but not in global brewfile..."
+comm -23 /tmp/Brewfile.current /tmp/Brewfile.global
+echo "==> Stuff in global brewfile but not installed..."
+comm -13 /tmp/Brewfile.current /tmp/Brewfile.global
