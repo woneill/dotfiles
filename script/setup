@@ -86,6 +86,13 @@ if [[ $rc != 0 ]]; then
     npm install -g js-yaml
 fi
 
+count=$(apm list --installed --packages --bare | grep -s sync-settings)
+if [[ $count != 0 ]]; then
+    echo "==> Installing atom sync-settings…"
+    apm install sync-settings
+    # TODO: setup initial sync config via _private variables?
+fi
+
 [ -x script/setup.work."$(uname -s)" ] && script/setup.work."$(uname -s)"
 
 echo "==> Ready to go!"
