@@ -72,20 +72,6 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     vim +PluginInstall +qall
 fi
 
-npm list -g jsonlint &> /dev/null
-rc=$?
-if [[ $rc != 0 ]]; then
-    echo "==> Installing jsonlint…"
-    npm install -g jsonlint
-fi
-
-npm list -g js-yaml &> /dev/null
-rc=$?
-if [[ $rc != 0 ]]; then
-    echo "==> Installing js-yaml…"
-    npm install -g js-yaml
-fi
-
 count=$(apm list --installed --packages --bare | grep -s sync-settings)
 if [[ $count != 0 ]]; then
     echo "==> Installing atom sync-settings…"
