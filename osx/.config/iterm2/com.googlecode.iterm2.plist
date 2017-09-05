@@ -89,25 +89,27 @@
 		</array>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>836 282 445 103 0 0 1680 1027 </string>
+	<string>1020 1232 445 77 -412 1050 2560 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 496 620 392 0 0 1680 1027 </string>
+	<string>490 496 700 392 0 0 1680 1027 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>-143 1176 606 469 -412 1050 2560 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>187 280 937 512 0 0 1680 1027 </string>
+	<string>49 228 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>699 150 842 850 0 0 1680 1027 </string>
+	<string>674 276 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>738 307 650 450 0 0 1680 1027 </string>
+	<string>657 158 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>818 1307 650 450 -412 1050 2560 1057 </string>
+	<string>803 1144 890 575 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>176 1270 1298 450 -412 1050 2560 1057 </string>
+	<string>-90 1452 890 575 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>409 440 570 452 0 0 1680 1027 </string>
+	<string>692 1277 890 575 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>774 184 570 452 0 0 1680 1027 </string>
+	<string>171 152 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>1061 390 570 452 0 0 1680 1027 </string>
+	<string>646 320 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
 	<string>1069 575 570 452 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 8</key>
@@ -643,7 +645,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 13</string>
+			<string>Hack-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -724,6 +726,10 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>516545667.09213299</real>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -770,7 +776,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-24T18:43:38Z</date>
+	<date>2017-09-05T20:04:58Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>UseBorder</key>
@@ -786,6 +792,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.6</string>
+	<string>3.1.beta.9</string>
 </dict>
 </plist>
