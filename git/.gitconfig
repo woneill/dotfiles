@@ -28,9 +28,6 @@
   enabled = true
 [hub]
     protocol = https
-
-[includeIf "gitdir:~/work/"]
-  path = ~/.gitconfig-work
 [color]
 	ui = true
 [color "diff-highlight"]

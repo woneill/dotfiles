@@ -19,11 +19,6 @@ cd "$(dirname "$0")/.." || exit
 
 script/bootstrap
 
-case ${DOTFILE_ROLE:?'DOTFILE_ROLE is not defined'} in
-    work) [ -d work ] && stow -R work;;
-    home) [ -d home ] && stow -R home;;
-esac
-
 stow -R autoenv bash bitbar ctags direnv docker git gnupg opensc puppet pwdhash python ruby screen travisci vagrant vim yubikey
 
 if [ "$(uname -s)" = "Darwin" ]; then
