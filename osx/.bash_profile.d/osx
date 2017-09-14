@@ -5,6 +5,7 @@ export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 export EDITOR=/usr/local/bin/vim
 
 alias dns="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist; sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist"
+alias camera_reset="sudo killall VDCAssistant"
 
 if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
     # shellcheck source=/usr/local/etc/bash_completion
