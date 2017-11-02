@@ -42,3 +42,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[rebase]
+	autostash = true
+[stash]
+	showPatch = true
