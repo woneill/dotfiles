@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>CheckTestRelease</key>
 	<true/>
 	<key>Default Bookmark Guid</key>
@@ -25,6 +27,12 @@
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
+	<true/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
 	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -90,22 +98,24 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1020 1232 445 77 -412 1050 2560 1057 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>640 693 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>490 496 700 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-143 1176 606 469 -412 1050 2560 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>49 228 796 473 0 0 1680 1027 </string>
+	<string>98 272 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>674 276 890 575 0 0 1680 1027 </string>
+	<string>391 183 1187 806 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>657 158 890 575 0 0 1680 1027 </string>
+	<string>192 1154 890 575 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>803 1144 890 575 -130 1050 1920 1057 </string>
+	<string>166 195 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>-90 1452 890 575 -130 1050 1920 1057 </string>
+	<string>17 438 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>692 1277 890 575 -130 1050 1920 1057 </string>
+	<string>74 196 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>171 152 890 575 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -718,17 +728,31 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>3DA86968-33DC-41F6-A8D2-7E1E8B06FC3C</string>
+	<key>NoSyncLastTipTime</key>
+	<real>531326282.45414901</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncSavePanelSavedSettings_StartSessionLog</key>
+	<dict>
+		<key>Initial Directory</key>
+		<string>/Users/woneill</string>
+	</dict>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>516545667.09213299</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
+	<false/>
+	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PointerActions</key>
 	<dict>
@@ -765,6 +789,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>~/.config/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -776,7 +802,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-05T20:04:58Z</date>
+	<date>2017-11-02T23:24:38Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>UseBorder</key>
@@ -792,6 +818,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.9</string>
+	<string>3.1.5.beta.1</string>
 </dict>
 </plist>
