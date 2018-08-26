@@ -19,5 +19,3 @@ done
 
 # shellcheck source=./.bashrc
 source "$HOME/.bashrc"
-
-trap cleanup EXIT

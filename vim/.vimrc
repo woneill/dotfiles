@@ -99,3 +99,5 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " Don't store swap files in $CWD
 set backupdir=/tmp//
 set directory=/tmp//
+
+silent! py3 pass
