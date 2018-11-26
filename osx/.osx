@@ -97,9 +97,6 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-# Setup BitBar plugin directory
-defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.bitbar_plugins/Enabled"
-
 # Configure XQuartz
 defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
 

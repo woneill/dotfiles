@@ -1,3 +1,0 @@
-[submodule "bitbar/.bitbar_plugins"]
-	path = bitbar/.bitbar_plugins
-	url = https://github.com/matryer/bitbar-plugins.git

@@ -14,7 +14,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'w0rp/ale'
 Plugin 'godlygeek/tabular'
 Plugin 'taglist.vim'
-Plugin 'rodjek/vim-puppet'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
@@ -72,10 +71,6 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 let g:WMGraphviz_output="svg"
 let g:WMGraphviz_viewer="open"
-
-"puppet
-set kp=pi
-set iskeyword=-,:,@,48-57,_,192-255
 
 "ruby
 compiler ruby
