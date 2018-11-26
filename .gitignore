@@ -1,4 +1,5 @@
 gnupg/.gnupg/gpg-agent.log
+gnupg/.gnupg/sshcontrol
 vim/.vim/.netrwhist
 vim/.vim/bundle
 _private*
