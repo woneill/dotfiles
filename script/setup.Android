@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+stow -R termux
+
+if [ -f "${HOME}/.termux.pkglist" ]; then
+    echo "==> Installing termux dependencies…"
+    xargs -0 apt install -y < <(tr \\n \\0 < "${HOME}"/.termux.pkglist)
+fi

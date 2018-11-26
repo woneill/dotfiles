@@ -3,18 +3,6 @@
 # script/setup: Set up application for the first time after cloning, or set it
 #               back to the initial first unused state.
 
-on_err() {
-    local parent_lineno="$1"
-    local message="$2"
-    local code="${3:-1}"
-    if [[ -n "$message" ]] ; then
-        echo "Error on or near line ${parent_lineno}: ${message}; exiting with status ${code}"
-    else
-        echo "Error on or near line ${parent_lineno}; exiting with status ${code}"
-    fi
-    exit "${code}"
-}
-
 cd "$(dirname "$0")/.." || exit
 
 script/bootstrap
@@ -22,42 +10,11 @@ script/bootstrap
 stow -R autoenv bash direnv docker git gnupg pwdhash python ruby screen travisci vim
 
 if [ "$(uname -s)" = "Darwin" ]; then
-    stow -R osx
-
-    if [ -f "${HOME}/.Brewfile" ]; then
-        brew update
-
-        # Uninstall deprecated tap
-        brew tap | grep -q completions
-        rc=$?
-        if [[ $rc == 0 ]]; then
-            brew untap homebrew/completions
-        fi
-
-        brew bundle check --global >/dev/null 2>&1  || {
-            echo "==> Installing Global Homebrew dependencies…"
-            brew bundle -v --global
-        }
-    fi
-
-    if [ -f /Applications/Docker.app/Contents/Resources/etc ]; then
-        echo "==> Installing Docker bash completion…"
-        stow -R -t "$(brew --prefix)/etc/bash_completion.d" -d /Applications/Docker.app/Contents/Resources --ignore='.*zsh.*' etc
-    fi
-
-    cellar=$(brew --cellar)
-    # Link brewed python versions into pyenv
-    echo "==> Linking python versions into pyenv…"
-    for python_binary in $(brew --cellar)/python*/*/bin/python[2,3]; do
-        python_version=$(basename "$(grealpath -Lm "${python_binary}/../..")")
-        pyenv virtualenv -p "$python_binary" system-"${python_version}"
-    done
-
-    # Link brewed ruby versions into rbenv
-    echo "==> Linking ruby versions into rbenv…"
-    rbenv_dest="${RBENV_ROOT:-/usr/local/var/rbenv}"
-    mkdir -p "${rbenv_dest}/versions"
-    stow -R -t "${rbenv_dest}/versions" -d "$cellar" ruby
+    script/setup."$(uname -s)"
+elif [ "$(uname -o)" = "Android" ]; then
+    script/setup."$(uname -o)"
+elif [ "$(uname -s)" = "Linux" ]; then
+    script/setup."$(uname -s)"
 fi
 
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -65,13 +22,6 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     mkdir -p ~/.vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
-fi
-
-count=$(apm list --installed --packages --bare | grep -s sync-settings)
-if [[ $count != 0 ]]; then
-    echo "==> Installing atom sync-settings…"
-    apm install sync-settings
-    # TODO: setup initial sync config via _private variables?
 fi
 
 [ -x script/setup.work."$(uname -s)" ] && script/setup.work."$(uname -s)"

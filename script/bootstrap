@@ -16,7 +16,7 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   }
 
   # Is homebrew installed?
-  which brew &> /dev/null || {
+  command -v brew &> /dev/null || {
     echo "==> Installing homebrew…"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   }
@@ -26,5 +26,18 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   brew bundle check >/dev/null 2>&1  || {
     echo "==> Installing Homebrew dependencies…"
     brew bundle
+  }
+elif [ "$(uname -o)" = "Android" ]; then
+  # Is stow installed?
+  command -v stow &> /dev/null || {
+    echo "==> Installing stow..."
+    pkg install stow
+  }
+elif [ "$(uname -s)" = "Linux" ]; then
+  # Is stow installed?
+  command -v stow &> /dev/null || {
+    echo "==> Installing stow..."
+    echo "** Won't guess at how to install stow- install it manually **"
+    exit 1
   }
 fi
