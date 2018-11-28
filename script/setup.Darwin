@@ -24,3 +24,8 @@ command -v apm &> /dev/null || {
         # TODO: setup initial sync config via _private variables?
     fi
 }
+
+current_shell=$(dscl . -read "/Users/$USER" UserShell)
+if [ ! -z "${current_shell##*/usr/local/bin/zsh*}" ]; then
+    sudo dscl . -create "/Users/$USER" UserShell /usr/local/bin/zsh
+fi

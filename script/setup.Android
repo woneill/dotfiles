@@ -6,3 +6,7 @@ if [ -f "${HOME}/.termux.pkglist" ]; then
     echo "==> Installing termux dependencies…"
     xargs -0 apt install -y < <(tr \\n \\0 < "${HOME}"/.termux.pkglist)
 fi
+
+# TODO: Look into oh-my-termux from https://wiki.termux.com/wiki/ZSH
+pkg install zsh
+chsh -s zsh

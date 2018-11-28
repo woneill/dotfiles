@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.." || exit
 
 script/bootstrap
 
-stow -R autoenv bash direnv docker git gnupg pwdhash python ruby screen travisci vim
+stow -R autoenv bash direnv docker git gnupg pwdhash python ruby screen travisci vim zsh
 
 if [ "$(uname -s)" = "Darwin" ]; then
     script/setup."$(uname -s)"

@@ -28,12 +28,8 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedStateForSaveMode</key>
-	<true/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 0</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -42,11 +38,6 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
-	<array>
-		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
-		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
-	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -54,7 +45,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -75,62 +66,34 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSTouchBarConfig: regular</key>
-	<dict>
-		<key>CurrentItems</key>
-		<array>
-			<string>iTermTouchBarIdentifierManPage</string>
-			<string>iTermTouchBarIdentifierColorPreset</string>
-			<string>iTermTouchBarIdentifierFunctionKeys</string>
-			<string>iTermTouchBarIdentifierStatus</string>
-			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
-			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
-			<string>iTermTouchBarIdentifierAddMark</string>
-			<string>iTermTouchBarIdentifierPreviousMark</string>
-			<string>iTermTouchBarIdentifierNextMark</string>
-		</array>
-		<key>DefaultItems</key>
-		<array>
-			<string>iTermTouchBarIdentifierManPage</string>
-			<string>iTermTouchBarIdentifierColorPreset</string>
-			<string>iTermTouchBarIdentifierFunctionKeys</string>
-			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
-			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
-			<string>iTermTouchBarIdentifierAddMark</string>
-			<string>iTermTouchBarIdentifierPreviousMark</string>
-			<string>iTermTouchBarIdentifierNextMark</string>
-		</array>
-	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 158 224 280 0 0 1680 1027 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1020 1232 445 77 -412 1050 2560 1057 </string>
+	<string>966 338 445 77 0 0 1440 877 </string>
+	<key>NSWindow Frame Preferences</key>
+	<string>89 407 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>640 693 400 129 0 0 1680 1027 </string>
+	<string>520 581 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>466 1548 700 392 -144 1050 1920 1057 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>37 1176 606 469 -144 1050 1920 1057 </string>
+	<string>410 383 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>14 396 796 486 0 0 1680 1027 </string>
+	<string>495 454 916 423 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>52 326 890 575 0 0 1680 1027 </string>
+	<string>527 296 890 575 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 80 1680 947 0 0 1680 1027 </string>
+	<string>326 167 890 575 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>44 1454 1275 575 -144 1050 1920 1057 </string>
+	<string>32 81 890 575 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>72 420 890 575 0 0 1680 1027 </string>
+	<string>447 1466 650 448 -541 900 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>747 262 890 575 0 0 1680 1027 </string>
+	<string>23 339 650 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>-73 1115 890 575 -144 1050 1920 1057 </string>
+	<string>764 336 650 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>48 130 890 575 0 0 1680 1027 </string>
+	<string>65 153 650 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
-	<string>1069 575 570 452 0 0 1680 1027 </string>
+	<string>746 425 650 426 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 8</key>
-	<string>350 424 570 452 0 0 1680 1027 </string>
+	<string>113 424 650 426 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_AD556229-A940-4B04-9A87-F09D5AAD29E0</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_AD556229-A940-4B04-9A87-F09D5AAD29E0_selection</key>
@@ -662,11 +625,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>HackNerdFontComplete-Regular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 18</string>
+			<string>HackNerdFontComplete-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -735,33 +698,61 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncHaveUsedCopyMode</key>
+	<key>NoSyncConfirmBeta</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>3DA86968-33DC-41F6-A8D2-7E1E8B06FC3C</string>
+	<string>2CF3356B-9719-42F4-A18A-4529C48C6531</string>
 	<key>NoSyncLastTipTime</key>
-	<real>531326282.45414901</real>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<real>508990659.83328497</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
-	<key>NoSyncSavePanelSavedSettings_StartSessionLog</key>
-	<dict>
-		<key>Initial Directory</key>
-		<string>/Users/woneill</string>
-	</dict>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>516545667.09213299</real>
+	<real>487626050.70479399</real>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>485457133.57041901</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>487448663.710531</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
+		<string>000</string>
 		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -817,13 +808,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=8</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=7</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-13T19:42:38Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
+	<date>2018-11-26T15:50:26Z</date>
 	<key>SuppressRestartAnnouncement</key>
 	<true/>
 	<key>UseBorder</key>
@@ -839,6 +828,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.0beta9</string>
+	<string>3.2.6beta4</string>
 </dict>
 </plist>
