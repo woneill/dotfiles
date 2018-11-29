@@ -1,0 +1,1 @@
+alias camera_reset="sudo killall VDCAssistant"

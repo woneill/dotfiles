@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+file=${ZDOTDIR-$HOME}/${(%):-%1N}.d
+
+if [ -d $file ]; then
+    for i in $file/*(N); do
+        case $i in *~) continue;; esac
+        source $i
+    done
+fi
