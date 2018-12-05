@@ -125,7 +125,7 @@ cask "xquartz"
 cask "yed"
 cask "yubico-authenticator"
 cask "yubico-yubikey-personalization-gui"
-cask "yubikey-piv-manager"
+cask "yubico-yubikey-piv-manager"
 cask "zoomus"
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
