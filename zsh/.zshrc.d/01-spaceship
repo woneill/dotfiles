@@ -1,0 +1,5 @@
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+SPACESHIP_CHAR_SYMBOL=$
+SPACESHIP_CHAR_SUFFIX=' ' 
+#SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_VI_MODE_SHOW=false
