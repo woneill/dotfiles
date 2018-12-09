@@ -45,4 +45,6 @@
 [rebase]
 	autostash = true
 [stash]
-	showPatch = true
+    showPatch = true
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig
