@@ -1,5 +1,6 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd notify
+setopt appendhistory histnostore histreduceblanks incappendhistory
+setopt autocd notify
 bindkey -v
