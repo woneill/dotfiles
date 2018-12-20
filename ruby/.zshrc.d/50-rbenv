@@ -1,1 +1,1 @@
-zplug "plugins/rbenv", from:oh-my-zsh
+[ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/rbenv

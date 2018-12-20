@@ -1,9 +1,1 @@
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
-SPACESHIP_CHAR_SYMBOL=$
-SPACESHIP_CHAR_SUFFIX=' '
-SPACESHIP_GOLANG_SHOW=false
-SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_KUBECONTEXT_COLOR_GROUPS=(
-    red    prod
-    yellow beta
-)
+[ -n "$ZGEN_LOAD" ] && zgen load denysdovhan/spaceship-prompt spaceship

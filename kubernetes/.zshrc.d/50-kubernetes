@@ -1,2 +1,4 @@
-zplug "plugins/helm", from:oh-my-zsh
-zplug "plugins/kubectl", from:oh-my-zsh
+if [ -n "$ZGEN_LOAD" ]; then
+    zgen oh-my-zsh plugins/helm
+    zgen oh-my-zsh plugins/kubectl
+fi
