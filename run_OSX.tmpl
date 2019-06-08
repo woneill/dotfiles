@@ -1,0 +1,12 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+if [ -f "${HOME}/.Brewfile" ]; then
+    brew update
+
+    brew bundle check --global --no-upgrade >/dev/null 2>&1  || {
+        echo "==> Installing Global Homebrew dependencies…"
+        brew bundle install --verbose --no-upgrade --global
+    }
+fi
+{{ end -}}

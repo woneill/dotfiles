@@ -1,0 +1,161 @@
+{{ if eq .chezmoi.os "darwin" -}}
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "martido/brew-graph"
+tap "twpayne/taps"
+brew "arping"
+brew "autoconf"
+brew "xz"
+brew "awscli"
+brew "p7zip"
+brew "cookiecutter"
+brew "coreutils"
+brew "ctags"
+brew "diff-so-fancy"
+brew "direnv"
+brew "dockutil"
+brew "dos2unix"
+brew "freetype"
+brew "fontconfig"
+brew "fzf"
+brew "gd"
+brew "gettext"
+brew "gist"
+brew "git"
+brew "git-crypt"
+brew "git-extras"
+brew "pcre"
+brew "glib"
+brew "gnu-tar"
+brew "gnutls"
+brew "libgcrypt"
+brew "gnupg"
+brew "go"
+brew "gts"
+brew "libtool"
+brew "graphviz"
+brew "hadolint"
+brew "htop"
+brew "hub"
+brew "hugo"
+brew "oniguruma"
+brew "jq"
+brew "jrnl"
+brew "node"
+brew "jsonlint"
+brew "m-cli"
+brew "mas"
+brew "nmap"
+brew "openssh"
+brew "pandoc"
+brew "pinentry-mac"
+brew "proselint"
+brew "pstree"
+brew "pv"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "ruby-build"
+brew "rbenv"
+brew "ruby"
+brew "ruby-install"
+brew "shellcheck"
+brew "socat"
+brew "ssh-copy-id"
+brew "terminal-notifier"
+brew "terraform@0.11", link: true
+brew "the_silver_searcher"
+brew "tree"
+brew "unison"
+{{ if eq .category "home" -}}
+brew "unrar"
+{{ end -}}
+brew "vim"
+brew "watch"
+brew "wget"
+brew "ykpers"
+brew "ykman"
+{{ if eq .category "home" -}}
+brew "youtube-dl"
+{{ end -}}
+brew "yq"
+brew "yubico-piv-tool"
+brew "zsh"
+brew "zsh-completions"
+brew "martido/brew-graph/brew-graph"
+brew "twpayne/taps/chezmoi"
+cask "1password"
+cask "1password-cli"
+cask "adobe-acrobat-reader"
+cask "alfred"
+{{ if eq .category "home" -}}
+cask "calibre"
+{{ end -}}
+cask "dash"
+cask "docker"
+cask "evernote"
+cask "font-hack"
+cask "font-hack-nerd-font"
+cask "font-menlo-for-powerline"
+cask "google-chrome"
+cask "google-drive"
+{{ if eq .category "home" -}}
+cask "handbrake"
+{{ end -}}
+cask "iterm2"
+{{ if eq .category "home" -}}
+cask "keepassxc"
+{{ end -}}
+cask "keybase"
+cask "kindlegen"
+cask "licecap"
+{{ if eq .category "home" -}}
+cask "logitech-myharmony"
+cask "makemkv"
+cask "musicbrainz-picard"
+{{ end -}}
+cask "ngrok"
+cask "notion"
+cask "osxfuse"
+{{ if eq .category "tpt" -}}
+cask "plantronics-hub"
+{{ end -}}
+cask "pocket-casts"
+cask "postman"
+cask "rescuetime"
+cask "skitch"
+cask "slack"
+cask "spectacle"
+cask "spotify"
+{{ if eq .category "home" -}}
+cask "supersync"
+cask "transmission"
+cask "tunnelblick"
+{{ end -}}
+cask "visual-studio-code"
+cask "visual-studio-code-insiders"
+{{ if eq .category "home" -}}
+cask "vlc"
+{{ end -}}
+cask "wireshark"
+cask "wkhtmltopdf"
+cask "xquartz"
+cask "yubico-authenticator"
+cask "yubico-yubikey-manager"
+cask "yubico-yubikey-personalization-gui"
+cask "zoomus"
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pocket", id: 568494494
+{{ if eq .category "home" -}}
+mas "QVR Client", id: 806101067
+{{ end -}}
+mas "Trello", id: 1278508951
+mas "Xcode", id: 497799835
+{{ end -}}

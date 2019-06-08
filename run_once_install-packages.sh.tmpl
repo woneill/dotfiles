@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Are Xcode CLI tools installed?
+xcode-select -p &> /dev/null || {
+  echo "==> Installing Xcode CLI tools…"
+  xcode-select --install
+  sudo xcodebuild -license
+}
+
+# Is homebrew installed?
+command -v brew &> /dev/null || {
+  echo "==> Installing homebrew…"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+}
+
+# Is mas installed?
+brew list mas &>/dev/null || {
+  echo "==> Installing mas…"
+  brew install mas
+}
+
+# Is 1password-cli installed?
+brew cask list 1password-cli &>/dev/null || {
+  echo "==> Installing 1password-cli…"
+  brew cask install 1password-cli
+}
+{{ end -}}
+{{ if eq .chezmoi.os "android" -}}
+if [ -f "${HOME}/.termux.pkglist" ]; then
+    echo "==> Installing termux dependencies…"
+    xargs -0 apt install -y < <(tr \\n \\0 < "${HOME}"/.termux.pkglist)
+fi
+
+# TODO: Look into oh-my-termux from https://wiki.termux.com/wiki/ZSH
+pkg install zsh
+chsh -s zsh
+{{ end -}}

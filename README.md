@@ -1,46 +1,67 @@
 # Bill O'Neill's Dot Files
 
-I'm using these sets of scripts to manage my environments. Currently it's oriented towards a Mac OS X based desktop but I plan on making these Linux server oriented too.
+I'm using these sets of scripts to manage my environments. They can be used to configure OSX, Linux, and Android.
 
-## Requirements
+## Pre-requisites
 
-These will be installed via the [bootstrap](script/bootstrap) script if they're not already installed:
+Everything is managed via [chezmoi](https://github.com/twpayne/chezmoi) so installing it is the first step. Follow the [chezmoi install guide](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md).
 
-* [Gnu Stow](http://www.gnu.org/software/stow/) to maintain the symlinks for dot files
+### OSX
+
+These will be installed via the [run_once_install-packages.sh.tmpl](run_once_install-packages.sh.tmpl) script if they're not already installed:
+
 * [Homebrew](https://github.com/Homebrew/brew) for installing the Mac OS X dependencies
   * [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) is used to bundle up all Mac OS X dependencies
   * [Homebrew Cask](https://github.com/caskroom/homebrew-cask) is used for installing desktop Mac applications
-  * [mas-cli](https://github.com/argon/mas) is used for installing Mac App Store applications.
+* [mas-cli](https://github.com/argon/mas) is used for installing Mac App Store applications.
+* Xcode
 
-## Installation
+### Linux
 
-Installation is based off of GitHub's [Scripts to Rule Them All](http://githubengineering.com/scripts-to-rule-them-all/) pattern.
+No pre-requisites
+
+### Android
+
+* [Termux](https://play.google.com/store/apps/details?id=com.termux): an Android terminal emulator and Linux environment application that works directly with no rooting or setup required
+
+## Usage
 
 ### Initial installation
 ```
-git clone --recursive https://github.com/woneill/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-script/setup
+chezmoi init --apply --verbose https://github.com/woneill/dotfiles.git
 ```
 
-### Update dependencies
+### Update from repo
 ```
-cd ~/dotfiles
-script/bootstrap
-```
-
-### Check for outdated/updated configs
-```
-cd ~/dotfiles
-script/update
+chezmoi update
 ```
 
-## Manual Steps
-Some things aren't easily scripted or require outside dependencies. Open to ideas for automating these steps too!
-
-### Install license for vmware fusion and vagrant plugin
-
+### Check for unmanaged files
 ```
-vagrant plugin install vagrant-vmware-fusion
-vagrant plugin license vagrant-vmware-fusion ~/license.lic
+chezmoi unmanaged
+```
+
+### Add new files or Edit existing files
+```
+# Add an existing file
+chezmoi add <path_to_file>
+
+# Edit a file already managed
+chezmoi edit <path_to_file>
+
+# Compare with current
+chezmoi diff
+
+# Apply the changes
+chezmoi -v apply
+
+# Commit updates to github
+## Spawn shell in chezmoi directory
+chezmoi cd
+## Add new or changed files
+git add -A
+git commit -m "<commit message>"
+git push
+## Exit from spawned shell
+exit
 ```

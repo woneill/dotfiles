@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "==> Modified files in this repo..."
+chezmoi source status
+
+{{ if eq .chezmoi.os "darwin" -}}
+echo "==> Brew status..."
+brew bundle check --global --no-upgrade --verbose || true
+
+dumpfile=$( mktemp -d )/Brewfile
+brew bundle dump --file="$dumpfile"
+echo "==> Stuff installed but not in global brewfile..."
+grep -Fxv -f ~/.Brewfile "$dumpfile"
+echo "==> Stuff in global brewfile but not installed..."
+grep -Fxv -f "$dumpfile" ~/.Brewfile
+{{ end -}}
+
+echo "==> Unmanaged dotfiles that might need to be added..."
+chezmoi unmanaged | sed "s|$HOME/||g" | grep '^\.'

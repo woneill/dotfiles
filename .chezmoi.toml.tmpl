@@ -1,0 +1,5 @@
+{{- $email := promptString "Email" -}}
+{{- $category := promptString "Category: [home, workname]" -}}
+[data]
+  email = "{{ $email }}"
+  category = "{{ $category }}"
