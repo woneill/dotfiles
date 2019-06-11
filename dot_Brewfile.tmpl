@@ -1,4 +1,8 @@
 {{ if eq .chezmoi.os "darwin" -}}
+{{ if eq .category "tpt" -}}
+tap "chef/chef"
+tap "git-chglog/git-chglog"
+{{ end -}}
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -7,9 +11,20 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "martido/brew-graph"
+{{ if eq .category "tpt" -}}
+tap "reactiveops/tap"
+{{ end -}}
 tap "twpayne/taps"
+{{ if eq .category "tpt" -}}
+tap "wata727/tflint"
+tap "weaveworks/tap"
+{{ end -}}
 brew "arping"
 brew "autoconf"
+{{ if eq .category "tpt" -}}
+brew "asdf"
+brew "aws-iam-authenticator"
+{{ end -}}
 brew "xz"
 brew "awscli"
 brew "p7zip"
@@ -43,17 +58,32 @@ brew "hadolint"
 brew "htop"
 brew "hub"
 brew "hugo"
+{{ if eq .category "tpt" -}}
+brew "istioctl"
+{{ end -}}
 brew "oniguruma"
 brew "jq"
 brew "jrnl"
 brew "node"
 brew "jsonlint"
+{{ if eq .category "tpt" -}}
+brew "kubernetes-helm"
+brew "lastpass-cli"
+{{ end -}}
 brew "m-cli"
 brew "mas"
+{{ if eq .category "tpt" -}}
+brew "mysql"
+{{ end -}}
 brew "nmap"
 brew "openssh"
+{{ if eq .category "tpt" -}}
+brew "packer"
+{{ end -}}
 brew "pandoc"
 brew "pinentry-mac"
+brew "pipenv"
+brew "pre-commit"
 brew "proselint"
 brew "pstree"
 brew "pv"
@@ -68,6 +98,7 @@ brew "socat"
 brew "ssh-copy-id"
 brew "terminal-notifier"
 brew "terraform@0.11", link: true
+brew "terraform-docs"
 brew "the_silver_searcher"
 brew "tree"
 brew "unison"
@@ -77,6 +108,7 @@ brew "unrar"
 brew "vim"
 brew "watch"
 brew "wget"
+brew "yamllint"
 brew "ykpers"
 brew "ykman"
 {{ if eq .category "home" -}}
@@ -86,8 +118,19 @@ brew "yq"
 brew "yubico-piv-tool"
 brew "zsh"
 brew "zsh-completions"
+{{ if eq .category "tpt" -}}
+brew "git-chglog/git-chglog/git-chglog"
+{{ end -}}
 brew "martido/brew-graph/brew-graph"
+{{ if eq .category "tpt" -}}
+brew "reactiveops/tap/polaris"
+brew "reactiveops/tap/rbac-lookup"
+{{ end -}}
 brew "twpayne/taps/chezmoi"
+{{ if eq .category "tpt" -}}
+brew "wata727/tflint/tflint"
+brew "weaveworks/tap/eksctl"
+{{ end -}}
 cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
@@ -102,7 +145,11 @@ cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-menlo-for-powerline"
 cask "google-chrome"
+{{ if eq .category "tpt" -}}
+cask "google-drive-file-stream"
+{{ else }}
 cask "google-drive"
+{{ end -}}
 {{ if eq .category "home" -}}
 cask "handbrake"
 {{ end -}}
@@ -131,6 +178,12 @@ cask "skitch"
 cask "slack"
 cask "spectacle"
 cask "spotify"
+{{ if eq .category "tpt" -}}
+cask "vagrant"
+cask "vidyo"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+{{ end -}}
 {{ if eq .category "home" -}}
 cask "supersync"
 cask "transmission"
@@ -148,14 +201,20 @@ cask "yubico-authenticator"
 cask "yubico-yubikey-manager"
 cask "yubico-yubikey-personalization-gui"
 cask "zoomus"
+{{ if eq .category "tpt" -}}
+cask "chef/chef/chefdk"
+{{ end -}}
+mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+{{ if eq .category "tpt" -}}
+mas "LastPass", id: 926036361
+{{ end -}}
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pocket", id: 568494494
 {{ if eq .category "home" -}}
 mas "QVR Client", id: 806101067
 {{ end -}}
-mas "Trello", id: 1278508951
 mas "Xcode", id: 497799835
 {{ end -}}
