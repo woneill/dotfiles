@@ -1,1 +1,3 @@
-#zplug "plugins/asdf", from:oh-my-zsh
+if [ -n "$ZGEN_LOAD" ]; then
+    zgen oh-my-zsh plugins/asdf
+fi
