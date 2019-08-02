@@ -146,7 +146,7 @@ cask "font-menlo-for-powerline"
 cask "google-chrome"
 {{ if eq .category "tpt" -}}
 cask "google-drive-file-stream"
-{{ else }}
+{{ else -}}
 cask "google-drive"
 {{ end -}}
 {{ if eq .category "home" -}}
