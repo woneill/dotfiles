@@ -16,7 +16,6 @@ tap "reactiveops/tap"
 {{ end -}}
 tap "twpayne/taps"
 {{ if eq .category "tpt" -}}
-tap "wata727/tflint"
 tap "weaveworks/tap"
 {{ end -}}
 brew "arping"
@@ -96,8 +95,8 @@ brew "shellcheck"
 brew "socat"
 brew "ssh-copy-id"
 brew "terminal-notifier"
-brew "terraform@0.11", link: true
 brew "terraform-docs"
+brew "tflint"
 brew "the_silver_searcher"
 brew "tree"
 brew "unison"
@@ -127,7 +126,6 @@ brew "reactiveops/tap/rbac-lookup"
 {{ end -}}
 brew "twpayne/taps/chezmoi"
 {{ if eq .category "tpt" -}}
-brew "wata727/tflint/tflint"
 brew "weaveworks/tap/eksctl"
 {{ end -}}
 cask "1password"
