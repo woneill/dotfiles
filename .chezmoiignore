@@ -1,4 +1,3 @@
-README.md
 .CFUserTextEncoding
 .DS_Store
 .Trash
@@ -25,7 +24,7 @@ README.md
 .vimtags
 .vscode
 .vscode-insiders
-.zcompdump
-.zcompdump-woneill-macbookpro-new-5.7.1
+.zcompdump*
 .zgen
 .zoomus
+README.md
