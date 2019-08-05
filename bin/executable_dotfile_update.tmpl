@@ -12,9 +12,9 @@ brew bundle check --global --no-upgrade --verbose || true
 dumpfile=$( mktemp -d )/Brewfile
 brew bundle dump --file="$dumpfile"
 echo "==> Stuff installed but not in global brewfile..."
-grep -Fxv -f ~/.Brewfile "$dumpfile"
+grep -Fxv -f ~/.Brewfile "$dumpfile" || true
 echo "==> Stuff in global brewfile but not installed..."
-grep -Fxv -f "$dumpfile" ~/.Brewfile
+grep -Fxv -f "$dumpfile" ~/.Brewfile || true
 {{ end -}}
 
 echo "==> Unmanaged dotfiles that might need to be added..."
