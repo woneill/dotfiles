@@ -1,0 +1,5 @@
+{{ if eq .category "tpt" -}}
+credentials "app.terraform.io" {
+    token = "{{ (index (lastpass "Private/Terraform Enterprise Token") 0).password }}"
+}
+{{ end -}}
