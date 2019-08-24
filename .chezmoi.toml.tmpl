@@ -1,5 +1,7 @@
 {{- $email := promptString "Email" -}}
 {{- $category := promptString "Category: [home, workname]" -}}
+{{- $github_oauth_token := promptString "GitHub Oauth Token" -}}
 [data]
   email = "{{ $email }}"
   category = "{{ $category }}"
+  github_oauth_token = "{{ $github_oauth_token }}"

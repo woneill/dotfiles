@@ -2,7 +2,8 @@
 .DS_Store
 .Trash
 .cache
-.config
+.config/*
+!.config/hub
 .cups
 .docker
 .gnupg
