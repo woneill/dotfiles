@@ -1,0 +1,13 @@
+{
+  "Profiles": [
+    {
+      "Guid": "EA52A580-F90D-4F81-8699-182867B61C4A",
+      "Name": "woneill",
+      "ASCII Ligatures": true,
+      "Draw Powerline Glyphs": false,
+      "Normal Font": "IosevkaNerdFontComplete-Term 15",
+      "Scrollback With Status Bar": true,
+      "Unlimited Scrollback": true
+    }
+  ]
+}
