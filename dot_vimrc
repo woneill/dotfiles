@@ -25,7 +25,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'easytags.vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'lambdalisue/vim-pyenv'
 Plugin 'pearofducks/ansible-vim'
 
 call vundle#end()
