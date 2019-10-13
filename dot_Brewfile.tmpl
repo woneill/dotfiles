@@ -11,7 +11,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "instrumenta/instrumenta"
-tap "martido/brew-graph"
+tap "martido/graph"
 {{ if eq .category "tpt" -}}
 tap "reactiveops/tap"
 {{ end -}}
@@ -129,7 +129,6 @@ brew "zsh-completions"
 brew "git-chglog/git-chglog/git-chglog"
 {{ end -}}
 brew "instrumenta/instrumenta/kubeval"
-brew "martido/brew-graph/brew-graph"
 {{ if eq .category "tpt" -}}
 brew "reactiveops/tap/polaris"
 brew "reactiveops/tap/rbac-lookup"
