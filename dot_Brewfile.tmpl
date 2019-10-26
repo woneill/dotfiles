@@ -68,6 +68,7 @@ brew "jq"
 brew "jrnl"
 brew "node"
 brew "jsonlint"
+brew "kubernetes-helm"
 {{ if eq .category "tpt" -}}
 brew "lastpass-cli"
 {{ end -}}
@@ -172,6 +173,9 @@ cask "licecap"
 {{ if eq .category "home" -}}
 cask "logitech-myharmony"
 cask "makemkv"
+{{ end -}}
+cask "minikube"
+{{ if eq .category "home" -}}
 cask "musicbrainz-picard"
 {{ end -}}
 cask "ngrok"
