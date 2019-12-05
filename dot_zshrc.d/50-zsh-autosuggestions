@@ -1,0 +1,2 @@
+[ -n "$ZGEN_LOAD" ] && zgen load zsh-users/zsh-autosuggestions
+
