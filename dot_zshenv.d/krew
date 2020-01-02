@@ -1,0 +1,3 @@
+# This would be better if it used `kubectl krew version | grep BinPath`
+path+=("$HOME/.krew/bin")
+export -U PATH
