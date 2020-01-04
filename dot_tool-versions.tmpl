@@ -1,8 +1,10 @@
 {{ if eq .category "tpt" -}}
 helm 2.9.1
 {{ else -}}
-helm system
+helm 2.9.1 system
 {{ end -}}
 nodejs system
 python system
 ruby system
+terraform system
+terraform-docs system
