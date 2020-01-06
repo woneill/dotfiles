@@ -176,7 +176,9 @@ cask "licecap"
 {{ if eq .category "home" -}}
 cask "logitech-myharmony"
 cask "makemkv"
+{{ end -}}
 cask "meld"
+{{ if eq .category "home" -}}
 cask "musicbrainz-picard"
 {{ end -}}
 cask "ngrok"
