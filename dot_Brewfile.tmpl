@@ -172,6 +172,9 @@ cask "keepassxc"
 {{ end -}}
 cask "keybase"
 cask "kindlegen"
+{{ if eq .category "tpt" -}}
+cask "lastpass"
+{{ end -}}
 cask "licecap"
 {{ if eq .category "home" -}}
 cask "logitech-myharmony"
@@ -221,9 +224,6 @@ cask "chefdk"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-{{ if eq .category "tpt" -}}
-mas "LastPass", id: 926036361
-{{ end -}}
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pocket", id: 568494494
