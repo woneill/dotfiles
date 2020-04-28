@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 command -v asdf >/dev/null 2>&1 && {
-    expected_plugins=(helmfile java kubectl maven nodejs python ruby terraform terraform-docs terraformer tflint tfsec)
+    expected_plugins=(direnv helm helmfile java kubectl maven nodejs python ruby terraform terraform-docs terraformer tflint tfsec)
     typeset -A a2
     for k in $(asdf plugin list); do
         a2[$k]=1
