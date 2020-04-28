@@ -2,11 +2,13 @@
 .DS_Store
 .Trash
 .asdf
+.awsume
 .bash_history
 .berkshelf
 .bundle
 .cache
 .chef*
+.circleci
 .config/*
 !.config/hub
 .cookiecutter*
@@ -14,6 +16,8 @@
 .docker
 .dokken
 .esets
+.filebot/*
+!.filebot/license.txt
 .gem
 .gnupg
 .helm
@@ -27,9 +31,12 @@
 .lesshst
 .local
 .lpass
+.minikube
 .mysql_history
 .npm
+.node-gyp
 .op
+.oracle_jre_usage
 .packer.d
 .pyenv
 .pylint.d
@@ -45,6 +52,8 @@
 .vimtags
 .vscode
 .vscode-insiders
+.wget-hsts
+.yarnrc
 .zcompdump*
 .zgen
 .zoomus
