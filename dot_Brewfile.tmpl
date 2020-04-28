@@ -3,6 +3,7 @@
 tap "chef/chef"
 tap "git-chglog/git-chglog"
 {{ end -}}
+tap "goreleaser/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -28,6 +29,10 @@ brew "aws-iam-authenticator"
 {{ end -}}
 brew "xz"
 brew "awscli"
+brew "awsume"
+{{ if eq .category "home" -}}
+brew "circleci"
+{{ end -}}
 brew "p7zip"
 brew "cookiecutter"
 brew "coreutils"
@@ -105,7 +110,6 @@ brew "shellcheck"
 brew "siege"
 brew "socat"
 brew "sops"
-brew "ssh-copy-id"
 brew "terminal-notifier"
 brew "terraformer"
 brew "the_silver_searcher"
@@ -118,9 +122,7 @@ brew "vim"
 brew "watch"
 brew "wget"
 brew "yamllint"
-{{ if eq .category "tpt" -}}
 brew "yarn"
-{{ end -}}
 brew "ykpers"
 brew "ykman"
 {{ if eq .category "home" -}}
@@ -133,6 +135,7 @@ brew "zsh-completions"
 {{ if eq .category "tpt" -}}
 brew "git-chglog/git-chglog/git-chglog"
 {{ end -}}
+brew "goreleaser/tap/goreleaser"
 brew "instrumenta/instrumenta/kubeval"
 brew "norwoodj/tap/helm-docs"
 {{ if eq .category "tpt" -}}
@@ -153,6 +156,7 @@ cask "calibre"
 cask "dash"
 cask "docker"
 {{ if eq .category "home" -}}
+cask "epic-games"
 cask "filebot"
 {{ end -}}
 cask "font-hack"
@@ -205,6 +209,7 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 {{ end -}}
 {{ if eq .category "home" -}}
+cask "steam"
 cask "supersync"
 cask "transmission"
 cask "tunnelblick"
