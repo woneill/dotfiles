@@ -3,3 +3,4 @@ credentials "app.terraform.io" {
     token = "{{ (index (lastpass "Private/Terraform Enterprise Token") 0).password }}"
 }
 {{ end -}}
+plugin_cache_dir = "$HOME/.terraform.d/plugin-cache"
