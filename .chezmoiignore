@@ -31,6 +31,7 @@
 .lesshst
 .local
 .lpass
+.m2
 .minikube
 .mysql_history
 .npm
@@ -50,6 +51,7 @@
 .vim
 .viminfo
 .vimtags
+.vs-kubernetes
 .vscode
 .vscode-insiders
 .wget-hsts
