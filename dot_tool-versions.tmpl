@@ -1,4 +1,8 @@
+{{ if eq .category "tpt" -}}
+brig v1.3.0
+{{ end -}}
 direnv 2.21.2
+golang 1.13.8 system
 {{ if eq .category "tpt" -}}
 helm 2.9.1
 kubectl 1.13.12
@@ -6,10 +10,16 @@ kubectl 1.13.12
 helm 2.9.1 system
 kubectl system
 {{ end -}}
+kubetail 1.6.9
 nodejs system
 python system
 ruby system
+{{ if eq .category "tpt" -}}
+terraform 0.12.20
+terraformer 0.8.7
+{{ else -}}
 terraform 0.12.24
+{{ end -}}
 terraform-docs v0.9.1
 {{ if eq .category "tpt" -}}
 tfsec 0.19.0
