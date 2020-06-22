@@ -1,8 +1,0 @@
-{{ if eq .chezmoi.os "darwin" -}}
-#!/usr/bin/env bash
-
-current_shell=$(dscl . -read "/Users/$USER" UserShell)
-if [ ! -z "${current_shell##*/usr/local/bin/zsh*}" ]; then
-    sudo dscl . -create "/Users/$USER" UserShell /usr/local/bin/zsh
-fi
-{{ end -}}
