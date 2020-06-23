@@ -1,21 +1,13 @@
-{{ if eq .category "tpt" -}}
-brig v1.3.0
-{{ end -}}
 direnv 2.21.2
 golang 1.13.8 system
-{{ if eq .category "tpt" -}}
-helm 2.16.7
-kubectl 1.13.12
-{{ else -}}
 helm 2.16.7 system
 kubectl system
-{{ end -}}
 kubetail 1.6.9
 nodejs system
 python system
 ruby system
-{{ if eq .category "tpt" -}}
-terraform 0.12.20
+{{ if eq .category "RechargeApps" -}}
+terraform 0.12.18
 {{ else -}}
 terraform 0.12.26
 {{ end -}}

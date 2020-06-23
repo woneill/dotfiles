@@ -1,9 +1,4 @@
 {{ if eq .chezmoi.os "darwin" -}}
-{{ if eq .category "tpt" -}}
-tap "chef/chef"
-tap "disneystreaming/tap"
-tap "git-chglog/git-chglog"
-{{ end -}}
 tap "goreleaser/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -13,20 +8,11 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "instrumenta/instrumenta"
+tap "johanhaleby/kubetail"
 tap "martido/graph"
-{{ if eq .category "tpt" -}}
-tap "reactiveops/tap"
-{{ end -}}
-tap "twpayne/taps"
-{{ if eq .category "tpt" -}}
-tap "weaveworks/tap"
-{{ end -}}
 brew "arping"
 brew "autoconf"
 brew "asdf"
-{{ if eq .category "tpt" -}}
-brew "aws-iam-authenticator"
-{{ end -}}
 brew "xz"
 brew "awscli"
 brew "awsume"
@@ -34,6 +20,7 @@ brew "awsume"
 brew "circleci"
 {{ end -}}
 brew "p7zip"
+brew "chezmoi"
 brew "cookiecutter"
 brew "coreutils"
 brew "csshx"
@@ -69,30 +56,24 @@ brew "hadolint"
 brew "htop"
 brew "hub"
 brew "hugo"
-{{ if eq .category "tpt" -}}
-brew "istioctl"
-{{ end -}}
 brew "oniguruma"
 brew "jq"
 brew "jrnl"
 brew "node"
 brew "jsonlint"
 brew "krew"
-{{ if eq .category "tpt" -}}
+{{ if eq .category "RechargeApps" -}}
 brew "lastpass-cli"
 {{ end -}}
 brew "m-cli"
 brew "mas"
 brew "mdcat"
 brew "minikube"
-{{ if eq .category "tpt" -}}
+{{ if eq .category "RechargeApps" -}}
 brew "mysql"
 {{ end -}}
 brew "nmap"
 brew "openssh"
-{{ if eq .category "tpt" -}}
-brew "packer"
-{{ end -}}
 brew "pandoc"
 brew "pinentry-mac"
 brew "pipenv"
@@ -100,9 +81,6 @@ brew "pre-commit"
 brew "proselint"
 brew "pstree"
 brew "pv"
-{{ if eq .category "tpt" -}}
-brew "redis"
-{{ end -}}
 brew "ruby-build"
 brew "ruby"
 brew "ruby-install"
@@ -133,24 +111,16 @@ brew "yq"
 brew "yubico-piv-tool"
 brew "zsh"
 brew "zsh-completions"
-{{ if eq .category "tpt" -}}
-brew "disneystreaming/tap/ssm-helpers"
-brew "git-chglog/git-chglog/git-chglog"
-{{ end -}}
 brew "goreleaser/tap/goreleaser"
 brew "instrumenta/instrumenta/kubeval"
-{{ if eq .category "tpt" -}}
-brew "reactiveops/tap/polaris"
-brew "reactiveops/tap/rbac-lookup"
-{{ end -}}
-brew "twpayne/taps/chezmoi"
-{{ if eq .category "tpt" -}}
-brew "weaveworks/tap/eksctl"
-{{ end -}}
+brew "johanhaleby/kubetail/kubetail"
 cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
+{{ if eq .category "RechargeApps" -}}
+cask "avira-antivirus"
+{{ end -}}
 {{ if eq .category "home" -}}
 cask "calibre"
 {{ end -}}
@@ -165,7 +135,7 @@ cask "font-hack-nerd-font"
 cask "font-iosevka-nerd-font"
 cask "font-menlo-for-powerline"
 cask "google-chrome"
-{{ if eq .category "tpt" -}}
+{{ if eq .category "RechargeApps" -}}
 cask "google-drive-file-stream"
 {{ else -}}
 cask "google-drive"
@@ -180,7 +150,7 @@ cask "keepassxc"
 {{ end -}}
 cask "keybase"
 cask "kindlegen"
-{{ if eq .category "tpt" -}}
+{{ if eq .category "RechargeApps" -}}
 cask "lastpass"
 {{ end -}}
 cask "licecap"
@@ -196,24 +166,16 @@ cask "ngrok"
 cask "notion"
 cask "osxfuse"
 cask "paw"
-{{ if eq .category "tpt" -}}
+{{ if eq .category "RechargeApps" -}}
 cask "plantronics-hub"
 {{ end -}}
 cask "pocket-casts"
 cask "postman"
 cask "rescuetime"
-{{ if eq .category "tpt" -}}
-cask "session-manager-plugin"
-{{ end -}}
 cask "skitch"
 cask "slack"
 cask "spectacle"
 cask "spotify"
-{{ if eq .category "tpt" -}}
-cask "vagrant"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
-{{ end -}}
 {{ if eq .category "home" -}}
 cask "steam"
 cask "supersync"
@@ -231,9 +193,6 @@ cask "yubico-authenticator"
 cask "yubico-yubikey-manager"
 cask "yubico-yubikey-personalization-gui"
 cask "zoomus"
-{{ if eq .category "tpt" -}}
-cask "chefdk"
-{{ end -}}
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694

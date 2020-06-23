@@ -1,3 +1,0 @@
-{{ if eq .category "tpt" -}}
-export ATLAS_TOKEN="{{ (index (lastpass "Private/Terraform Enterprise Token") 0).password }}"
-{{ end -}}
