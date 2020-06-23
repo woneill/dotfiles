@@ -1,10 +1,9 @@
-{{- $expected_plugins_default := list "direnv" "helm" "helm-docs" "helmfile" "java" "kubectl" "kubetail" "maven" "nodejs" "python" "ruby" "terraform" "terraform-docs" "terraformer" "tflint" "tfsec" -}}
+{{- $expected_plugins_default := list "direnv" "helm" "helm-docs" "helmfile" "java" "kubectl" "maven" "nodejs" "python" "ruby" "terraform" "terraform-docs" "terraformer|https://github.com/grimoh/asdf-terraformer.git" "tflint" "tfsec" -}}
 {{- $expected_plugins := "" -}}
 {{ if eq .category "home" -}}
-{{- $expected_plugins = $expected_plugins_default | sortAlpha | join " " -}}
-{{ end -}}
-{{ if eq .category "tpt" -}}
-{{- $expected_plugins = concat $expected_plugins_default ( list "brig" "golang" "kubetail") | uniq | sortAlpha | join " " -}}
+{{- $expected_plugins = $expected_plugins_default | sortAlpha -}}
+{{ else -}}
+{{- $expected_plugins = $expected_plugins_default | sortAlpha -}}
 {{ end -}}
 #!/usr/bin/env zsh
 
@@ -14,11 +13,12 @@ command -v asdf >/dev/null 2>&1 && {
         a2[$k]=1
     done
 
-    for k in {{ $expected_plugins }}; do
-        if [ ! "${a2[$k]}" ]; then
-            asdf plugin add $k
+    for k in {{ range $expected_plugins }}{{ squote . }} {{ end }}; do
+        plugin=("${(@s/|/)k}")
+        if [ ! "${a2[$plugin[1]]}" ]; then
+            asdf plugin add $plugin[1] $plugin[2]
         fi
-        unset "a2[$k]"
+        unset "a2[$plugin[1]]"
     done
 
     if [ ! -z "${(k)a2}" ]; then
