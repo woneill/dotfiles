@@ -7,6 +7,12 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # echo -n "What would you like the hostname to be? [$HOSTNAME]: "
 # read -r COMPUTER_NAME
 # if [ ! -z "$COMPUTER_NAME" ]; then
@@ -29,6 +35,9 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Hide language menu in the top right corner of the boot screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool false
 
 # Enable the automatic update check
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
@@ -133,7 +142,10 @@ defaults write com.googlecode.iterm2 "Default Bookmark Guid" EA52A580-F90D-4F81-
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable local Time Machine backups
-sudo tmutil disablelocal
+hash tmutil &> /dev/null && sudo tmutil disablelocal
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
 
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
@@ -142,10 +154,10 @@ defaults write com.apple.dock persistent-apps -array
 
 # Add only applications we care about to the dock
 dock_apps=(
-  "/Applications/Launchpad.app"
-  "/Applications/Mail.app"
-  "/Applications/Calendar.app"
-  "/Applications/System Preferences.app"
+  "/System/Applications/Launchpad.app"
+  "/System/Applications/Mail.app"
+  "/System/Applications/Calendar.app"
+  "/System/Applications/System Preferences.app"
   "/Applications/iTerm.app"
   "/Applications/Google Chrome.app"
   "/Applications/Slack.app"
