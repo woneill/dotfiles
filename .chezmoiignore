@@ -1,6 +1,7 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash
+.ansible
 .asdf
 .awsume
 .bash_history

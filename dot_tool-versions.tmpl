@@ -1,13 +1,16 @@
 direnv 2.21.2
 golang 1.13.8 system
-helm 2.16.7 system
+helm 3.2.4
 kubectl system
 kubetail 1.6.9
 nodejs system
+{{ if eq .category "RechargeApps" -}}
+poetry 1.0.9
+{{ end -}}
 python system
 ruby system
 {{ if eq .category "RechargeApps" -}}
-terraform 0.12.18
+terraform 0.12.24
 {{ else -}}
 terraform 0.12.26
 {{ end -}}

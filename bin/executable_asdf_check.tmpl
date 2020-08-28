@@ -2,6 +2,8 @@
 {{- $expected_plugins := "" -}}
 {{ if eq .category "home" -}}
 {{- $expected_plugins = $expected_plugins_default | sortAlpha -}}
+{{ else if eq .category "RechargeApps" -}}
+{{- $expected_plugins = concat $expected_plugins_default ( list "poetry") | uniq | sortAlpha -}}
 {{ else -}}
 {{- $expected_plugins = $expected_plugins_default | sortAlpha -}}
 {{ end -}}

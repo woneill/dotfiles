@@ -97,6 +97,9 @@ brew "unison"
 {{ if eq .category "home" -}}
 brew "unrar"
 {{ end -}}
+{{ if eq .category "RechargeApps" -}}
+brew "vault"
+{{ end -}}
 brew "vim"
 brew "watch"
 brew "wget"
@@ -118,9 +121,6 @@ cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
-{{ if eq .category "RechargeApps" -}}
-cask "avira-antivirus"
-{{ end -}}
 {{ if eq .category "home" -}}
 cask "calibre"
 {{ end -}}
@@ -135,6 +135,7 @@ cask "font-hack-nerd-font"
 cask "font-iosevka-nerd-font"
 cask "font-menlo-for-powerline"
 cask "google-chrome"
+cask "google-cloud-sdk"
 {{ if eq .category "RechargeApps" -}}
 cask "google-drive-file-stream"
 {{ else -}}
@@ -149,7 +150,6 @@ cask "iterm2"
 cask "keepassxc"
 {{ end -}}
 cask "keybase"
-cask "kindlegen"
 {{ if eq .category "RechargeApps" -}}
 cask "lastpass"
 {{ end -}}
@@ -180,8 +180,8 @@ cask "spotify"
 cask "steam"
 cask "supersync"
 cask "transmission"
-cask "tunnelblick"
 {{ end -}}
+cask "tunnelblick"
 cask "visual-studio-code"
 {{ if eq .category "home" -}}
 cask "vlc"
@@ -196,6 +196,7 @@ cask "zoomus"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pocket", id: 568494494
