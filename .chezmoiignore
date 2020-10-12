@@ -6,6 +6,7 @@
 .awsume
 .bash_history
 .berkshelf
+.boto
 .bundle
 .cache
 .chef*
@@ -16,6 +17,7 @@
 .cups
 .docker
 .dokken
+.electron
 .esets
 .filebot/*
 !.filebot/license.txt
@@ -49,6 +51,7 @@
 .terraform.d
 .tfh
 .vagrant.d
+.vault-token
 .vim
 .viminfo
 .vimtags
@@ -61,4 +64,5 @@
 .zgen
 .zoomus
 .zplug
+.zsh_history
 README.md
