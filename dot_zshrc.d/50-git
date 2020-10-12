@@ -1,1 +1,1 @@
-eval "$(hub alias -s)"
+alias git=lab
