@@ -1,1 +1,1 @@
-alias git=lab
+alias git=hub
