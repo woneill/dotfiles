@@ -22,6 +22,7 @@
 .filebot/*
 !.filebot/license.txt
 .gem
+.git-credentials
 .gnupg
 .helm
 .histfile
@@ -58,6 +59,7 @@
 .vs-kubernetes
 .vscode
 .vscode-insiders
+.vscode-server
 .wget-hsts
 .yarnrc
 .zcompdump*
