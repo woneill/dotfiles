@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 # Make sure stdin and stdout are a tty.
 if [ ! -t 0 ] ; then
@@ -79,3 +80,4 @@ term=$(terminal "${version_string}")
 
 # Check if they match what we're looking for. This becomes the return code of the script.
 test "$term" = ITERM2 -a \( "$version" \> "$MIN_VERSION" -o "$version" = "$MIN_VERSION" \)
+{{ end -}}

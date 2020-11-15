@@ -1,1 +1,3 @@
+{{ if eq .chezmoi.os "darwin" -}}
 {{ (onepassword "gist").details.password }}
+{{ end -}}

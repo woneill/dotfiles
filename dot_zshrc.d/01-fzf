@@ -1,1 +1,5 @@
-[ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/fzf
+if command -v fzf &> /dev/null
+then
+    [ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/fzf
+fi
+

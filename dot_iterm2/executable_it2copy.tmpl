@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 trap clean_up EXIT
@@ -76,3 +77,4 @@ printf '1337;Copy=:%s' "$data"
 print_st
 inosc=0
 
+{{ end -}}

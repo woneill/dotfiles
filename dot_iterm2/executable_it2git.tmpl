@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 # This script sets iTerm2 user-defined variables describing the state of the git
 # repo in the current directory.
@@ -104,3 +105,4 @@ else
 fi
 
 
+{{ end -}}

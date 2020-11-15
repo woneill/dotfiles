@@ -4,15 +4,19 @@
 [core]
   autocrlf = input
   safecrlf = true
-  editor = /usr/local/bin/vim
+  editor = vim
   excludesfile = ~/.gitignore_global
+{{ if eq .chezmoi.os "darwin" -}}
   pager = diff-so-fancy | less --tabs=4 -RFX
+{{ end -}}
 [merge]
   tool = opendiff
 [mergetool]
   prompt = false
+{{ if eq .chezmoi.os "darwin" -}}
 [credential]
   helper = osxkeychain
+{{ end -}}
 [filter "media"]
   clean = git media clean %f
   smudge = git media smudge %f
@@ -20,7 +24,9 @@
 [push]
   default = current
 [diff]
+{{ if eq .chezmoi.os "darwin" -}}
   tool = opendiff
+{{ end -}}
   compactionHeuristic = true
 [difftool]
   prompt = false

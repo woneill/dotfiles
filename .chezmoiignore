@@ -66,3 +66,8 @@
 .zplug
 .zsh_history
 README.md
+{{ if ne .chezmoi.os "darwin" -}}
+Library/Application Support
+.filebot
+.iterm2
+{{ end -}}

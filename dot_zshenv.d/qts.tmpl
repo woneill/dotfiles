@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.osRelease.name "QTS" -}}
+path=("/opt/bin" "/opt/sbin" $path /share/CACHEDEV1_DATA/.qpkg/container-station/bin)
+export -U PATH
+
+export TERMINFO=/opt/share/terminfo
+export TERM=xterm
+export TMP=/opt/tmp
+export TEMP=/opt/tmp
+{{ end -}}

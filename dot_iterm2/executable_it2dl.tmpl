@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 if [ $# -lt 1 ]; then
   echo "Usage: $(basename $0) file ..."
@@ -16,3 +17,4 @@ do
     echo File $fn does not exist or is not readable.
   fi
 done
+{{ end -}}

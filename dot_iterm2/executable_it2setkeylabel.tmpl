@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 # tmux requires unrecognized OSC sequences to be wrapped with DCS tmux;
@@ -121,3 +122,4 @@ else
   show_help
   exit 1
 fi
+{{ end -}}

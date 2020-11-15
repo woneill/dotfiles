@@ -1,1 +1,3 @@
+{{ if eq .chezmoi.os "darwin" -}}
 [ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/gpg-agent
+{{ end -}}

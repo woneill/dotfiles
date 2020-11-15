@@ -1,6 +1,8 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
 SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket) || true
 export SSH_AUTH_SOCK
 
 gpgconf --launch gpg-agent
+{{ end -}}
