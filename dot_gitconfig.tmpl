@@ -6,15 +6,15 @@
   safecrlf = true
   editor = vim
   excludesfile = ~/.gitignore_global
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if eq .chezmoi.os "darwin" }}
   pager = diff-so-fancy | less --tabs=4 -RFX
-{{ end -}}
-{{ if eq .chezmoi.os "darwin" -}}
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
 [merge]
   tool = opendiff
 [mergetool]
   prompt = false
-{{ end -}}
+{{- end }}
 [credential]
   helper = {{ if eq .chezmoi.os "darwin" }}osxkeychain{{ else }}store{{ end }}
 [filter "media"]
@@ -24,7 +24,9 @@
 [push]
   default = current
 [diff]
-{{- if eq .chezmoi.os "darwin" }}  tool = opendiff{{ end }}
+{{- if eq .chezmoi.os "darwin" }}
+  tool = opendiff
+{{- end }}
   compactionHeuristic = true
 [difftool]
   prompt = false

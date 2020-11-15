@@ -9,15 +9,11 @@ Plugin 'gmarik/Vundle.vim'
 
 " My Plugins
 Plugin 'ervandew/supertab'
-{{ if ne .chezmoi.osRelease.name "QTS" -}}
-Plugin 'SirVer/ultisnips'
-{{ end -}}
+" Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'w0rp/ale'
 Plugin 'godlygeek/tabular'
-{{ if ne .chezmoi.osRelease.name "QTS" -}}
-Plugin 'taglist.vim'
-{{ end -}}
+" Plugin 'taglist.vim'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-haml'
@@ -28,9 +24,7 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'xolox/vim-misc'
-{{ if ne .chezmoi.osRelease.name "QTS" -}}
-Plugin 'easytags.vim'
-{{ end -}}
+" Plugin 'easytags.vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'pearofducks/ansible-vim'
