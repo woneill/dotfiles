@@ -1,7 +1,12 @@
+{{- $kubectl_version := "system" -}}
+{{- if eq .category "RechargeApps" -}}
+{{- $kubectl_version = "1.19.3" -}}
+{{- end -}}
 direnv 2.21.2
 golang 1.13.8 system
-helm 3.2.4
-kubectl system
+helm 3.4.0
+helmfile system
+kubectl {{ $kubectl_version }}
 kubetail 1.6.9
 nodejs system
 {{ if eq .category "RechargeApps" -}}
@@ -9,12 +14,8 @@ poetry 1.0.9
 {{ end -}}
 python system
 ruby system
-{{ if eq .category "RechargeApps" -}}
-terraform 0.12.24
-{{ else -}}
-terraform 0.12.26
-{{ end -}}
-terraformer 0.8.7
-terraform-docs v0.9.1
-tflint 0.20.2
-tfsec 0.21.0
+terraform 0.12.29
+terraformer 0.8.9
+terraform-docs v0.10.1
+tflint 0.20.3
+tfsec 0.36.2
