@@ -18,7 +18,6 @@ brew "autoconf"
 brew "asdf"
 brew "xz"
 brew "awscli"
-brew "awsume"
 {{ if eq .category "home" -}}
 brew "circleci"
 {{ end -}}
@@ -26,7 +25,6 @@ brew "p7zip"
 brew "chezmoi"
 brew "cookiecutter"
 brew "coreutils"
-brew "csshx"
 brew "ctags"
 brew "curl"
 brew "diff-so-fancy"
@@ -48,7 +46,6 @@ brew "gnu-getopt"
 brew "gnu-sed"
 brew "gnu-tar"
 brew "gnutls"
-brew "ipcalc"
 brew "libgcrypt"
 brew "gnupg"
 brew "go"
@@ -61,7 +58,6 @@ brew "hub"
 brew "hugo"
 brew "oniguruma"
 brew "jq"
-brew "jrnl"
 brew "node"
 brew "jsonlint"
 brew "krew"
@@ -83,9 +79,7 @@ brew "pandoc"
 brew "pinentry-mac"
 brew "pipenv"
 brew "pre-commit"
-brew "proselint"
 brew "pstree"
-brew "pv"
 brew "ruby-build"
 brew "ruby"
 brew "ruby-install"
@@ -94,14 +88,9 @@ brew "shfmt"
 brew "siege"
 brew "socat"
 brew "sops"
-brew "svg2png"
-brew "terminal-notifier"
 brew "the_silver_searcher"
 brew "tree"
 brew "unison"
-{{ if eq .category "home" -}}
-brew "unrar"
-{{ end -}}
 {{ if eq .category "RechargeApps" -}}
 brew "vault"
 {{ end -}}
@@ -133,7 +122,6 @@ cask "calibre"
 cask "dash"
 cask "docker"
 {{ if eq .category "home" -}}
-cask "epic-games"
 cask "filebot"
 {{ end -}}
 cask "font-hack"
@@ -143,21 +131,16 @@ cask "font-menlo-for-powerline"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-drive-file-stream"
-cask "grammarly"
 {{ if eq .category "home" -}}
 cask "handbrake"
 {{ end -}}
 cask "iterm2"
-{{ if eq .category "home" -}}
-cask "keepassxc"
-{{ end -}}
 cask "keybase"
 {{ if eq .category "RechargeApps" -}}
 cask "lastpass"
 {{ end -}}
 cask "licecap"
 {{ if eq .category "home" -}}
-cask "logitech-myharmony"
 cask "makemkv"
 {{ end -}}
 cask "meld"
@@ -167,33 +150,25 @@ cask "musicbrainz-picard"
 cask "ngrok"
 cask "notion"
 cask "osxfuse"
-cask "paw"
 {{ if eq .category "RechargeApps" -}}
 cask "plantronics-hub"
 {{ end -}}
 cask "pocket-casts"
-cask "postman"
 cask "rescuetime"
 cask "skitch"
 cask "slack"
 cask "spectacle"
 cask "spotify"
-{{ if eq .category "home" -}}
-cask "steam"
-cask "transmission"
-{{ end -}}
 cask "tunnelblick"
 cask "visual-studio-code"
 {{ if eq .category "home" -}}
 cask "vlc"
 {{ end -}}
 cask "wireshark"
-cask "wkhtmltopdf"
-cask "xquartz"
 cask "yubico-authenticator"
 cask "yubico-yubikey-manager"
 cask "yubico-yubikey-personalization-gui"
-cask "zoomus"
+cask "zoom"
 {{ if eq .category "home" -}}
 mas "CleanMyDrive 2", id: 523620159
 {{ end -}}
