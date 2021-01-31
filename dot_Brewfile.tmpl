@@ -12,15 +12,11 @@ tap "johanhaleby/kubetail"
 tap "martido/graph"
 tap "minamijoyo/tfmigrate"
 tap "minamijoyo/tfupdate"
-tap "zaquestion/tap"
 brew "arping"
 brew "autoconf"
 brew "asdf"
 brew "xz"
 brew "awscli"
-{{ if eq .category "home" -}}
-brew "circleci"
-{{ end -}}
 brew "p7zip"
 brew "chezmoi"
 brew "cookiecutter"
@@ -33,7 +29,6 @@ brew "dockutil"
 brew "dos2unix"
 brew "freetype"
 brew "fontconfig"
-brew "ffmpeg"
 brew "fzf"
 brew "gd"
 brew "gettext"
@@ -75,7 +70,6 @@ brew "mysql"
 {{ end -}}
 brew "nmap"
 brew "openssh"
-brew "pandoc"
 brew "pinentry-mac"
 brew "pipenv"
 brew "pre-commit"
@@ -106,7 +100,6 @@ brew "youtube-dl"
 {{ end -}}
 brew "yq"
 brew "yubico-piv-tool"
-brew "zaquestion/tap/lab"
 brew "zsh"
 brew "zsh-completions"
 brew "goreleaser/tap/goreleaser"
@@ -139,12 +132,8 @@ cask "keybase"
 {{ if eq .category "RechargeApps" -}}
 cask "lastpass"
 {{ end -}}
-cask "licecap"
 {{ if eq .category "home" -}}
 cask "makemkv"
-{{ end -}}
-cask "meld"
-{{ if eq .category "home" -}}
 cask "musicbrainz-picard"
 {{ end -}}
 cask "ngrok"
