@@ -2,8 +2,10 @@
 {{- $category := promptString "Category: [home, work]" -}}
 {{- $github_oauth_token := promptString "GitHub Oauth Token" -}}
 {{- $aws_account_number := promptString "AWS Account Number" -}}
+{{- $ansible_repo_path := promptString "Ansible repository path" -}}
 [data]
   email = "{{ $email }}"
   category = "{{ $category }}"
   github_oauth_token = "{{ $github_oauth_token }}"
   aws_account_number = "{{ $aws_account_number }}"
+  ansible_repo_path = "{{ $ansible_repo_path }}"
