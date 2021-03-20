@@ -22,9 +22,9 @@ brew list mas &>/dev/null || {
 }
 
 # Is 1password-cli installed?
-brew cask list 1password-cli &>/dev/null || {
+brew list --cask 1password-cli &>/dev/null || {
   echo "==> Installing 1password-cli…"
-  brew cask install 1password-cli
+  brew install --cask 1password-cli
 }
 {{ end -}}
 {{ if eq .chezmoi.os "android" -}}
