@@ -1,5 +1,5 @@
-{{- $release_name := get . "chezmoi.osRelease.name" -}}
-{{- if eq $release_name "QTS" -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{-   if eq .chezmoi.osRelease.id "qts" -}}
 path=("/opt/bin" "/opt/sbin" $path /share/CACHEDEV1_DATA/.qpkg/container-station/bin)
 export -U PATH
 
@@ -7,4 +7,5 @@ export TERMINFO=/opt/share/terminfo
 export TERM=xterm
 export TMP=/opt/tmp
 export TEMP=/opt/tmp
-{{ end -}}
+{{- end -}}
+{{- end -}}
