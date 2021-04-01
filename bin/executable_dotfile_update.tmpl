@@ -3,7 +3,7 @@
 set -e
 
 echo "==> Modified files in this repo..."
-chezmoi source status
+chezmoi git status
 
 {{ if eq .chezmoi.os "darwin" -}}
 echo "==> Brew status..."
