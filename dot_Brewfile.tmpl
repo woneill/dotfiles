@@ -19,6 +19,9 @@ brew "xz"
 brew "awscli"
 brew "p7zip"
 brew "chezmoi"
+{{ if eq .category "RechargeApps" -}}
+brew "cloud-nuke"
+{{ end -}}
 brew "cookiecutter"
 brew "coreutils"
 brew "ctags"
@@ -27,6 +30,7 @@ brew "diff-so-fancy"
 brew "direnv"
 brew "dockutil"
 brew "dos2unix"
+brew "entr"
 brew "freetype"
 brew "fontconfig"
 brew "fzf"
@@ -56,7 +60,9 @@ brew "oniguruma"
 brew "jq"
 brew "node"
 brew "jsonlint"
+brew "kind"
 brew "krew"
+brew "kubectx"
 {{ if eq .category "RechargeApps" -}}
 brew "lastpass-cli"
 {{ end -}}
@@ -78,6 +84,9 @@ brew "pstree"
 brew "ruby-build"
 brew "ruby"
 brew "ruby-install"
+{{ if eq .category "RechargeApps" -}}
+brew "saml2aws"
+{{ end -}}
 brew "shellcheck"
 brew "shfmt"
 brew "siege"
@@ -135,6 +144,9 @@ cask "lastpass"
 {{ end -}}
 {{ if eq .category "home" -}}
 cask "makemkv"
+{{ end -}}
+cask "micro-snitch"
+{{ if eq .category "home" -}}
 cask "musicbrainz-picard"
 {{ end -}}
 cask "ngrok"

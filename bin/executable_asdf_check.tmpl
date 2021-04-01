@@ -1,4 +1,4 @@
-{{- $expected_plugins_default := list "direnv" "helm" "helm-docs" "helmfile" "java" "kubectl" "maven" "nodejs" "python" "ruby" "terraform" "terraform-docs" "terraformer|https://github.com/grimoh/asdf-terraformer.git" "tflint" "tfsec" -}}
+{{- $expected_plugins_default := list "direnv" "hadolint" "helm" "helm-docs" "helmfile" "java" "kubectl" "maven" "nodejs" "python" "ruby" "terraform" "terraform-docs" "terraformer|https://github.com/grimoh/asdf-terraformer.git" "tflint" "tfsec" -}}
 {{- $expected_plugins := "" -}}
 {{ if eq .category "home" -}}
 {{- $expected_plugins = $expected_plugins_default | sortAlpha -}}

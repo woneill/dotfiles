@@ -49,6 +49,7 @@
 .rbenv
 .siege
 .ssh
+.skaffold
 .terraform.d
 .tfh
 .vagrant.d
