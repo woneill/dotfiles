@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.theben.monitorjumper</string>
+	<key>connections</key>
+	<dict>
+		<key>4EEA1853-3B58-47A6-A74A-402079F5D0C7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>33D30A83-7373-4B1A-ADC9-B106BB5E5580</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>BFC4080B-B898-4D02-BB83-75FEF2570C05</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>33D30A83-7373-4B1A-ADC9-B106BB5E5580</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>The_Ben</string>
+	<key>description</key>
+	<string>Move the top-most window between monitors with ease.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>MonitorJumper</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Finder"	set _bounds to bounds of window of desktop	set _width to item 3 of _bounds	end tell	set left_width to _width / 2	tell application "System Events"		tell (first process whose frontmost is true)			tell first window				set {x, y} to (get position)				if x &lt; left_width then					set position to {x + left_width, y}				else					set position to {x - left_width, y}				end if			end tell		end tell	end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>33D30A83-7373-4B1A-ADC9-B106BB5E5580</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BFC4080B-B898-4D02-BB83-75FEF2570C05</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>jump</string>
+				<key>text</key>
+				<string>Move the top-most window to your other monitor(s).</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4EEA1853-3B58-47A6-A74A-402079F5D0C7</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>33D30A83-7373-4B1A-ADC9-B106BB5E5580</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>4EEA1853-3B58-47A6-A74A-402079F5D0C7</key>
+		<dict>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>BFC4080B-B898-4D02-BB83-75FEF2570C05</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
