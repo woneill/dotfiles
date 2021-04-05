@@ -16,6 +16,10 @@ These will be installed via the [run_once_install-packages.sh.tmpl](run_once_ins
 * [mas-cli](https://github.com/argon/mas) is used for installing Mac App Store applications.
 * Xcode
 
+[Alfred](https://www.alfredapp.com/) and [Dash](https://kapeli.com/dash) are also synced but require manual configuation after the initial sync:
+* Dash sync folder is ~/.dash
+* Alfred sync folder is ~/.alfred-sync
+
 ### Linux
 
 No pre-requisites
@@ -65,3 +69,4 @@ git push
 ## Exit from spawned shell
 exit
 ```
+
