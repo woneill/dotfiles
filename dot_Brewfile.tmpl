@@ -1,4 +1,5 @@
 {{ if eq .chezmoi.os "darwin" -}}
+tap "filippo.io/age", "https://filippo.io/age"
 tap "goreleaser/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -12,6 +13,7 @@ tap "johanhaleby/kubetail"
 tap "martido/graph"
 tap "minamijoyo/tfmigrate"
 tap "minamijoyo/tfupdate"
+brew "age"
 brew "arping"
 brew "autoconf"
 brew "asdf"
@@ -66,7 +68,7 @@ brew "kubectx"
 {{ if eq .category "RechargeApps" -}}
 brew "lastpass-cli"
 {{ end -}}
-brew "m-cli"
+brew "m-cli", link: false
 brew "mas"
 brew "mdcat"
 brew "minamijoyo/tfmigrate/tfmigrate"
