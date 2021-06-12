@@ -9,7 +9,7 @@
 {{ end -}}
 #!/usr/bin/env zsh
 
-command -v asdf >/dev/null 2>&1 && {
+if command -v asdf >/dev/null 2>&1; then
     typeset -A a2
     for k in $(asdf plugin list); do
         a2[$k]=1
@@ -26,4 +26,4 @@ command -v asdf >/dev/null 2>&1 && {
     if [ ! -z "${(k)a2}" ]; then
         echo "ASDF plugins installed but not expected: ${(k)a2}"
     fi
-}
+fi
