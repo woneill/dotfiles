@@ -2,20 +2,21 @@
 {{- if eq .category "RechargeApps" -}}
 {{- $kubectl_version = "1.19.3" -}}
 {{- end -}}
-direnv 2.21.2
-golang 1.13.8 system
-helm 3.4.0
-helmfile system
+direnv 2.28.0
+golang 1.16.6
+golangci-lint 1.41.1
+hadolint v2.6.0
+helm 3.6.3
+helm-docs 1.5.0
+helmfile 0.140.0
+java system
 kubectl {{ $kubectl_version }}
-kubetail 1.6.9
-nodejs system
+maven system
+nodejs 16.6.1
 {{ if eq .category "RechargeApps" -}}
 poetry 1.0.9
 {{ end -}}
 python system
 ruby system
-terraform 0.12.29
-terraformer 0.8.11
-terraform-docs v0.10.1
-tflint 0.20.3
-tfsec 0.36.2
+skaffold 1.29.0
+terraformer 0.8.15

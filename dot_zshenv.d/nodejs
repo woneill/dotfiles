@@ -1,0 +1,2 @@
+# Yes, this isn't ideal but otherwise we'd need to install gpg
+export NODEJS_CHECK_SIGNATURES=no
