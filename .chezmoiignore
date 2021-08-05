@@ -25,6 +25,8 @@
 .gem
 .git-credentials
 .gnupg
+.google_libcloud_auth.*
+.gsutil
 .helm
 .histfile
 .inspec
@@ -48,6 +50,7 @@
 .pylint.d
 .python_history
 .rbenv
+.saml2aws*
 .siege
 .ssh
 .skaffold
@@ -58,6 +61,7 @@
 .vim
 .viminfo
 .vimtags
+.virtualenvs
 .vs-kubernetes
 .vscode
 .vscode-insiders
@@ -69,6 +73,7 @@
 .zoomus
 .zplug
 .zsh_history
+.zsh_sessions
 README.md
 {{ if ne .chezmoi.os "darwin" -}}
 Library/Application Support
