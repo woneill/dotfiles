@@ -63,7 +63,7 @@
 			<key>GoogleCloudPlatform/terraformer</key>
 			<dict>
 				<key>date</key>
-				<date>2021-07-17T15:26:50Z</date>
+				<date>2021-07-30T20:16:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -72,6 +72,20 @@
 					<string>github</string>
 					<key>uniqueIdentifier</key>
 					<string>GoogleCloudPlatform/terraformer</string>
+				</dict>
+			</dict>
+			<key>hashicorp/terraform-provider-google</key>
+			<dict>
+				<key>date</key>
+				<date>2021-08-04T20:39:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>hashicorp/terraform-provider-google</string>
+					<key>platform</key>
+					<string>github</string>
+					<key>uniqueIdentifier</key>
+					<string>hashicorp/terraform-provider-google</string>
 				</dict>
 			</dict>
 			<key>hashicorp/terraform-provider-helm</key>
@@ -102,10 +116,24 @@
 					<string>hashicorp/terraform-provider-kubernetes</string>
 				</dict>
 			</dict>
+			<key>hashicorp/terraform-provider-vault</key>
+			<dict>
+				<key>date</key>
+				<date>2021-08-02T20:17:07Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>hashicorp/terraform-provider-vault</string>
+					<key>platform</key>
+					<string>github</string>
+					<key>uniqueIdentifier</key>
+					<string>hashicorp/terraform-provider-vault</string>
+				</dict>
+			</dict>
 			<key>pypa/pipenv</key>
 			<dict>
 				<key>date</key>
-				<date>2021-07-15T18:13:07Z</date>
+				<date>2021-08-03T20:16:55Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -116,10 +144,13 @@
 					<string>pypa/pipenv</string>
 				</dict>
 			</dict>
+		</dict>
+		<key>uninstalled</key>
+		<dict>
 			<key>terraform-docs/terraform-docs</key>
 			<dict>
 				<key>date</key>
-				<date>2021-07-15T18:13:17Z</date>
+				<date>2021-04-12T13:19:07Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -133,7 +164,7 @@
 			<key>terraform-providers/terraform-provider-google</key>
 			<dict>
 				<key>date</key>
-				<date>2021-07-17T15:29:45Z</date>
+				<date>2021-04-12T13:24:51Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -147,7 +178,7 @@
 			<key>terraform-providers/terraform-provider-vault</key>
 			<dict>
 				<key>date</key>
-				<date>2021-07-15T18:13:02Z</date>
+				<date>2021-04-12T13:25:17Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -159,8 +190,6 @@
 				</dict>
 			</dict>
 		</dict>
-		<key>uninstalled</key>
-		<dict/>
 	</dict>
 	<key>DHGoRepo</key>
 	<dict>
@@ -240,10 +269,13 @@
 					<string>Google_Cloud_Client-Python</string>
 				</dict>
 			</dict>
+		</dict>
+		<key>uninstalled</key>
+		<dict>
 			<key>Terraform</key>
 			<dict>
 				<key>date</key>
-				<date>2021-06-29T01:36:15Z</date>
+				<date>2021-04-12T13:17:28Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -261,8 +293,6 @@
 				</dict>
 			</dict>
 		</dict>
-		<key>uninstalled</key>
-		<dict/>
 	</dict>
 	<key>actuallyDarkWebView</key>
 	<true/>
@@ -439,7 +469,31 @@
 	<key>versionedDHUserRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>Terraform</key>
+			<dict>
+				<key>0.12.29</key>
+				<dict>
+					<key>date</key>
+					<date>2021-04-12T13:16:55Z</date>
+					<key>entry</key>
+					<dict>
+						<key>aliases</key>
+						<array/>
+						<key>authorLinkHref</key>
+						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Terraform#readme</string>
+						<key>authorLinkText</key>
+						<string>rolandjohann</string>
+						<key>name</key>
+						<string>Terraform</string>
+						<key>platform</key>
+						<string>usercontribTerraform</string>
+						<key>uniqueIdentifier</key>
+						<string>Terraform</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
