@@ -1,7 +1,6 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash
-.alfred-sync/Alfred.alfredpreferences/workflows/user.workflow.68396260-F9F2-414C-8C94-481FA4B1A040/dash_keyword_*.png
 .ansible
 .asdf
 .awsume
@@ -78,8 +77,7 @@
 README.md
 {{ if ne .chezmoi.os "darwin" -}}
 Library/Application Support
-.alfred-sync
-.dash
 .filebot
 .iterm2
+.iterm2_shell_integration.zsh
 {{ end -}}

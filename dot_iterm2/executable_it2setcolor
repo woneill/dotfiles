@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 open=0
 
@@ -115,4 +114,3 @@ fi
 
 exit 0
 
-{{ end -}}

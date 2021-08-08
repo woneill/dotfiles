@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 trap clean_up EXIT
@@ -97,4 +96,3 @@ else
   die "Unknown status: $status" 1>& 2
 fi
 
-{{ end -}}
