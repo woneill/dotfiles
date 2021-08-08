@@ -18,6 +18,7 @@
 .cups
 .docker
 .dokken
+.dropbox
 .electron
 .esets
 .filebot/*
