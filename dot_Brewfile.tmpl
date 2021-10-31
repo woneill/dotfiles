@@ -23,9 +23,6 @@ brew "xz"
 brew "awscli"
 brew "p7zip"
 brew "chezmoi"
-{{ if eq .category "RechargeApps" -}}
-brew "cloud-nuke"
-{{ end -}}
 brew "cookiecutter"
 brew "coreutils"
 brew "ctags"
@@ -61,20 +58,14 @@ brew "mdcat"
 brew "minamijoyo/tfmigrate/tfmigrate"
 brew "minamijoyo/tfupdate/tfupdate"
 brew "minikube"
-{{ if eq .category "RechargeApps" -}}
-brew "protobuf"
-brew "mysql"
-{{ end -}}
 brew "nmap"
 brew "openssh"
 brew "pipenv"
 brew "pre-commit"
 brew "pstree"
+brew "pwgen"
 brew "ruby-build"
 brew "ruby-install"
-{{ if eq .category "RechargeApps" -}}
-brew "saml2aws"
-{{ end -}}
 brew "shellcheck"
 brew "shfmt"
 brew "siege"
@@ -84,9 +75,6 @@ brew "stern"
 brew "the_silver_searcher"
 brew "tree"
 brew "unison"
-{{ if eq .category "RechargeApps" -}}
-brew "vault"
-{{ end -}}
 brew "vim"
 brew "watch"
 brew "wget"
@@ -129,9 +117,6 @@ cask "hammerspoon"
 cask "iterm2"
 cask "keybase"
 cask "kap"
-{{ if eq .category "RechargeApps" -}}
-cask "lastpass"
-{{ end -}}
 {{ if eq .category "home" -}}
 cask "makemkv"
 {{ end -}}
@@ -146,7 +131,7 @@ cask "ngrok"
 cask "notion"
 cask "obsidian"
 cask "osxfuse"
-{{ if eq .category "RechargeApps" -}}
+{{ if eq .category "work" -}}
 cask "plantronics-hub"
 {{ end -}}
 cask "plexamp"
@@ -167,13 +152,13 @@ cask "wireshark"
 cask "zoom"
 {{ if eq .category "home" -}}
 mas "CleanMyDrive 2", id: 523620159
-{{ end -}}
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+{{ end -}}
 mas "Pocket", id: 568494494
 {{ if eq .category "home" -}}
 mas "QVR Client", id: 806101067

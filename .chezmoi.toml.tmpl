@@ -10,22 +10,12 @@
 {{- if not $github_oauth_token -}}
 {{-   $github_oauth_token = promptString "GitHub Oauth Token" -}}
 {{- end -}}
-{{- $gitlab_host := get . "gitlab_host" -}}
-{{- if not $gitlab_host -}}
-{{-   $gitlab_host = promptString "Gitlab host (normally gitlab.com)" -}}
-{{- end -}}
 {{- $aws_account_number := get . "aws_account_number" -}}
 {{- if not $aws_account_number -}}
 {{-   $aws_account_number = promptString "AWS Account Number" -}}
-{{- end -}}
-{{- $ansible_repo_path := get . "ansible_repo_path" -}}
-{{- if not $ansible_repo_path -}}
-{{-   $ansible_repo_path = promptString "Ansible repository path" -}}
 {{- end -}}
 [data]
   email = "{{ $email }}"
   category = "{{ $category }}"
   github_oauth_token = "{{ $github_oauth_token }}"
-  gitlab_host = "{{ $gitlab_host }}"
   aws_account_number = "{{ $aws_account_number }}"
-  ansible_repo_path = "{{ $ansible_repo_path }}"

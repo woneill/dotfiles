@@ -1,6 +1,0 @@
-{{- if (index . "ansible_repo_path") -}}
-if command -v ansible-ssh &> /dev/null
-then
-    alias ansible-ssh='_ansible-ssh() { (cd {{ .ansible_repo_path }}; command ansible-ssh "$@")}; _ansible-ssh'
-fi
-{{ end -}}
