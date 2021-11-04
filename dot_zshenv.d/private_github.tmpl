@@ -1,1 +1,3 @@
-export GITHUB_TOKEN={{ .github_oauth_token }}
+{{- if .github_enterprise_host -}}
+export GITHUB_HOST={{ .github_enterprise_host }}
+{{- end }}

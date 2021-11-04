@@ -34,6 +34,9 @@
   enabled = true
 [hub]
   protocol = https
+{{- if .github_enterprise_host }}
+  host = {{ .github_enterprise_host }}
+{{- end }}
 [color]
   ui = true
 [color "diff-highlight"]

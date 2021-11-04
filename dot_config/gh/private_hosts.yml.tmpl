@@ -1,0 +1,6 @@
+{{- if .github_enterprise_host }}
+{{ .github_enterprise_host }}:
+    oauth_token: {{ .github_enterprise_oauth_token }}
+{{- end }}
+github.com:
+    {{ .github_oauth_token }}
