@@ -1,0 +1,9 @@
+{{ if eq .category "work" -}}
+"bin/smproxy.sh":
+  type: "file"
+  url: "https://code.corp.surveymonkey.com/raw/ACMe/ssh_proxy/master/smproxy.sh"
+  executable: true
+".ssh/config.d/sm-proxy":
+  type: "file"
+  url: "https://code.corp.surveymonkey.com/raw/ACMe/ssh_proxy/master/config"
+{{- end }}

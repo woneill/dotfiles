@@ -19,6 +19,7 @@ brew "age"
 brew "arping"
 brew "autoconf"
 brew "asdf"
+brew "sqlite"
 brew "xz"
 brew "awscli"
 brew "p7zip"
@@ -47,7 +48,9 @@ brew "gnu-tar"
 brew "graphviz"
 brew "htop"
 brew "hub"
+{{ if eq .category "home" -}}
 brew "hugo"
+{{ end -}}
 brew "oniguruma"
 brew "jq"
 brew "kind"
@@ -84,6 +87,7 @@ brew "yamllint"
 brew "youtube-dl"
 {{ end -}}
 brew "yq"
+brew "zlib"
 brew "zsh"
 brew "zsh-completions"
 brew "fujiwara/tap/tfstate-lookup"
@@ -91,7 +95,9 @@ brew "goreleaser/tap/goreleaser"
 brew "instrumenta/instrumenta/kubeval"
 brew "johanhaleby/kubetail/kubetail"
 brew "robscott/tap/kube-capacity"
+{{ if ne .category "work" -}}
 cask "1password"
+{{ end -}}
 cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
@@ -100,15 +106,17 @@ cask "calibre"
 {{ end -}}
 cask "dash"
 cask "docker"
-cask "dropbox"
 {{ if eq .category "home" -}}
+cask "dropbox"
 cask "filebot"
 {{ end -}}
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-iosevka-nerd-font"
 cask "font-menlo-for-powerline"
+{{ if ne .category "work" -}}
 cask "google-chrome"
+{{ end -}}
 cask "google-cloud-sdk"
 cask "google-drive"
 {{ if eq .category "home" -}}
@@ -116,7 +124,9 @@ cask "handbrake"
 {{ end -}}
 cask "hammerspoon"
 cask "iterm2"
+{{ if eq .category "home" -}}
 cask "keybase"
+{{ end -}}
 cask "kap"
 {{ if eq .category "home" -}}
 cask "makemkv"
@@ -138,28 +148,36 @@ cask "plantronics-hub"
 cask "plexamp"
 cask "pocket-casts"
 cask "rescuetime"
+{{ if eq .category "home" -}}
 cask "signal"
+{{ end -}}
 cask "skitch"
+{{ if ne .category "work" -}}
 cask "slack"
+{{ end -}}
 cask "spectacle"
 cask "spotify"
+{{ if ne .category "work" -}}
 cask "tunnelblick"
+{{ end -}}
 cask "typora"
 cask "visual-studio-code"
 {{ if eq .category "home" -}}
 cask "vlc"
 {{ end -}}
 cask "wireshark"
+{{ if ne .category "work" -}}
 cask "zoom"
+{{ end -}}
 {{ if eq .category "home" -}}
 mas "CleanMyDrive 2", id: 523620159
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 {{ end -}}
+mas "Meeter", id: 1510445899
 mas "Pocket", id: 568494494
 {{ if eq .category "home" -}}
 mas "QVR Client", id: 806101067
