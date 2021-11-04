@@ -1,0 +1,17 @@
+Host tvs-871
+    ForwardAgent yes
+{{- if ne .category "home" }}
+    IdentityFile ~/.ssh/id_rsa_home
+{{- end }}
+
+{{ if eq .category "home" -}}
+Host kindle
+    User root
+    Hostname KindlePaperwhite
+    Port 2222
+    PubkeyAcceptedKeyTypes +ssh-rsa
+
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+{{ end -}}

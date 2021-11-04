@@ -52,8 +52,8 @@
 .rbenv
 .saml2aws*
 .siege
-.ssh
 .skaffold
+.ssh/known_hosts
 .terraform.d
 .tfh
 .vagrant.d
