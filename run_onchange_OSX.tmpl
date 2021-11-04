@@ -1,6 +1,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
+# ~/.Brewfile hash: {{ include "dot_Brewfile.tmpl" | sha256sum }}
 if [ -f "${HOME}/.Brewfile" ]; then
     brew update
 

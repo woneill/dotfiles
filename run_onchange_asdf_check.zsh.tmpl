@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# ~/bin/asdf_check hash: {{ include "bin/executable_asdf_check.tmpl" | sha256sum }}
+if [ -x ~/bin/asdf_check ]; then
+    ~/bin/asdf_check
+fi
