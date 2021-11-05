@@ -51,6 +51,7 @@
 .python_history
 .rbenv
 .saml2aws*
+.shared_sync
 .siege
 .skaffold
 .ssh/known_hosts

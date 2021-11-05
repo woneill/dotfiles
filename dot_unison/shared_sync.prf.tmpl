@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "darwin" -}}
+root = {{ .chezmoi.homeDir }}/.shared_sync
+root = ssh://tvs-871/shared_sync
+
+servercmd = ./unison-2.51.4/bin/unison
+{{ end -}}
