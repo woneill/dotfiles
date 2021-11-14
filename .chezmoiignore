@@ -57,6 +57,8 @@
 .ssh/known_hosts
 .terraform.d
 .tfh
+.unison/*
+!.unison/shared_sync.prf
 .vagrant.d
 .vault-token
 .vim
