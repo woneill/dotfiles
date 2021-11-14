@@ -34,6 +34,10 @@
 {{- if not $aws_account_number -}}
 {{-   $aws_account_number = promptString "AWS Account Number" -}}
 {{- end -}}
+{{- $piknik_role := get . "piknik_role" -}}
+{{- if not $piknik_role -}}
+{{-   $piknik_role = promptString "Piknik role (e.g client, server, hybrid)" -}}
+{{- end -}}
 [data]
   home_domain_name = "{{ $home_domain_name }}"
   home_fileserver_hostname = "{{ $home_fileserver_hostname }}"
@@ -43,3 +47,4 @@
   github_enterprise_oauth_token = "{{ $github_enterprise_oauth_token }}"
   github_oauth_token = "{{ $github_oauth_token }}"
   aws_account_number = "{{ $aws_account_number }}"
+  piknik_role = "{{ $piknik_role }}"

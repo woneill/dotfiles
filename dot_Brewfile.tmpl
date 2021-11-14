@@ -64,6 +64,7 @@ brew "minamijoyo/tfupdate/tfupdate"
 brew "minikube"
 brew "nmap"
 brew "openssh"
+brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
 brew "pipenv"
 brew "pre-commit"
 brew "pstree"

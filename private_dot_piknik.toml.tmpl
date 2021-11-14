@@ -1,0 +1,19 @@
+{{- $piknik_server := "127.0.0.1:8075" -}}
+{{- $fileserver := printf "%s.%s:%d" .home_fileserver_hostname .home_domain_name 8075 -}}
+{{- if eq .piknik_role "client" -}}
+{{- $piknik_server = $fileserver -}}
+{{- end -}}
+{{ if eq .piknik_role "client" "hybrid" -}}
+Connect   = "{{ $piknik_server }}"
+{{ end -}}
+{{ if eq .piknik_role "server" "hybrid" -}}
+Listen    = "0.0.0.0:8075"
+{{ end -}}
+Psk       = "{{ (onepasswordItemFields "Piknik").Psk.v }}"
+SignPk    = "{{ (onepasswordItemFields "Piknik").SignPk.v }}"
+{{ if eq .piknik_role "client" "hybrid" -}}
+SignSk    = "{{ (onepasswordItemFields "Piknik").SignSk.v }}"
+{{ end -}}
+{{ if eq .piknik_role "client" "hybrid" -}}
+EncryptSk = "{{ (onepasswordItemFields "Piknik").EncryptSk.v }}"
+{{ end -}}
