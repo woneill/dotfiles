@@ -1,6 +1,7 @@
-Host tvs-871
+Host {{ .home_fileserver_hostname }} {{ list .home_fileserver_hostname .home_domain_name | join "." }}
     ForwardAgent yes
 {{- if ne .category "home" }}
+    Hostname {{ list .home_fileserver_hostname .home_domain_name | join "." }}
     IdentityFile ~/.ssh/id_rsa_home
 {{- end }}
 

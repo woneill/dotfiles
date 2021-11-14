@@ -1,3 +1,11 @@
+{{- $home_domain_name := get . "home_domain_name" -}}
+{{- if not $home_domain_name -}}
+{{-   $home_domain_name = promptString "Home Domain Name (e.g. foo.com)" -}}
+{{- end -}}
+{{- $home_fileserver_hostname := get . "home_fileserver_hostname" -}}
+{{- if not $home_fileserver_hostname -}}
+{{-   $home_fileserver_hostname = promptString "Home Fileserver Hostname (short name)" -}}
+{{- end -}}
 {{- $email := get . "email" -}}
 {{- if not $email -}}
 {{-   $email = promptString "Email" -}}
@@ -27,6 +35,8 @@
 {{-   $aws_account_number = promptString "AWS Account Number" -}}
 {{- end -}}
 [data]
+  home_domain_name = "{{ $home_domain_name }}"
+  home_fileserver_hostname = "{{ $home_fileserver_hostname }}"
   email = "{{ $email }}"
   category = "{{ $category }}"
   github_enterprise_host = "{{ $github_enterprise_host }}"

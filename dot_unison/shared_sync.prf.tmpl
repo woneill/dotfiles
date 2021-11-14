@@ -1,6 +1,10 @@
 {{ if eq .chezmoi.os "darwin" -}}
+{{- $fileserver := .home_fileserver_hostname -}}
+{{- if eq .category "work" -}}
+{{- $fileserver = (list .home_fileserver_hostname .home_domain_name | join ".") -}}
+{{- end -}}
 root = {{ .chezmoi.homeDir }}/.shared_sync
-root = ssh://tvs-871/shared_sync
+root = ssh://{{ $fileserver }}/shared_sync
 
 servercmd = ./unison-2.51.4/bin/unison
 {{ end -}}
