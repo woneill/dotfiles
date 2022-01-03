@@ -8,7 +8,7 @@ helmfile 0.140.0
 java system
 kubectl system
 maven system
-nodejs 16.6.1
+nodejs {{ if eq .category "work" }}14.18.2{{else}}16.6.1{{end}}
 python system
 ruby system
 skaffold 1.29.0

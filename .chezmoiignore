@@ -54,9 +54,11 @@
 .shared_sync
 .siege
 .skaffold
+.smproxy.md5
 .ssh/known_hosts
 .terraform.d
 .tfh
+.tflint.d
 .unison/*
 !.unison/shared_sync.prf
 .vagrant.d
