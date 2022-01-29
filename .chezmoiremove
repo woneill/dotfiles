@@ -1,3 +1,6 @@
 .bash_profile
 .bash_profile.d
 .bashrc
+.zgen/denysdovhan
+.zshrc.d/01-spaceship
+.zshenv.d/spaceship
