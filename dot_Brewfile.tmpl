@@ -44,7 +44,6 @@ brew "gettext"
 brew "gist"
 brew "git"
 brew "git-extras"
-brew "glab"
 brew "glib"
 brew "gnu-getopt"
 brew "gnu-sed"
@@ -154,6 +153,10 @@ cask "plantronics-hub"
 {{ end -}}
 cask "plexamp"
 cask "pocket-casts"
+cask "raindropio"
+{{ if eq .category "home" -}}
+cask "raspberry-pi-imager"
+{{ end -}}
 cask "rescuetime"
 {{ if eq .category "home" -}}
 cask "signal"
@@ -164,7 +167,9 @@ cask "slack"
 {{ end -}}
 cask "spectacle"
 cask "spotify"
+cask "syncthing"
 {{ if ne .category "work" -}}
+cask "steam"
 cask "tunnelblick"
 {{ end -}}
 cask "typora"
