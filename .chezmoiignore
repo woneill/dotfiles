@@ -86,3 +86,6 @@ Library/Application Support
 .iterm2
 .iterm2_shell_integration.zsh
 {{ end -}}
+{{ if eq .category "work" -}}
+.aws/config
+{{ end -}}
