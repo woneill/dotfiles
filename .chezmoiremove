@@ -1,6 +1,7 @@
 .bash_profile
 .bash_profile.d
 .bashrc
+.unison/shared_sync.prf
 .zgen/denysdovhan
 .zshrc.d/01-spaceship
 .zshenv.d/spaceship
