@@ -112,9 +112,6 @@ cask "calibre"
 {{ end -}}
 cask "dash"
 cask "docker"
-{{ if eq .category "home" -}}
-cask "dropbox"
-{{ end -}}
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-iosevka-nerd-font"
@@ -189,8 +186,5 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 {{ end -}}
 mas "Meeter", id: 1510445899
-{{ if eq .category "home" -}}
-mas "QVR Client", id: 806101067
-{{ end -}}
 mas "Xcode", id: 497799835
 {{ end -}}
