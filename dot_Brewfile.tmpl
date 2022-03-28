@@ -48,17 +48,24 @@ brew "glib"
 brew "gnu-getopt"
 brew "gnu-sed"
 brew "gnu-tar"
+{{ if eq .category "work" -}}
+brew "go-jira"
+{{ end -}}
 brew "graphviz"
 brew "htop"
 brew "hub"
 {{ if eq .category "home" -}}
 brew "hugo"
 {{ end -}}
+{{ if eq .category "work" -}}
+brew "ical-buddy"
+{{ end -}}
 brew "oniguruma"
 brew "jq"
 brew "kind"
 brew "krew"
 brew "kubectx"
+brew "kubeval"
 brew "kubernetes-cli"
 brew "m-cli"
 brew "mas"
@@ -98,7 +105,6 @@ brew "zsh"
 brew "zsh-completions"
 brew "fujiwara/tap/tfstate-lookup"
 brew "goreleaser/tap/goreleaser"
-brew "instrumenta/instrumenta/kubeval"
 brew "johanhaleby/kubetail/kubetail"
 brew "robscott/tap/kube-capacity"
 {{ if ne .category "work" -}}
@@ -134,7 +140,9 @@ cask "kap"
 cask "makemkv"
 {{ end -}}
 cask "logitech-camera-settings"
+{{ if ne .category "work" -}}
 cask "micro-snitch"
+{{ end -}}
 cask "moom"
 {{ if eq .category "home" -}}
 cask "musicbrainz-picard"
