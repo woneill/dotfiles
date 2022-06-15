@@ -1,0 +1,4 @@
+DefaultBrowser = "CHROME"
+CustomBrowserPath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+LastCheckForUpdates = 0
+Ordering = ""

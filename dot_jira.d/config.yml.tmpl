@@ -1,0 +1,5 @@
+{{ if eq .category "work" -}}
+endpoint: {{ .jira_url }}
+user: {{ .email }}
+password-source: keyring
+{{ end -}}

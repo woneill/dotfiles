@@ -2,42 +2,60 @@
 {{- if not $home_domain_name -}}
 {{-   $home_domain_name = promptString "Home Domain Name (e.g. foo.com)" -}}
 {{- end -}}
+
 {{- $home_fileserver_hostname := get . "home_fileserver_hostname" -}}
 {{- if not $home_fileserver_hostname -}}
 {{-   $home_fileserver_hostname = promptString "Home Fileserver Hostname (short name)" -}}
 {{- end -}}
+
 {{- $email := get . "email" -}}
 {{- if not $email -}}
 {{-   $email = promptString "Email" -}}
 {{- end -}}
+
 {{- $category := get . "category" -}}
 {{- if not $category -}}
 {{-   $category = promptString "Category: [home, work]" -}}
 {{- end -}}
-{{- $github_enterprise_host := get . "github_enterprise_host" -}}
-{{- if not $github_enterprise_host -}}
-{{- if eq .category "work" -}}
-{{-   $github_enterprise_host = promptString "GitHub Enterprise Host" -}}
-{{- end -}}
-{{- end -}}
-{{- $github_enterprise_oauth_token := get . "github_enterprise_oauth_token" -}}
-{{- if not $github_enterprise_oauth_token -}}
-{{- if eq .category "work" -}}
-{{-   $github_enterprise_oauth_token = promptString "GitHub Enterprise Oauth Token" -}}
-{{- end -}}
-{{- end -}}
+
 {{- $github_oauth_token := get . "github_oauth_token" -}}
 {{- if not $github_oauth_token -}}
 {{-   $github_oauth_token = promptString "GitHub Oauth Token" -}}
 {{- end -}}
+
 {{- $aws_account_number := get . "aws_account_number" -}}
 {{- if not $aws_account_number -}}
 {{-   $aws_account_number = promptString "AWS Account Number" -}}
 {{- end -}}
+
 {{- $piknik_role := get . "piknik_role" -}}
 {{- if not $piknik_role -}}
 {{-   $piknik_role = promptString "Piknik role (e.g client, server, hybrid)" -}}
 {{- end -}}
+
+{{- $github_enterprise_host := get . "github_enterprise_host" -}}
+{{- $github_enterprise_oauth_token := get . "github_enterprise_oauth_token" -}}
+{{- $vault_url := get . "vault_url" -}}
+{{- $jira_url := get . "jira_url" -}}
+
+{{- if eq .category "work" -}}
+{{-   if not $github_enterprise_host -}}
+{{-     $github_enterprise_host = promptString "GitHub Enterprise Host" -}}
+{{-   end -}}
+
+{{-   if not $github_enterprise_oauth_token -}}
+{{-     $github_enterprise_oauth_token = promptString "GitHub Enterprise Oauth Token" -}}
+{{-   end -}}
+
+{{-   if not $vault_url -}}
+{{-     $vault_url = promptString "Vault URL" -}}
+{{-   end -}}
+
+{{-   if not $jira_url -}}
+{{-     $jira_url = promptString "JIRA URL" -}}
+{{-   end -}}
+{{- end -}}
+
 [data]
   home_domain_name = "{{ $home_domain_name }}"
   home_fileserver_hostname = "{{ $home_fileserver_hostname }}"
@@ -48,3 +66,5 @@
   github_oauth_token = "{{ $github_oauth_token }}"
   aws_account_number = "{{ $aws_account_number }}"
   piknik_role = "{{ $piknik_role }}"
+  vault_url = "{{ $vault_url }}"
+  jira_url = "{{ $jira_url }}"

@@ -18,7 +18,7 @@
   prompt = false
 {{- end }}
 [credential]
-  helper = {{ if eq .chezmoi.os "darwin" }}osxkeychain{{ else }}store{{ end }}
+  helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager-core{{ else }}store{{ end }}
 [filter "media"]
   clean = git media clean %f
   smudge = git media smudge %f

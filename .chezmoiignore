@@ -2,6 +2,7 @@
 .DS_Store
 .Trash
 .ansible
+.ansible_async
 .asdf
 .awsume
 .bash_history
@@ -26,6 +27,7 @@
 .git-credentials
 .gnupg
 .google_libcloud_auth.*
+.granted/aws_profiles_frecency
 .gsutil
 .helm
 .histfile
@@ -41,6 +43,7 @@
 .m2
 .minikube
 .mysql_history
+.nodenv
 .npm
 .node-gyp
 .op
