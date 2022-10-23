@@ -12,6 +12,12 @@ Host kindle
     Port 2222
     PubkeyAcceptedKeyTypes +ssh-rsa
 
+Host unifi
+    User root
+    Hostname 192.168.1.1
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+
 Host *
     AddKeysToAgent yes
     UseKeychain yes
