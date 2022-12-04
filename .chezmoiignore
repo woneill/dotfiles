@@ -62,8 +62,7 @@
 .terraform.d
 .tfh
 .tflint.d
-.unison/*
-!.unison/shared_sync.prf
+.unison
 .vagrant.d
 .vault-token
 .vim
