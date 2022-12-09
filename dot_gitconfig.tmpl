@@ -65,3 +65,9 @@
   helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager-core{{ else }}store{{ end }}
 [credential "https://dev.azure.com"]
   useHttpPath = true
+{{- if eq .category "work" }}
+{{- if .github_enterprise_host }}
+[credential "https://{{ .github_enterprise_host }}"]
+  provider = github
+{{- end }}
+{{- end }}
