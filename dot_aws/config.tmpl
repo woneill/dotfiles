@@ -1,5 +1,6 @@
 {{ if and (eq .category "home") (eq .chezmoi.os "darwin") -}}
 [default]
+cli_auto_prompt = on-partial
 region=us-east-1
 cli_timestamp_format=iso8601
 mfa_serial = arn:aws:iam::{{ .aws_account_number }}:mfa/woneill
