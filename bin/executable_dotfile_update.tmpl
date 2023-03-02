@@ -17,5 +17,8 @@ echo "==> Stuff in global brewfile but not installed..."
 grep -Fxv -f "$dumpfile" ~/.Brewfile || true
 {{ end -}}
 
+echo "==> ASDF status..."
+~/bin/asdf_check
+
 echo "==> Unmanaged dotfiles that might need to be added..."
 chezmoi unmanaged | sed "s|$HOME/||g" | grep '^\.'
