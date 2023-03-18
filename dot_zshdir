@@ -8,3 +8,7 @@ if [ -d $file ]; then
         source $i
     done
 fi
+
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc" ]; then
+    source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+fi
