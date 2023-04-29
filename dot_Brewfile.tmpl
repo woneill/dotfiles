@@ -36,7 +36,6 @@ brew "entr"
 brew "freetype"
 brew "fontconfig"
 brew "fzf"
-brew "gdk-pixbuf"
 brew "gh"
 brew "gettext"
 brew "gist"
@@ -54,9 +53,6 @@ brew "htop"
 brew "hub"
 {{ if eq .category "home" -}}
 brew "hugo"
-{{ end -}}
-{{ if eq .category "work" -}}
-brew "ical-buddy"
 {{ end -}}
 brew "oniguruma"
 brew "jq"
@@ -113,6 +109,7 @@ cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
 cask "aws-vpn-client"
+cask "barrier"
 {{ if eq .category "home" -}}
 cask "burn"
 cask "calibre"
@@ -140,7 +137,9 @@ cask "kap"
 {{ if eq .category "home" -}}
 cask "makemkv"
 {{ end -}}
+{{ if eq .category "work" -}}
 cask "logitech-camera-settings"
+{{ end -}}
 {{ if ne .category "work" -}}
 cask "micro-snitch"
 {{ end -}}
