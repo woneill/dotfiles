@@ -62,6 +62,8 @@
 [fetch]
   prune = true
 {{- if eq .category "work" }}
+[includeIf "hasconfig:remote.*.url:https://github.com/mntv-*/**"]
+	path = ~/.gitconfig_mntv
 {{- if .github_enterprise_host }}
 [credential "https://{{ .github_enterprise_host }}"]
 	provider = github
