@@ -1,8 +1,13 @@
 .bash_profile
 .bash_profile.d
 .bashrc
+.filebot
+.gist
 .unison/shared_sync.prf
 .zgen/denysdovhan
 .zshrc.d/01-spaceship
 .zshenv.d/spaceship
 .zshenv.d/homebrew
+{{ if ne .category "home" -}}
+.ssh/id_rsa_home
+{{ end -}}

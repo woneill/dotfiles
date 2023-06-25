@@ -1,3 +1,4 @@
+{{ if eq .category "home" -}}
 {{- $piknik_server := "127.0.0.1:8075" -}}
 {{- $fileserver := printf "%s.%s:%d" .home_fileserver_hostname .home_domain_name 8075 -}}
 {{- if eq .piknik_role "client" -}}
@@ -16,4 +17,5 @@ SignSk    = "{{ (onepasswordItemFields "Piknik").SignSk.value }}"
 {{ end -}}
 {{ if eq .piknik_role "client" "hybrid" -}}
 EncryptSk = "{{ (onepasswordItemFields "Piknik").EncryptSk.value }}"
+{{ end -}}
 {{ end -}}

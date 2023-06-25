@@ -71,7 +71,9 @@ brew "netpbm"
 brew "nmap"
 brew "openldap"
 brew "openssh"
+{{ if eq .category "home" -}}
 brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
+{{ end -}}
 brew "pipenv"
 brew "pre-commit"
 brew "pstree"
@@ -104,8 +106,10 @@ brew "goreleaser/tap/goreleaser"
 brew "johanhaleby/kubetail/kubetail"
 brew "kovetskiy/mark/mark"
 brew "robscott/tap/kube-capacity"
+{{ if ne .category "work" -}}
 cask "1password"
 cask "1password-cli"
+{{ end -}}
 cask "adobe-acrobat-reader"
 cask "alfred"
 cask "aws-vpn-client"
