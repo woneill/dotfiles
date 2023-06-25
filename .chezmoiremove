@@ -5,3 +5,4 @@
 .zgen/denysdovhan
 .zshrc.d/01-spaceship
 .zshenv.d/spaceship
+.zshenv.d/homebrew
