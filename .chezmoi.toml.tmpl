@@ -18,11 +18,6 @@
 {{-   $category = promptString "Category: [home, work]" -}}
 {{- end -}}
 
-{{- $github_oauth_token := get . "github_oauth_token" -}}
-{{- if not $github_oauth_token -}}
-{{-   $github_oauth_token = promptString "GitHub Oauth Token" -}}
-{{- end -}}
-
 {{- $aws_account_number := get . "aws_account_number" -}}
 {{- if not $aws_account_number -}}
 {{-   $aws_account_number = promptString "AWS Account Number" -}}
@@ -63,7 +58,6 @@
   category = "{{ $category }}"
   github_enterprise_host = "{{ $github_enterprise_host }}"
   github_enterprise_oauth_token = "{{ $github_enterprise_oauth_token }}"
-  github_oauth_token = "{{ $github_oauth_token }}"
   aws_account_number = "{{ $aws_account_number }}"
   piknik_role = "{{ $piknik_role }}"
   vault_url = "{{ $vault_url }}"
