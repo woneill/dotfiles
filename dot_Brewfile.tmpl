@@ -98,7 +98,7 @@ brew "yamllint"
 {{ if eq .category "home" -}}
 brew "youtube-dl"
 {{ end -}}
-brew "yq"
+brew "python-yq"
 brew "zsh"
 brew "zsh-completions"
 brew "common-fate/granted/granted"
@@ -163,8 +163,8 @@ cask "raindropio"
 {{ if eq .category "home" -}}
 cask "raspberry-pi-imager"
 {{ end -}}
-cask "rescuetime"
 {{ if eq .category "home" -}}
+cask "rescuetime"
 cask "sidequest"
 cask "signal"
 {{ end -}}
@@ -173,9 +173,9 @@ cask "skitch"
 cask "slack"
 {{ end -}}
 cask "spectacle"
+{{ if ne .category "work" -}}
 cask "spotify"
 cask "syncthing"
-{{ if ne .category "work" -}}
 cask "steam"
 cask "tunnelblick"
 {{ end -}}
