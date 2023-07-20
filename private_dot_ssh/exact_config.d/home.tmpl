@@ -12,11 +12,19 @@ Host kindle
     Port 2222
     PubkeyAcceptedKeyTypes +ssh-rsa
 
+Host kobo
+    User root
+    Port 2222
+    PubkeyAcceptedKeyTypes +ssh-rsa
+
 Host unifi
     User root
     Hostname 192.168.1.1
     HostkeyAlgorithms +ssh-rsa
     PubkeyAcceptedKeyTypes +ssh-rsa
+
+Host optiplex7070 mj07wy4g mj07wy66 mj07wy5v
+    User core
 
 Host *
     AddKeysToAgent yes
