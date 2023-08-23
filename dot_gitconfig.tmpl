@@ -56,13 +56,9 @@
   ff = only
 [fetch]
   prune = true
-{{- if eq .category "work" }}
-[includeIf "hasconfig:remote.*.url:https://github.com/mntv-*/**"]
-	path = ~/.gitconfig_mntv
 {{- if .github_enterprise_host }}
 [credential "https://{{ .github_enterprise_host }}"]
 	provider = github
-{{- end }}
 {{- end }}
 [credential]
 	helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
