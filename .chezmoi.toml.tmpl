@@ -13,6 +13,11 @@
 {{-   $email = promptString "Email" -}}
 {{- end -}}
 
+{{- $gitemail := get . "gitemail" -}}
+{{- if not $gitemail -}}
+{{-   $gitemail = promptString "Git Email" -}}
+{{- end -}}
+
 {{- $category := get . "category" -}}
 {{- if not $category -}}
 {{-   $category = promptString "Category: [home, work]" -}}
@@ -55,6 +60,7 @@
   home_domain_name = "{{ $home_domain_name }}"
   home_fileserver_hostname = "{{ $home_fileserver_hostname }}"
   email = "{{ $email }}"
+  gitemail = "{{ $gitemail }}"
   category = "{{ $category }}"
   github_enterprise_host = "{{ $github_enterprise_host }}"
   github_enterprise_oauth_token = "{{ $github_enterprise_oauth_token }}"

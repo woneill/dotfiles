@@ -1,6 +1,6 @@
 [user]
   name = Bill ONeill
-  email = {{ .email }}
+  email = {{ default .email .gitemail }}
 [core]
   autocrlf = input
   safecrlf = true
