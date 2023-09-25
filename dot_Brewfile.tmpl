@@ -11,12 +11,13 @@ tap "johanhaleby/kubetail"
 tap "kovetskiy/mark"
 tap "martido/graph"
 tap "microsoft/git"
+{{ if eq .category "home" -}}
 tap "minamijoyo/tfmigrate"
 tap "minamijoyo/tfupdate"
+{{ end -}}
 tap "robscott/tap"
 {{ if eq .category "work" -}}
 brew "ansible"
-brew "ansible-lint"
 {{ end -}}
 brew "age"
 brew "arping"
@@ -58,8 +59,10 @@ brew "kubernetes-cli"
 brew "ldns"
 brew "mas"
 brew "mdcat"
+{{ if eq .category "home" -}}
 brew "minamijoyo/tfmigrate/tfmigrate"
 brew "minamijoyo/tfupdate/tfupdate"
+{{ end -}}
 brew "minikube"
 brew "netpbm"
 brew "nmap"
