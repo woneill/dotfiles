@@ -1,8 +1,5 @@
-syntax: glob
 *~
 .DS_Store
 .env
 .tags*
-
-syntax: regexp
-^buildbox
+.tool-versions
