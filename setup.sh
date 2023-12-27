@@ -16,14 +16,14 @@ if [ "${OS}" == "Darwin" ]; then
     xcode-select -p &>/dev/null || {
         echo "==> Installing Xcode CLI tools…"
         xcode-select --install
-        sudo xcodebuild -license
+        sudo xcodebuild -license accept
     }
 
     # Is homebrew installed?
     command -v brew &>/dev/null || {
         echo "==> Installing homebrew…"
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        eval "(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+        eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
     }
 
     # Ensure that chezmoi, mas and 1password-cli are installed
