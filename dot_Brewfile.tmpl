@@ -104,7 +104,9 @@ cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
+{{ if eq .category "work" -}}
 cask "aws-vpn-client"
+{{ end -}}
 {{ if eq .category "home" -}}
 cask "burn"
 cask "calibre"
@@ -137,6 +139,7 @@ cask "logitech-camera-settings"
 {{ if ne .category "work" -}}
 cask "micro-snitch"
 {{ end -}}
+cask "macfuse"
 cask "moom"
 {{ if eq .category "home" -}}
 cask "musicbrainz-picard"
@@ -144,7 +147,6 @@ cask "musicbrainz-picard"
 cask "ngrok"
 cask "notion"
 cask "obsidian"
-cask "osxfuse"
 {{ if eq .category "work" -}}
 cask "plantronics-hub"
 {{ end -}}
