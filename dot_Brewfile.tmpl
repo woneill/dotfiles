@@ -89,7 +89,7 @@ brew "watch"
 brew "wget"
 brew "yamllint"
 {{ if eq .category "home" -}}
-brew "youtube-dl"
+brew "yt-dlp"
 {{ end -}}
 brew "python-yq"
 brew "zsh"
@@ -151,6 +151,7 @@ cask "plantronics-hub"
 {{ end -}}
 cask "plexamp"
 cask "raindropio"
+cask "rectangle"
 {{ if eq .category "home" -}}
 cask "pocket-casts"
 cask "raspberry-pi-imager"
@@ -161,9 +162,6 @@ cask "signal"
 cask "skitch"
 {{ if ne .category "work" -}}
 cask "slack"
-{{ end -}}
-cask "spectacle"
-{{ if ne .category "work" -}}
 cask "spotify"
 cask "steam"
 {{ end -}}
