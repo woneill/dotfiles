@@ -22,3 +22,6 @@
     - "*/utilities"
     - "*/utilities/**"
 {{- end }}
+".vim/bundle/Vundle.vim":
+  type: "git-repo"
+  url: "https://github.com/VundleVim/Vundle.vim.git"

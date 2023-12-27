@@ -108,7 +108,6 @@ cask "aws-vpn-client"
 {{ if eq .category "home" -}}
 cask "burn"
 cask "calibre"
-cask "dash"
 {{ end -}}
 cask "docker"
 cask "font-hack"
@@ -163,10 +162,12 @@ cask "skitch"
 cask "slack"
 {{ end -}}
 cask "spectacle"
-cask "syncthing"
 {{ if ne .category "work" -}}
 cask "spotify"
 cask "steam"
+{{ end -}}
+cask "syncthing"
+{{ if ne .category "work" -}}
 cask "tunnelblick"
 {{ end -}}
 cask "typora"

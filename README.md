@@ -6,6 +6,9 @@ I'm using these sets of scripts to manage my environments. They can be used to c
 
 Everything is managed via [chezmoi](https://github.com/twpayne/chezmoi) so installing it is the first step. Follow the [chezmoi install guide](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md).
 
+Running [setup.sh](setup.sh) should handle all installations (including
+chezmoi) on OSX
+
 ### OSX
 
 These will be installed via the [run_once_install-packages.sh.tmpl](run_once_install-packages.sh.tmpl) script if they're not already installed:
@@ -15,10 +18,6 @@ These will be installed via the [run_once_install-packages.sh.tmpl](run_once_ins
   * [Homebrew Cask](https://github.com/caskroom/homebrew-cask) is used for installing desktop Mac applications
 * [mas-cli](https://github.com/argon/mas) is used for installing Mac App Store applications.
 * Xcode
-
-[Alfred](https://www.alfredapp.com/) and [Dash](https://kapeli.com/dash) are also synced but require manual configuation after the initial sync:
-* Dash sync folder is ~/.dash
-* Alfred sync folder is ~/.alfred-sync
 
 ### Linux
 
