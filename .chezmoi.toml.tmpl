@@ -38,7 +38,7 @@
 {{- $vault_url := get . "vault_url" -}}
 {{- $jira_url := get . "jira_url" -}}
 
-{{- if eq .category "work" -}}
+{{- if eq $category "work" -}}
 {{-   if not $github_enterprise_host -}}
 {{-     $github_enterprise_host = promptString "GitHub Enterprise Host" -}}
 {{-   end -}}
