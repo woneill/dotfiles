@@ -4,3 +4,5 @@ SAVEHIST=1000
 setopt appendhistory histnostore histreduceblanks incappendhistory
 setopt autocd notify
 bindkey -v
+
+fpath=(${HOMEBREW_PREFIX:-/usr/local}/share/zsh/site-functions ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-completions $fpath)
