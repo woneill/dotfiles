@@ -1,6 +1,0 @@
-{{ if eq .chezmoi.os "darwin" -}}
-if command -v gpgconf &> /dev/null
-then
-  [ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/gpg-agent
-fi
-{{ end -}}
