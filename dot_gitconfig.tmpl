@@ -7,16 +7,16 @@
   editor = vim
   excludesfile = ~/.gitignore_global
 {{- if eq .chezmoi.os "darwin" }}
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
 {{- end }}
 [init]
   defaultBranch = main
-{{- if eq .chezmoi.os "darwin" }}
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
 [merge]
-  tool = opendiff
-[mergetool]
-  prompt = false
-{{- end }}
+  conflictstyle = diff3
 [filter "media"]
   clean = git media clean %f
   smudge = git media smudge %f
@@ -24,12 +24,7 @@
 [push]
   default = current
 [diff]
-{{- if eq .chezmoi.os "darwin" }}
-  tool = opendiff
-{{- end }}
-  compactionHeuristic = true
-[difftool]
-  prompt = false
+  colorMoved = default
 [rerere]
   enabled = true
 [color]
@@ -53,7 +48,7 @@
 [diff "sopsdiffer"]
   textconv = sops -d
 [pull]
-  ff = only
+  rebase = true
 [fetch]
   prune = true
 {{- if .github_enterprise_host }}
