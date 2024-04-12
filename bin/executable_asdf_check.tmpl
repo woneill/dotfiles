@@ -1,4 +1,4 @@
-{{- $expected_plugins_default := list "direnv" "golangci-lint" "golang" "hadolint" "helm" "helm-docs" "helmfile" "java" "kubectl" "maven" "nodejs" "poetry" "python" "ruby" "skaffold" "terraform" "terraform-docs" "terraformer|https://github.com/grimoh/asdf-terraformer.git" "tflint" "tfsec" "vault" -}}
+{{- $expected_plugins_default := list "container-structure-test" "direnv" "golangci-lint" "golang" "hadolint" "helm" "helm-docs" "helmfile" "java" "kubectl" "maven" "nodejs" "poetry" "python" "ruby" "skaffold" "terraform" "terraform-docs" "terraformer|https://github.com/grimoh/asdf-terraformer.git" "tflint" "tfsec" "vault" -}}
 {{- $expected_plugins := "" -}}
 {{ if eq .category "home" -}}
 {{- $expected_plugins = append $expected_plugins_default "talosctl" | sortAlpha -}}
