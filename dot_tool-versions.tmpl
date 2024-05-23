@@ -14,7 +14,9 @@ poetry 1.8.2
 python 3.11.6
 ruby system
 skaffold 2.11.1
+{{ if ne .category "work" -}}
 talosctl 1.6.5
+{{ end -}}
 terraform 1.8.4
 terraform-docs 0.17.0
 terraformer 0.8.24
