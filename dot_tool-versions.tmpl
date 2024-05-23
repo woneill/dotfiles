@@ -9,13 +9,13 @@ helmfile 0.160.0
 java system
 kubectl system
 maven system
-nodejs {{ if eq .category "work" }}14.18.2{{else}}16.6.1{{end}}
+nodejs 18.16.0
 poetry 1.8.2
 python 3.11.6
 ruby system
 skaffold 2.11.1
 talosctl 1.6.5
-terraform {{ if eq .category "work" }}1.5.7{{else}}1.6.6{{end}}
+terraform 1.8.4
 terraform-docs 0.17.0
 terraformer 0.8.24
 tflint 0.50.0
