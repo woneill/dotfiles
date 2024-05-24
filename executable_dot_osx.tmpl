@@ -46,6 +46,9 @@ defaults write com.apple.controlstrip MiniCustomized -array \
     "com.apple.system.mission-control"
 killall ControlStrip
 
+# Disable Force Touch and data detectors which launch Dictionary
+defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
+
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
