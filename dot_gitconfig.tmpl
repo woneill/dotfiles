@@ -49,7 +49,7 @@
 [diff "sopsdiffer"]
   textconv = sops -d
 [pull]
-  rebase = true
+  ff = only
 [fetch]
   prune = true
 {{- if .github_enterprise_host }}
