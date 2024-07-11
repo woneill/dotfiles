@@ -104,7 +104,7 @@ GHORG_EXCLUDE_MATCH_REGEX:
 
 # Only clones new repos and does not perform a git clean on existing repos. Useful if you don't want to lose changes made to repos in the org/user directory.
 # flag (--no-clean)
-GHORG_NO_CLEAN: true
+GHORG_NO_CLEAN: false
 
 # Additionally clone the wiki page for repo
 # flag (--clone-wiki)
