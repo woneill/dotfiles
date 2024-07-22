@@ -1,0 +1,4 @@
+{{- onepasswordDocument "Home SSH pub key" "Private" -}}
+{{ if eq .category "work" -}}
+{{- onepasswordDocument "SurveyMonkey SSH pub key" "SurveyMonkey" -}}
+{{ end -}}
