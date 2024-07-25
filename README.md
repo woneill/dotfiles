@@ -16,7 +16,6 @@ These will be installed via the [run_once_install-packages.sh.tmpl](run_once_ins
 * [Homebrew](https://github.com/Homebrew/brew) for installing the Mac OS X dependencies
   * [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) is used to bundle up all Mac OS X dependencies
   * [Homebrew Cask](https://github.com/caskroom/homebrew-cask) is used for installing desktop Mac applications
-* [mas-cli](https://github.com/argon/mas) is used for installing Mac App Store applications.
 * Xcode
 
 ### Linux

@@ -26,11 +26,10 @@ if [ "${OS}" == "Darwin" ]; then
         eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
     }
 
-    # Ensure that chezmoi, mas and 1password-cli are installed
+    # Ensure that chezmoi and 1password-cli are installed
     # Tabs, not spaces for these lines, else the heredoc will break!
     brew bundle --file=- <<-EOS
 		brew "chezmoi"
-		brew "mas"
 		cask "1password-cli"
 	EOS
 

@@ -11,7 +11,7 @@ brew bundle check --global --no-upgrade --verbose || true
 
 dumpfile=$( mktemp -d )/Brewfile
 # Everything except whalebrew and vscode
-brew bundle dump --taps --brews --casks --mas --file="$dumpfile"
+brew bundle dump --taps --brews --casks --file="$dumpfile"
 echo "==> Stuff installed but not in global brewfile..."
 grep -Fxv -f ~/.Brewfile "$dumpfile" || true
 echo "==> Stuff in global brewfile but not installed..."

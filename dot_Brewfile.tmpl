@@ -52,7 +52,6 @@ brew "kubeconform"
 brew "kubectx"
 brew "kubernetes-cli"
 brew "ldns"
-brew "mas"
 {{ if eq .category "home" -}}
 brew "minamijoyo/tfmigrate/tfmigrate"
 brew "minamijoyo/tfupdate/tfupdate"
@@ -167,13 +166,4 @@ cask "wireshark"
 {{ if ne .category "work" -}}
 cask "zoom"
 {{ end -}}
-{{ if eq .category "home" -}}
-mas "CleanMyDrive 2", id: 523620159
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-{{ end -}}
-mas "Xcode", id: 497799835
 {{ end -}}
