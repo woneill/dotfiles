@@ -28,6 +28,8 @@
   refreshPeriod: "168h"
 {{- $helm_plugin_dir := output "helm" "env" "HELM_PLUGINS" | trim | trimPrefix .chezmoi.homeDir | trimPrefix "/" }}
 {{ joinPath $helm_plugin_dir "helm-unittest.git" | quote }}:
-  type: "git-repo"
-  url: "https://github.com/helm-unittest/helm-unittest.git"
+  type: "archive"
+  # TODO: make this not hardcode macos
+  url: {{ gitHubLatestReleaseAssetURL "helm-unittest/helm-unittest" (printf "helm-unittest-%s-%s-*.tgz" "macos" .chezmoi.arch)  | quote }}
+  exact: true
   refreshPeriod: "168h"
