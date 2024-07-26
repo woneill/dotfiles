@@ -125,6 +125,33 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+# Wipe all (default) app icons from the Dock
+# This is only really useful when setting up a new Mac, or if you don’t use
+# the Dock to launch apps.
+defaults write com.apple.dock persistent-apps -array
+
+# Add only applications we care about to the dock
+dock_apps=(
+  "/System/Applications/Launchpad.app"
+  "/System/Applications/Mail.app"
+  "/System/Applications/Calendar.app"
+  "/System/Applications/System Preferences.app"
+  "/Applications/iTerm.app"
+  "/Applications/Google Chrome.app"
+  "/Applications/Slack.app"
+  "/Applications/zoom.us.app"
+  "/Applications/Raindrop.io.app"
+)
+for app in "${dock_apps[@]}"
+do
+  /usr/local/bin/dockutil --add "${app}" --section apps --no-restart
+done
+
+# shellcheck disable=SC2088
+/usr/local/bin/dockutil --add '~/Documents' --section others --before 'Downloads' --view fan --no-restart
+# shellcheck disable=SC2088
+/usr/local/bin/dockutil --add '~/Downloads' --section others --view fan --no-restart
+
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
