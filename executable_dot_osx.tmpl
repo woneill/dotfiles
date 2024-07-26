@@ -1,4 +1,5 @@
 {{ if eq .chezmoi.os "darwin" -}}
+{{ $homebrew_prefix := output "brew" "--prefix" | trim -}}
 #!/usr/bin/env bash
 
 # Based off of https://github.com/mathiasbynens/dotfiles/blob/master/.macos
@@ -130,36 +131,43 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+{{ $dockutil := joinPath $homebrew_prefix "/bin/dockutil" -}}
 # Add only applications we care about to the dock
 dock_apps=(
   "/System/Applications/Launchpad.app"
+  {{ if eq .category "work" -}}
+  "/Applications/Microsoft Outlook.app"
+  {{ else -}}
   "/System/Applications/Mail.app"
   "/System/Applications/Calendar.app"
-  "/System/Applications/System Preferences.app"
+  {{ end -}}
+  "/System/Applications/System Settings.app"
   "/Applications/iTerm.app"
   "/Applications/Google Chrome.app"
   "/Applications/Slack.app"
   "/Applications/zoom.us.app"
   "/Applications/Raindrop.io.app"
+  "/Applications/Obsidian.app"
 )
+
+# Start with a clean slate
+{{ $dockutil }} --remove all --no-restart
+
 for app in "${dock_apps[@]}"
 do
-  /usr/local/bin/dockutil --add "${app}" --section apps --no-restart
+  {{ $dockutil }} --add "${app}" --section apps --no-restart
 done
 
 # shellcheck disable=SC2088
-/usr/local/bin/dockutil --add '~/Documents' --section others --before 'Downloads' --view fan --no-restart
+{{ $dockutil }} --add '~/Documents' --section others --before 'Downloads' --view fan --no-restart
 # shellcheck disable=SC2088
-/usr/local/bin/dockutil --add '~/Downloads' --section others --view fan --no-restart
+{{ $dockutil }} --add '~/Downloads' --section others --view fan --no-restart
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
-
-# Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Hot corners
 # Possible values:
@@ -206,9 +214,6 @@ defaults write com.googlecode.iterm2 "Default Bookmark Guid" EA52A580-F90D-4F81-
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
 # Mac App Store                                                               #
