@@ -54,9 +54,15 @@
   prune = true
 {{- if .github_enterprise_host }}
 [credential "https://{{ .github_enterprise_host }}"]
-	provider = github
+  provider = github
 {{- end }}
 [credential]
-	helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
+  helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+  useHttpPath = true
+{{ if eq .category "work" -}}
+[credential "https://github.com"]
+  username = woneill_mntv
+[credential "https://github.com/woneill"]
+  username = woneill
+{{- end }}
