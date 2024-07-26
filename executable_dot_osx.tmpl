@@ -38,14 +38,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-# Replace Siri on Touchbar with Mission Control
-defaults write com.apple.controlstrip MiniCustomized -array \
-    "com.apple.system.brightness" \
-    "com.apple.system.volume" \
-    "com.apple.system.mute" \
-    "com.apple.system.mission-control"
-killall ControlStrip
-
 # Disable Force Touch and data detectors which launch Dictionary
 defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
 
@@ -96,10 +88,6 @@ defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
-
-# Enable subpixel font rendering on non-Apple LCDs
-# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
