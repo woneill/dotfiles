@@ -1,0 +1,1 @@
+[ -n "$ZGENOM_LOAD" ] && zgenom save

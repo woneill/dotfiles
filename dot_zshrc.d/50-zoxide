@@ -1,5 +1,2 @@
-if command -v zoxide &> /dev/null
-then
-    eval "$(zoxide init --cmd cd zsh)"
-fi
-
+ZOXIDE_CMD_OVERRIDE=cd
+[ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/zoxide

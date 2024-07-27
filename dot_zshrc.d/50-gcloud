@@ -1,1 +1,1 @@
-[ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/gcloud
+[ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/gcloud
