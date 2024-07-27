@@ -1,2 +1,2 @@
-[ -n "$ZGEN_LOAD" ] && zgen load zsh-users/zsh-autosuggestions
+[ -n "$ZGENOM_LOAD" ] && zgenom load zsh-users/zsh-autosuggestions
 

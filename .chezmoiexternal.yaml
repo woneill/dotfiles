@@ -7,6 +7,9 @@
   type: "file"
   url: "https://code.corp.surveymonkey.com/raw/ACMe/ssh_proxy/master/config"
 {{- end }}
+".zgenom":
+  type: "git-repo"
+  url: "https://github.com/jandamm/zgenom.git"
 {{ if eq .chezmoi.os "darwin" -}}
 ".iterm2_shell_integration.zsh":
   type: "file"

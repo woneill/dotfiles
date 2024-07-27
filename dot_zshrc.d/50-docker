@@ -1,4 +1,4 @@
-if [ -n "$ZGEN_LOAD" ]; then
-    zgen oh-my-zsh plugins/docker
-    zgen oh-my-zsh plugins/docker-compose
+if [ -n "$ZGENOM_LOAD" ]; then
+    zgenom ohmyzsh plugins/docker
+    zgenom ohmyzsh plugins/docker-compose
 fi

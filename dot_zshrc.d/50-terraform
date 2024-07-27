@@ -1,2 +1,2 @@
-[ -n "$ZGEN_LOAD" ] && zgen oh-my-zsh plugins/terraform
+[ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/terraform
 
