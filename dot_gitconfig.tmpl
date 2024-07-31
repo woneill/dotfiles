@@ -12,10 +12,12 @@
 [init]
   defaultBranch = main
   templateDir = ~/.git-template
+{{- if eq .chezmoi.os "darwin" }}
 [interactive]
   diffFilter = delta --color-only
 [delta]
   navigate = true
+{{- end }}
 [merge]
   conflictstyle = diff3
 [filter "media"]
