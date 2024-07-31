@@ -29,6 +29,7 @@
   type: "git-repo"
   url: "https://github.com/VundleVim/Vundle.vim.git"
   refreshPeriod: "168h"
+{{- if lookPath "helm" }}
 {{- $helm_plugin_dir := output "helm" "env" "HELM_PLUGINS" | trim | trimPrefix .chezmoi.homeDir | trimPrefix "/" }}
 {{ joinPath $helm_plugin_dir "helm-unittest.git" | quote }}:
   type: "archive"
@@ -36,3 +37,4 @@
   url: {{ gitHubLatestReleaseAssetURL "helm-unittest/helm-unittest" (printf "helm-unittest-%s-%s-*.tgz" "macos" .chezmoi.arch)  | quote }}
   exact: true
   refreshPeriod: "168h"
+{{- end }}
