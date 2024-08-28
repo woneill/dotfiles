@@ -37,4 +37,24 @@
   url: {{ gitHubLatestReleaseAssetURL "helm-unittest/helm-unittest" (printf "helm-unittest-%s-%s-*.tgz" "macos" .chezmoi.arch)  | quote }}
   exact: true
   refreshPeriod: "168h"
+{{ joinPath $helm_plugin_dir "kubeconform-helm" | quote }}:
+  type: "git-repo"
+  url: "https://github.com/jtyr/kubeconform-helm"
+  refreshPeriod: "168h"
+{{ joinPath $helm_plugin_dir "helm-diff" | quote }}:
+  type: "git-repo"
+  url: "https://github.com/databus23/helm-diff"
+  refreshPeriod: "168h"
+{{ joinPath $helm_plugin_dir "helm-git" | quote }}:
+  type: "git-repo"
+  url: "https://github.com/aslafy-z/helm-git"
+  refreshPeriod: "168h"
+{{ joinPath $helm_plugin_dir "helm-s3" | quote }}:
+  type: "git-repo"
+  url: "https://github.com/hypnoglow/helm-s3"
+  refreshPeriod: "168h"
+{{ joinPath $helm_plugin_dir "helm-secrets" | quote }}:
+  type: "git-repo"
+  url: "https://github.com/jkroepke/helm-secrets"
+  refreshPeriod: "168h"
 {{- end }}
