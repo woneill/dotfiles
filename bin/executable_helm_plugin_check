@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+if command -v helm >/dev/null 2>&1; then
+    typeset -A a2
+    for k in $(helm plugin list | tail +2 | awk '{print $1}'); do
+        a2[$k]=1
+    done
+
+    for k in 'diff|https://github.com/databus23/helm-diff' 'helm-git|https://github.com/aslafy-z/helm-git' 's3|https://github.com/hypnoglow/helm-s3' 'secrets|https://github.com/jkroepke/helm-secrets' 'unittest|https://github.com/helm-unittest/helm-unittest.git'; do
+        plugin=("${(@s/|/)k}")
+        if [ ! "${a2[$plugin[1]]}" ]; then
+            helm plugin install $plugin[2]
+        fi
+        unset "a2[$plugin[1]]"
+    done
+
+    if [ ! -z "${(k)a2}" ]; then
+        echo "helm plugins installed but not expected: ${(k)a2}"
+    fi
+fi

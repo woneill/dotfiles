@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# ~/bin/helm_plugin_check hash: {{ include "bin/executable_helm_plugin_check" | sha256sum }}
+if [ -x ~/bin/helm_plugin_check ]; then
+    ~/bin/helm_plugin_check
+fi
