@@ -1,0 +1,5 @@
+{{ if lookPath "pipx" -}}
+command -v register-python-argcomplete &> /dev/null || pipx install argcomplete
+
+eval "$(register-python-argcomplete pipx)"
+{{ end -}}

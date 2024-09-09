@@ -67,6 +67,7 @@ brew "openssh"
 brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
 {{ end -}}
 brew "pipenv"
+brew "pipx"
 brew "pre-commit"
 brew "pstree"
 brew "shellcheck"
