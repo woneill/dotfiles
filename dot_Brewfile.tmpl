@@ -13,6 +13,9 @@ tap "minamijoyo/tfmigrate"
 tap "minamijoyo/tfupdate"
 {{ end -}}
 tap "robscott/tap"
+{{ if eq .category "work" -}}
+tap "metalbear-co/mirrord"
+{{ end -}}
 brew "age"
 brew "arping"
 brew "autoconf"
@@ -89,6 +92,9 @@ brew "zsh-completions"
 brew "common-fate/granted/granted"
 brew "johanhaleby/kubetail/kubetail"
 brew "robscott/tap/kube-capacity"
+{{ if eq .category "work" -}}
+brew "metalbear-co/mirrord/mirrord"
+{{ end -}}
 cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
