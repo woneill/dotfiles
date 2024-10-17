@@ -8,11 +8,11 @@ tap "instrumenta/instrumenta"
 tap "johanhaleby/kubetail"
 tap "martido/graph"
 tap "microsoft/git"
+tap "robscott/tap"
 {{ if eq .category "home" -}}
 tap "minamijoyo/tfmigrate"
 tap "minamijoyo/tfupdate"
 {{ end -}}
-tap "robscott/tap"
 {{ if eq .category "work" -}}
 tap "metalbear-co/mirrord"
 {{ end -}}
@@ -39,14 +39,8 @@ brew "gettext"
 brew "git"
 brew "git-delta"
 brew "glib"
-{{ if eq .category "work" -}}
-brew "go-jira"
-{{ end -}}
 brew "graphviz"
 brew "htop"
-{{ if eq .category "home" -}}
-brew "hugo"
-{{ end -}}
 brew "oniguruma"
 brew "jq"
 brew "kind"
@@ -55,17 +49,10 @@ brew "kubeconform"
 brew "kubectx"
 brew "kubernetes-cli"
 brew "ldns"
-{{ if eq .category "home" -}}
-brew "minamijoyo/tfmigrate/tfmigrate"
-brew "minamijoyo/tfupdate/tfupdate"
-{{ end -}}
 brew "minikube"
 brew "netpbm"
 brew "nmap"
 brew "openssh"
-{{ if eq .category "home" -}}
-brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
-{{ end -}}
 brew "pipenv"
 brew "pipx"
 brew "pre-commit"
@@ -82,9 +69,6 @@ brew "vim"
 brew "watch"
 brew "wget"
 brew "yamllint"
-{{ if eq .category "home" -}}
-brew "yt-dlp"
-{{ end -}}
 brew "python-yq"
 brew "zoxide"
 brew "zsh"
@@ -92,48 +76,31 @@ brew "zsh-completions"
 brew "common-fate/granted/granted"
 brew "johanhaleby/kubetail/kubetail"
 brew "robscott/tap/kube-capacity"
+{{ if eq .category "home" -}}
+brew "hugo"
+brew "minamijoyo/tfmigrate/tfmigrate"
+brew "minamijoyo/tfupdate/tfupdate"
+brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
+brew "yt-dlp"
+{{ end -}}
 {{ if eq .category "work" -}}
+brew "go-jira"
 brew "metalbear-co/mirrord/mirrord"
 {{ end -}}
 cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
-{{ if eq .category "work" -}}
-cask "aws-vpn-client"
-{{ end -}}
-{{ if eq .category "home" -}}
-cask "burn"
-cask "calibre"
-{{ end -}}
 cask "docker"
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-iosevka-nerd-font"
 cask "font-menlo-for-powerline"
 cask "git-credential-manager"
-{{ if ne .category "work" -}}
-cask "google-chrome"
-{{ end -}}
 cask "google-drive"
-{{ if eq .category "home" -}}
-cask "handbrake"
-{{ end -}}
 cask "hammerspoon"
 cask "iterm2"
-{{ if eq .category "home" -}}
-cask "keybase"
-{{ end -}}
 cask "kap"
-{{ if eq .category "home" -}}
-cask "makemkv"
-{{ end -}}
-{{ if eq .category "work" -}}
-cask "logitech-camera-settings"
-{{ end -}}
-{{ if ne .category "work" -}}
-cask "micro-snitch"
-{{ end -}}
 cask "macfuse"
 cask "moom"
 cask "ngrok"
@@ -142,29 +109,32 @@ cask "obsidian"
 cask "plexamp"
 cask "raindropio"
 cask "rectangle"
+cask "syncthing"
+cask "typora"
+cask "visual-studio-code"
+cask "wireshark"
 {{ if eq .category "home" -}}
+cask "burn"
+cask "calibre"
+cask "google-chrome"
+cask "handbrake"
+cask "keybase"
+cask "makemkv"
+cask "micro-snitch"
 cask "pocket-casts"
 cask "raspberry-pi-imager"
 cask "rescuetime"
 cask "sidequest"
 cask "signal"
-{{ end -}}
-{{ if ne .category "work" -}}
 cask "slack"
 cask "spotify"
 cask "steam"
-{{ end -}}
-cask "syncthing"
-{{ if ne .category "work" -}}
 cask "tunnelblick"
-{{ end -}}
-cask "typora"
-cask "visual-studio-code"
-{{ if eq .category "home" -}}
 cask "vlc"
-{{ end -}}
-cask "wireshark"
-{{ if ne .category "work" -}}
 cask "zoom"
+{{ end -}}
+{{ if eq .category "work" -}}
+cask "aws-vpn-client"
+cask "logitech-camera-settings"
 {{ end -}}
 {{ end -}}
