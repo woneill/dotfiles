@@ -1,10 +1,7 @@
 {{ if eq .category "work" -}}
 export VAULT_ADDR="{{ .vault_url }}"
-export SM_REGION="0"
-export SM_ENVIRONMENT="dev/mt3"
-export VAULT_SKIP_VERIFY=true
 if [ -f ~/.vault-token ]; then
-    SM_VAULT_TOKEN=$(cat ~/.vault-token)
-    export SM_VAULT_TOKEN
+    VAULT_TOKEN=$(cat ~/.vault-token)
+    export VAULT_TOKEN
 fi
 {{ end -}}
