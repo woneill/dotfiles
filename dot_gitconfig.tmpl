@@ -54,10 +54,6 @@
   ff = only
 [fetch]
   prune = true
-{{- if .github_enterprise_host }}
-[credential "https://{{ .github_enterprise_host }}"]
-  provider = github
-{{- end }}
 [credential]
   helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
 [credential "https://dev.azure.com"]

@@ -33,20 +33,10 @@
 {{-   $piknik_role = promptString "Piknik role (e.g client, server, hybrid)" -}}
 {{- end -}}
 
-{{- $github_enterprise_host := get . "github_enterprise_host" -}}
-{{- $github_enterprise_oauth_token := get . "github_enterprise_oauth_token" -}}
 {{- $vault_url := get . "vault_url" -}}
 {{- $jira_url := get . "jira_url" -}}
 
 {{- if eq $category "work" -}}
-{{-   if not $github_enterprise_host -}}
-{{-     $github_enterprise_host = promptString "GitHub Enterprise Host" -}}
-{{-   end -}}
-
-{{-   if not $github_enterprise_oauth_token -}}
-{{-     $github_enterprise_oauth_token = promptString "GitHub Enterprise Oauth Token" -}}
-{{-   end -}}
-
 {{-   if not $vault_url -}}
 {{-     $vault_url = promptString "Vault URL" -}}
 {{-   end -}}
@@ -62,8 +52,6 @@
   email = "{{ $email }}"
   gitemail = "{{ $gitemail }}"
   category = "{{ $category }}"
-  github_enterprise_host = "{{ $github_enterprise_host }}"
-  github_enterprise_oauth_token = "{{ $github_enterprise_oauth_token }}"
   aws_account_number = "{{ $aws_account_number }}"
   piknik_role = "{{ $piknik_role }}"
   vault_url = "{{ $vault_url }}"
