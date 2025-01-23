@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>woneill/.github:renovate-config"],
+  "asdf": {
+    "fileMatch": ["dot_tool-versions.tmpl"]
+  }
+}
