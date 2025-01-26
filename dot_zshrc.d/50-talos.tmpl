@@ -1,0 +1,11 @@
+{{ if eq .category "home" -}}
+if command -v talosctl &> /dev/null
+then
+    source <(talosctl completion zsh)
+fi
+
+if command -v talhelper &> /dev/null
+then
+    source <(talhelper completion zsh)
+fi
+{{ end -}}
