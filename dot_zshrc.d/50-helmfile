@@ -1,0 +1,4 @@
+if command -v helmfile &> /dev/null
+then
+    source <(helmfile completion zsh)
+fi
