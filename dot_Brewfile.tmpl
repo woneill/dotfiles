@@ -1,17 +1,11 @@
 {{ if eq .chezmoi.os "darwin" -}}
 tap "filippo.io/age", "https://filippo.io/age"
-tap "gabrie30/utils"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "instrumenta/instrumenta"
 tap "johanhaleby/kubetail"
 tap "martido/graph"
 tap "microsoft/git"
 tap "robscott/tap"
-{{ if eq .category "home" -}}
-tap "minamijoyo/tfmigrate"
-tap "minamijoyo/tfupdate"
-{{ end -}}
 {{ if eq .category "work" -}}
 tap "metalbear-co/mirrord"
 brew "adr-tools"
@@ -33,7 +27,7 @@ brew "entr"
 brew "freetype"
 brew "fontconfig"
 brew "fzf"
-brew "gabrie30/utils/ghorg"
+brew "ghorg"
 brew "gh"
 brew "gettext"
 brew "git"
@@ -77,8 +71,6 @@ brew "johanhaleby/kubetail/kubetail"
 brew "robscott/tap/kube-capacity"
 {{ if eq .category "home" -}}
 brew "hugo"
-brew "minamijoyo/tfmigrate/tfmigrate"
-brew "minamijoyo/tfupdate/tfupdate"
 brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
 brew "yt-dlp"
 {{ end -}}
