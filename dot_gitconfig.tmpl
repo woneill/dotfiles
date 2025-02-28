@@ -1,6 +1,12 @@
 [user]
 	name = Bill ONeill
 	email = {{ default .email .gitemail }}
+[branch]
+	sort = -committerdate
+[color]
+	ui = true
+[column]
+	ui = auto
 [core]
 	autocrlf = input
 	safecrlf = true
@@ -9,59 +15,6 @@
 {{- if eq .chezmoi.os "darwin" }}
 	pager = delta
 {{- end }}
-[init]
-	defaultBranch = main
-	templateDir = ~/.git-template
-{{- if eq .chezmoi.os "darwin" }}
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	navigate = true
-{{- end }}
-[merge]
-	conflictstyle = zdiff3
-[filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
-[push]
-	default = current
-	autoSetupRemote = true
-[diff]
-	colorMoved = plain
-	algorithm = histogram
-	renames = true
-[rerere]
-	enabled = true
-	autoupdate = true
-[color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 227
-	frag = magenta bold
-	commit = 227 bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[rebase]
-	autoStash = true
-	autoSquash = true
-	updateRefs = true
-[stash]
-	showPatch = true
-[diff "sopsdiffer"]
-	textconv = sops -d
-[pull]
-	rebase = true
-[fetch]
-	prune = true
-	pruneTags = true
-	all = true
 [credential]
 	helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
 [credential "https://dev.azure.com"]
@@ -69,12 +22,47 @@
 {{ if eq .category "work" -}}
 [credential "https://github.com"]
 	username = woneill_mntv
+{{- end }}
 [credential "https://github.com/woneill"]
 	username = woneill
+[delta]
+	navigate = true
+[diff]
+	colorMoved = plain
+	algorithm = histogram
+	renames = true
+[diff "sopsdiffer"]
+	textconv = sops -d
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[init]
+	defaultBranch = main
+	templateDir = ~/.git-template
+{{- if eq .chezmoi.os "darwin" }}
+[interactive]
+	diffFilter = delta --color-only
 {{- end }}
-[column]
-	ui = auto
-[branch]
-	sort = -committerdate
+[merge]
+	conflictstyle = zdiff3
+[pull]
+	rebase = true
+[push]
+	default = current
+	autoSetupRemote = true
+[rebase]
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[stash]
+	showPatch = true
 [tag]
 	sort = version:refname
