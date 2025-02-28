@@ -1,31 +1,31 @@
 [user]
-  name = Bill ONeill
-  email = {{ default .email .gitemail }}
+	name = Bill ONeill
+	email = {{ default .email .gitemail }}
 [core]
-  autocrlf = input
-  safecrlf = true
-  editor = vim
-  excludesfile = ~/.gitignore_global
+	autocrlf = input
+	safecrlf = true
+	editor = vim
+	excludesfile = ~/.gitignore_global
 {{- if eq .chezmoi.os "darwin" }}
-  pager = delta
+	pager = delta
 {{- end }}
 [init]
-  defaultBranch = main
-  templateDir = ~/.git-template
+	defaultBranch = main
+	templateDir = ~/.git-template
 {{- if eq .chezmoi.os "darwin" }}
 [interactive]
-  diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-  navigate = true
+	navigate = true
 {{- end }}
 [merge]
 	conflictstyle = zdiff3
 [filter "media"]
-  clean = git media clean %f
-  smudge = git media smudge %f
-  required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
 [push]
-  default = current
+	default = current
 	autoSetupRemote = true
 [diff]
 	colorMoved = plain
@@ -35,27 +35,27 @@
 	enabled = true
 	autoupdate = true
 [color]
-  ui = true
+	ui = true
 [color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 [color "diff"]
-  meta = 227
-  frag = magenta bold
-  commit = 227 bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 [rebase]
 	autoStash = true
 	autoSquash = true
 	updateRefs = true
 [stash]
-  showPatch = true
+	showPatch = true
 [diff "sopsdiffer"]
-  textconv = sops -d
+	textconv = sops -d
 [pull]
 	rebase = true
 [fetch]
@@ -63,14 +63,14 @@
 	pruneTags = true
 	all = true
 [credential]
-  helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
+	helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
 [credential "https://dev.azure.com"]
-  useHttpPath = true
+	useHttpPath = true
 {{ if eq .category "work" -}}
 [credential "https://github.com"]
-  username = woneill_mntv
+	username = woneill_mntv
 [credential "https://github.com/woneill"]
-  username = woneill
+	username = woneill
 {{- end }}
 [column]
 	ui = auto
