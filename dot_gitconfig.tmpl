@@ -19,17 +19,21 @@
   navigate = true
 {{- end }}
 [merge]
-  conflictstyle = diff3
+	conflictstyle = zdiff3
 [filter "media"]
   clean = git media clean %f
   smudge = git media smudge %f
   required = true
 [push]
   default = current
+	autoSetupRemote = true
 [diff]
-  colorMoved = default
+	colorMoved = plain
+	algorithm = histogram
+	renames = true
 [rerere]
-  enabled = true
+	enabled = true
+	autoupdate = true
 [color]
   ui = true
 [color "diff-highlight"]
@@ -45,7 +49,9 @@
   new = green bold
   whitespace = red reverse
 [rebase]
-  autostash = true
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
 [stash]
   showPatch = true
 [diff "sopsdiffer"]
@@ -53,7 +59,9 @@
 [pull]
   ff = only
 [fetch]
-  prune = true
+	prune = true
+	pruneTags = true
+	all = true
 [credential]
   helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
 [credential "https://dev.azure.com"]
@@ -64,3 +72,9 @@
 [credential "https://github.com/woneill"]
   username = woneill
 {{- end }}
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
