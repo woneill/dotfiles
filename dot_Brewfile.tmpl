@@ -73,6 +73,7 @@ brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{
 brew "yt-dlp"
 {{ end -}}
 {{ if eq .category "work" -}}
+brew "colima"
 brew "go-jira"
 brew "metalbear-co/mirrord/mirrord"
 {{ end -}}

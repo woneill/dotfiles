@@ -1,2 +1,0 @@
-IgnoreUnknown AddKeysToAgent,UseKeychain
-Include config.d/*
