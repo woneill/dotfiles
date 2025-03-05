@@ -1,0 +1,8 @@
+{{ if eq .category "work" -}}
+shipyard:
+  cmd: "ghorg clone --prune mntv-shipyard"
+  description: "Clones the entire mntv-shipyard org"
+mntv-sre:
+  cmd: "ghorg clone mntv-sre"
+  description: "Clones the entire mntv-sre org"
+{{- end }}

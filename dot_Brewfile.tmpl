@@ -73,6 +73,7 @@ brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{
 brew "yt-dlp"
 {{ end -}}
 {{ if eq .category "work" -}}
+brew "argocd"
 brew "colima"
 brew "go-jira"
 brew "metalbear-co/mirrord/mirrord"
@@ -123,6 +124,7 @@ cask "vlc"
 cask "zoom"
 {{ end -}}
 {{ if eq .category "work" -}}
+cask "ankerwork"
 cask "aws-vpn-client"
 cask "logitech-camera-settings"
 {{ end -}}
