@@ -1,0 +1,5 @@
+{{ if stat (joinPath .chezmoi.homeDir ".rd/bin") -}}
+# Rancher Desktop is installed
+path+=("$HOME/.rd/bin")
+export -U PATH
+{{ end -}}

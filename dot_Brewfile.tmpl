@@ -67,7 +67,6 @@ brew "yt-dlp"
 {{ end -}}
 {{ if eq .category "work" -}}
 brew "argocd"
-brew "colima"
 brew "go-jira"
 brew "metalbear-co/mirrord/mirrord"
 {{ end -}}
@@ -75,7 +74,9 @@ cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
 cask "alfred"
+{{ if eq .category "home" -}}
 cask "docker"
+{{ end -}}
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-iosevka-nerd-font"
@@ -120,5 +121,6 @@ cask "zoom"
 cask "ankerwork"
 cask "aws-vpn-client"
 cask "logitech-camera-settings"
+cask "rancher"
 {{ end -}}
 {{ end -}}
