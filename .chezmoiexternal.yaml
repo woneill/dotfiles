@@ -20,3 +20,7 @@
   type: "git-repo"
   url: "https://github.com/VundleVim/Vundle.vim.git"
   refreshPeriod: "168h"
+".local/share/gh/extensions/gh-cp":
+  type: "git-repo"
+  url: "https://github.com/mislav/gh-cp.git"
+  refreshPeriod: "168h"
