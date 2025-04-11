@@ -158,11 +158,7 @@ GHORG_NO_TOKEN: false
 
 # Add your GitHub token
 # flag (--token, -t) eg: --token=bGVhdmUgYSBjb21tZW50IG9uIGlzc3VlIDY2 or --token=~/path/to/file/containing/token
-{{ if eq .category "work" -}}
-GHORG_GITHUB_TOKEN: {{ (onepasswordItemFields "GHorg GitHub Personal Access Token").token.value -}}
-{{ else -}}
 GHORG_GITHUB_TOKEN:
-{{ end }}
 
 # Path to your GitHub App PEM file, for authenticating with GitHub App
 # e.g. /home/user/foo/ghorg-app.pem

@@ -1,7 +1,0 @@
-{{ if eq .category "work" -}}
-export VAULT_ADDR="{{ .vault_url }}"
-if [ -f ~/.vault-token ]; then
-    VAULT_TOKEN=$(cat ~/.vault-token)
-    export VAULT_TOKEN
-fi
-{{ end -}}

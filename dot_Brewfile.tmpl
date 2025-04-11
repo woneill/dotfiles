@@ -3,8 +3,6 @@ tap "filippo.io/age", "https://filippo.io/age"
 tap "microsoft/git"
 tap "robscott/tap"
 {{ if eq .category "work" -}}
-tap "metalbear-co/mirrord"
-tap "opslevel/tap"
 brew "adr-tools"
 {{ end -}}
 brew "age"
@@ -67,10 +65,7 @@ brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{
 brew "yt-dlp"
 {{ end -}}
 {{ if eq .category "work" -}}
-brew "argocd"
 brew "go-jira"
-brew "metalbear-co/mirrord/mirrord"
-brew "opslevel/tap/cli"
 {{ end -}}
 cask "1password"
 cask "1password-cli"
@@ -118,11 +113,7 @@ cask "steam"
 cask "tunnelblick"
 cask "vlc"
 cask "zoom"
-{{ end -}}
-{{ if eq .category "work" -}}
 cask "ankerwork"
-cask "aws-vpn-client"
-cask "logitech-camera-settings"
 cask "rancher"
 {{ end -}}
 {{ end -}}

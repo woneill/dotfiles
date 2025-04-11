@@ -135,12 +135,8 @@ defaults write com.apple.dock persistent-apps -array
 # Add only applications we care about to the dock
 dock_apps=(
   "/System/Applications/Launchpad.app"
-  {{ if eq .category "work" -}}
-  "/Applications/Microsoft Outlook.app"
-  {{ else -}}
   "/System/Applications/Mail.app"
   "/System/Applications/Calendar.app"
-  {{ end -}}
   "/System/Applications/System Settings.app"
   "/Applications/iTerm.app"
   "/Applications/Google Chrome.app"
