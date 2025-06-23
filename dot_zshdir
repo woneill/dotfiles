@@ -9,10 +9,9 @@ if [ -d $file ]; then
     done
 fi
 
-if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc" ]; then
-    source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-fi
-
 if [ -f /opt/homebrew/bin/brew ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+# this sets up non-interactive sessions
+eval "$(mise activate zsh --shims)"
