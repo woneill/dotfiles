@@ -12,6 +12,3 @@ fi
 if [ -f /opt/homebrew/bin/brew ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
-# this sets up non-interactive sessions
-eval "$(mise activate zsh --shims)"
