@@ -21,6 +21,3 @@ tflint = "0.58.0"
 tfsec = "1.28.14"
 trivy = "0.63.0"
 vault = "1.19.5"
-
-[settings]
-disable_backends = ["asdf"]
