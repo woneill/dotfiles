@@ -14,6 +14,7 @@ brew "p7zip"
 brew "chart-testing"
 brew "chezmoi"
 brew "cookiecutter"
+brew "cosign"
 brew "dive"
 brew "dockutil"
 brew "entr"
@@ -61,7 +62,7 @@ brew "zsh-completions"
 brew "robscott/tap/kube-capacity"
 {{ if eq .category "home" -}}
 brew "hugo"
-brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: true{{ end }}
+brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: :changed{{ end }}
 brew "yt-dlp"
 {{ end -}}
 {{ if eq .category "work" -}}
@@ -93,8 +94,10 @@ cask "typora"
 cask "visual-studio-code"
 cask "wireshark-app"
 {{ if eq .category "home" -}}
+cask "adobe-digital-editions"
 cask "burn"
 cask "calibre"
+cask "cursor"
 cask "google-chrome"
 cask "handbrake-app"
 cask "keybase"
