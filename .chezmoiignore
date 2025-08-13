@@ -51,7 +51,12 @@
 .krew
 .kube
 .lesshst
-.local
+.local/*
+!.local/share
+.local/share/*
+!.local/share/atuin
+.local/share/atuin/*
+!.local/share/atuin/key
 .lpass
 .m2
 .minikube
@@ -98,16 +103,16 @@
 .zsh_history
 .zsh_sessions
 README.md
-{{ if ne .chezmoi.os "darwin" -}}
+{{- if ne .chezmoi.os "darwin" }}
 Library/Application Support
 .filebot
 .iterm2
 .iterm2_shell_integration.zsh
-{{ end -}}
-{{ if eq .category "work" -}}
+{{- end }}
+{{- if eq .category "work" }}
 .codeartifact_env
 .gitconfig_mntv
 .aws/*
 Library/Application Support/Dash
-{{ end -}}
+{{- end }}
 setup.sh
