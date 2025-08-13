@@ -1,5 +1,2 @@
 IgnoreUnknown AddKeysToAgent,UseKeychain
 Include config.d/*
-{{ if lookPath "pipx" -}}
-Include {{.chezmoi.homeDir}}/.colima/ssh_config
-{{- end }}
