@@ -1,4 +1,4 @@
-sync_address = "{{ (index ((onepassword "Atuin").urls) 0).href }}"
+sync_address = "{{ (index ((onepassword "Atuin" "" .home_vault).urls) 0).href }}"
 
 [dotfiles]
 enabled = false

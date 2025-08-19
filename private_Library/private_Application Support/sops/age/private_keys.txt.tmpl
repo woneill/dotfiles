@@ -1,5 +1,5 @@
 {{ if eq .category "home" -}}
 {{ if eq .chezmoi.os "darwin" -}}
-{{- onepasswordDocument "AGE encryption keys" -}}
+{{- onepasswordDocument "AGE encryption keys" "" .home_vault -}}
 {{ end -}}
 {{ end -}}

@@ -10,12 +10,12 @@ Connect   = "{{ $piknik_server }}"
 {{ if eq .piknik_role "server" "hybrid" -}}
 Listen    = "0.0.0.0:8075"
 {{ end -}}
-Psk       = "{{ (onepasswordItemFields "Piknik").Psk.value }}"
-SignPk    = "{{ (onepasswordItemFields "Piknik").SignPk.value }}"
+Psk       = "{{ (onepasswordItemFields "Piknik" "" .home_vault).Psk.value }}"
+SignPk    = "{{ (onepasswordItemFields "Piknik" "" .home_vault).SignPk.value }}"
 {{ if eq .piknik_role "client" "hybrid" -}}
-SignSk    = "{{ (onepasswordItemFields "Piknik").SignSk.value }}"
+SignSk    = "{{ (onepasswordItemFields "Piknik" "" .home_vault).SignSk.value }}"
 {{ end -}}
 {{ if eq .piknik_role "client" "hybrid" -}}
-EncryptSk = "{{ (onepasswordItemFields "Piknik").EncryptSk.value }}"
+EncryptSk = "{{ (onepasswordItemFields "Piknik" "" .home_vault).EncryptSk.value }}"
 {{ end -}}
 {{ end -}}

@@ -23,6 +23,16 @@
 {{-   $category = promptString "Category: [home, work]" -}}
 {{- end -}}
 
+{{- $home_vault := get . "home_vault" -}}
+{{- if not $home_vault -}}
+{{-   $home_vault = promptString "Home 1password Vault" -}}
+{{- end -}}
+
+{{- $work_vault := get . "work_vault" -}}
+{{- if not $work_vault -}}
+{{-   $work_vault = promptString "Work 1password Vault" -}}
+{{- end -}}
+
 {{- $aws_account_number := get . "aws_account_number" -}}
 {{- if not $aws_account_number -}}
 {{-   $aws_account_number = promptString "AWS Account Number" -}}
@@ -39,5 +49,7 @@
   email = "{{ $email }}"
   gitemail = "{{ $gitemail }}"
   category = "{{ $category }}"
+  home_vault = "{{ $home_vault }}"
+  work_vault = "{{ $work_vault }}"
   aws_account_number = "{{ $aws_account_number }}"
   piknik_role = "{{ $piknik_role }}"
