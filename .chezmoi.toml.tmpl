@@ -33,19 +33,6 @@
 {{-   $piknik_role = promptString "Piknik role (e.g client, server, hybrid)" -}}
 {{- end -}}
 
-{{- $vault_url := get . "vault_url" -}}
-{{- $jira_url := get . "jira_url" -}}
-
-{{- if eq $category "work" -}}
-{{-   if not $vault_url -}}
-{{-     $vault_url = promptString "Vault URL" -}}
-{{-   end -}}
-
-{{-   if not $jira_url -}}
-{{-     $jira_url = promptString "JIRA URL" -}}
-{{-   end -}}
-{{- end -}}
-
 [data]
   home_domain_name = "{{ $home_domain_name }}"
   home_fileserver_hostname = "{{ $home_fileserver_hostname }}"
@@ -54,5 +41,3 @@
   category = "{{ $category }}"
   aws_account_number = "{{ $aws_account_number }}"
   piknik_role = "{{ $piknik_role }}"
-  vault_url = "{{ $vault_url }}"
-  jira_url = "{{ $jira_url }}"
