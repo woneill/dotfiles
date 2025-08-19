@@ -80,7 +80,7 @@
 .smproxy.md5
 .ssh/known_hosts*
 .talos
-.terraform.d
+.terraform.d/plugin-cache/*
 .tfh
 .tflint.d
 .unison
@@ -108,11 +108,5 @@ Library/Application Support
 .filebot
 .iterm2
 .iterm2_shell_integration.zsh
-{{- end }}
-{{- if eq .category "work" }}
-.codeartifact_env
-.gitconfig_mntv
-.aws/*
-Library/Application Support/Dash
 {{- end }}
 setup.sh
