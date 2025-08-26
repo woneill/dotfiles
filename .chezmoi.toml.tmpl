@@ -1,47 +1,13 @@
-{{- $home_domain_name := get . "home_domain_name" -}}
-{{- if not $home_domain_name -}}
-{{-   $home_domain_name = promptString "Home Domain Name (e.g. foo.com)" -}}
-{{- end -}}
+{{- $home_domain_name := promptStringOnce . "home_domain_name" "Home Domain Name (e.g. foo.com)" -}}
+{{- $home_fileserver_hostname := promptStringOnce . "home_fileserver_hostname" "Home Fileserver Hostname (short name)" -}}
+{{- $email := promptStringOnce . "email" "Email" -}}
+{{- $gitemail := promptStringOnce . "gitemail" "Git Email" -}}
+{{- $category := promptStringOnce . "category" "Category: [home, work]" -}}
+{{- $home_vault := promptStringOnce . "home_vault" "Home 1password Vault" -}}
+{{- $work_vault := promptStringOnce . "work_vault" "Work 1password Vault" -}}
+{{- $aws_account_number := promptStringOnce . "aws_account_number" "AWS Account Number" -}}
+{{- $piknik_role := promptStringOnce . "piknik_role" "Piknik role (e.g client, server, hybrid)" -}}
 
-{{- $home_fileserver_hostname := get . "home_fileserver_hostname" -}}
-{{- if not $home_fileserver_hostname -}}
-{{-   $home_fileserver_hostname = promptString "Home Fileserver Hostname (short name)" -}}
-{{- end -}}
-
-{{- $email := get . "email" -}}
-{{- if not $email -}}
-{{-   $email = promptString "Email" -}}
-{{- end -}}
-
-{{- $gitemail := get . "gitemail" -}}
-{{- if not $gitemail -}}
-{{-   $gitemail = promptString "Git Email" -}}
-{{- end -}}
-
-{{- $category := get . "category" -}}
-{{- if not $category -}}
-{{-   $category = promptString "Category: [home, work]" -}}
-{{- end -}}
-
-{{- $home_vault := get . "home_vault" -}}
-{{- if not $home_vault -}}
-{{-   $home_vault = promptString "Home 1password Vault" -}}
-{{- end -}}
-
-{{- $work_vault := get . "work_vault" -}}
-{{- if not $work_vault -}}
-{{-   $work_vault = promptString "Work 1password Vault" -}}
-{{- end -}}
-
-{{- $aws_account_number := get . "aws_account_number" -}}
-{{- if not $aws_account_number -}}
-{{-   $aws_account_number = promptString "AWS Account Number" -}}
-{{- end -}}
-
-{{- $piknik_role := get . "piknik_role" -}}
-{{- if not $piknik_role -}}
-{{-   $piknik_role = promptString "Piknik role (e.g client, server, hybrid)" -}}
-{{- end -}}
 
 {{- $age_identity := joinPath .chezmoi.homeDir ".config" "age" "keys.txt" -}}
 {{- $age_recipient := output "age-keygen" "-y" $age_identity | trim -}}
