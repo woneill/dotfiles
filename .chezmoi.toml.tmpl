@@ -43,6 +43,14 @@
 {{-   $piknik_role = promptString "Piknik role (e.g client, server, hybrid)" -}}
 {{- end -}}
 
+{{- $age_identity := joinPath .chezmoi.homeDir ".config" "age" "keys.txt" -}}
+{{- $age_recipient := output "age-keygen" "-y" $age_identity | trim -}}
+
+encryption = "age"
+[age]
+  identity = "{{ $age_identity }}"
+  recipients = "{{ $age_recipient }}"
+
 [data]
   home_domain_name = "{{ $home_domain_name }}"
   home_fileserver_hostname = "{{ $home_fileserver_hostname }}"
