@@ -4,6 +4,7 @@
 .ansible
 .ansible_async
 .asdf
+.aws/cli
 .awsume
 .bash_history
 .berkshelf
@@ -80,6 +81,7 @@
 .smproxy.md5
 .ssh/known_hosts*
 .talos
+.terraform.d/checkpoint_*
 .terraform.d/plugin-cache/*
 .tfh
 .tflint.d
