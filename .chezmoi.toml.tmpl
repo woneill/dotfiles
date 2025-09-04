@@ -8,14 +8,13 @@
 {{- $aws_account_number := promptStringOnce . "aws_account_number" "AWS Account Number" -}}
 {{- $piknik_role := promptStringOnce . "piknik_role" "Piknik role (e.g client, server, hybrid)" -}}
 
-
 {{- $age_identity := joinPath .chezmoi.homeDir ".config" "age" "keys.txt" -}}
-{{- $age_recipient := output "age-keygen" "-y" $age_identity | trim -}}
-
+{{ if stat $age_identity  -}}
 encryption = "age"
 [age]
   identity = "{{ $age_identity }}"
-  recipients = "{{ $age_recipient }}"
+  recipients = [{{ (onepasswordItemFields "AGE encryption keys" "" .home_vault).Recipient.value | quote}}, {{ (onepasswordItemFields "AGE encryption keys" "" .work_vault).Recipient.value | quote}}]
+{{ end -}}
 
 [data]
   home_domain_name = "{{ $home_domain_name }}"

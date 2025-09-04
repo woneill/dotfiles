@@ -1,8 +1,9 @@
+{{- $vault := "" -}}
 {{ if eq .chezmoi.os "darwin" -}}
 {{ if eq .category "home" -}}
-{{- $vault := .home_vault -}}
+{{- $vault = .home_vault -}}
 {{ else if eq .category "work" -}}
-{{- $vault := .work_vault -}}
-{{- onepasswordDocument "AGE encryption keys" "" $vault -}}
+{{- $vault = .work_vault -}}
 {{ end -}}
+{{- onepasswordDocument "AGE encryption keys" "" $vault -}}
 {{ end -}}
