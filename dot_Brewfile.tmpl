@@ -66,9 +66,6 @@ brew "hugo"
 brew "piknik"{{ if eq .piknik_role "server" "hybrid" }}, restart_service: :changed{{ end }}
 brew "yt-dlp"
 {{ end -}}
-{{ if eq .category "work" -}}
-brew "go-jira"
-{{ end -}}
 cask "1password"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
