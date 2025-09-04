@@ -1,0 +1,13 @@
+{{ if eq .category "work" -}}
+{{- $apikey := (onepasswordDetailsFields "Temporal CLI" "" .work_vault).credential.value -}}
+---
+env:
+{{- range $environment := list "prod-etl" "prod-core" "staging-etl" "staging-core" }}
+  {{ $environment }}:
+    address: {{ onepasswordRead (printf "op://Employee/Temporal CLI/%s/address" $environment) $.work_vault }}
+    namespace: {{ onepasswordRead (printf "op://Employee/Temporal CLI/%s/namespace" $environment) $.work_vault }}
+    grpc-meta: temporal-namespace={{ onepasswordRead (printf "op://Employee/Temporal CLI/%s/namespace" $environment) $.work_vault }}
+    tls: true
+    api-key: {{ $apikey }}
+{{- end }}
+{{ end -}}

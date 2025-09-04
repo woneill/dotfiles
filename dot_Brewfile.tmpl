@@ -49,6 +49,9 @@ brew "shellcheck"
 brew "shfmt"
 brew "sops"
 brew "stern"
+{{ if eq .category "work" -}}
+brew "temporal"
+{{ end -}}
 brew "the_silver_searcher"
 brew "trash"
 brew "tree"
