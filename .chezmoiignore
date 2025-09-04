@@ -1,6 +1,7 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash
+.amp
 .ansible
 .ansible_async
 .asdf
@@ -18,6 +19,7 @@
 .config/argocd
 .config/chezmoi
 .config/configstore
+.config/fish
 .config/gh/hosts.yml
 .config/htop
 .config/iterm2
@@ -27,6 +29,7 @@
 .config/vscode-dev-containers
 .cookiecutter*
 .cups
+.cursor
 .devenv
 .docker
 .dokken
