@@ -15,7 +15,7 @@ node = { version = "25.0.0", os = ["macos"] }
 poetry = "2.2.1"
 python = "3.14.0"
 skaffold = "2.16.1"
-talhelper = "3.0.37"
+talhelper = "3.0.38"
 talosctl = "1.11.3"
 terraform = "1.13.4"
 terraform-docs = "0.20.0"
