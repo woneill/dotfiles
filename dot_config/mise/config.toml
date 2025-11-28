@@ -9,7 +9,7 @@ golangci-lint = "2.6.2"
 hadolint = "2.14.0"
 helm = "4.0.0"
 helm-docs = "1.14.2"
-helmfile = "1.2.1"
+helmfile = "1.2.2"
 k9s = "0.50.15"
 node = { version = "25.2.1", os = ["macos"] }
 poetry = "2.2.1"
