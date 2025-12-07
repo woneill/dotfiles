@@ -22,7 +22,7 @@ terraform-docs = "0.20.0"
 terraformer = "0.8.30"
 tflint = "0.60.0"
 tfsec = "1.28.14"
-trivy = "0.67.2"
+trivy = "0.68.1"
 yq = "4.49.2"
 
 [settings]
