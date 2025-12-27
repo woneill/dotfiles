@@ -49,6 +49,7 @@ brew "shellcheck"
 brew "shfmt"
 brew "sops"
 brew "stern"
+brew "syncthing", restart_service: :changed
 {{ if eq .category "work" -}}
 brew "temporal"
 {{ end -}}
@@ -96,7 +97,6 @@ cask "rancher"
 cask "rectangle"
 cask "slack"
 cask "spotify"
-cask "syncthing-app"
 cask "visual-studio-code"
 cask "wireshark-app"
 cask "zoom"
