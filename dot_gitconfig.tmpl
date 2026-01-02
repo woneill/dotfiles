@@ -62,3 +62,15 @@
 	showPatch = true
 [tag]
 	sort = version:refname
+[alias]
+	default-branch = "!git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'"
+	merge-base-origin ="!f() { git merge-base ${1-HEAD} origin/$(git default-branch); };f "
+	stack = "!f() { \
+		BRANCH=${1-HEAD}; \
+		MERGE_BASE=$(git merge-base-origin $BRANCH); \
+		git log --decorate-refs=refs/heads --simplify-by-decoration --pretty=format:\"%(decorate:prefix=,suffix=,tag=,separator=%n)\" $MERGE_BASE..$BRANCH; \
+	};f "
+	push-stack = "!f() { \
+		BRANCH=${1-HEAD}; \
+		git stack $BRANCH | xargs -I {} git push --force-with-lease origin {}; \
+	};f "
