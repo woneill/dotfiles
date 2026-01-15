@@ -25,6 +25,7 @@
 .config/iterm2
 .config/op
 .config/pip
+.config/temporalio/version-info.yaml
 .config/wireshark
 .config/vscode-dev-containers
 .cookiecutter*
@@ -49,9 +50,11 @@
 .helm
 .histfile
 .inspec
+.irb_history
 .jsonresume.json
 .kindle
 .kitchen
+.kuberlr
 .krew
 .kube
 .lesshst
@@ -78,8 +81,10 @@
 .rbenv
 .rd
 .saml2aws*
+.serverless*
 .shared_sync
 .siege
+.sigstore
 .skaffold
 .smproxy.md5
 .ssh/known_hosts*
