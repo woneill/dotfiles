@@ -24,7 +24,7 @@ terraformer = "0.8.30"
 tflint = "0.60.0"
 tfsec = "1.28.14"
 trivy = "0.69.0"
-yq = "4.52.1"
+yq = "4.52.2"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]
