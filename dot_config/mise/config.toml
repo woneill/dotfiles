@@ -11,7 +11,7 @@ helm = "4.1.1"
 helm-docs = "1.14.2"
 helmfile = "1.2.3"
 k9s = "0.50.15"
-kustomize = "5.8.0"
+kustomize = "5.8.1"
 node = { version = "25.6.0", os = ["macos"] }
 poetry = "2.3.2"
 python = "3.14.3"
