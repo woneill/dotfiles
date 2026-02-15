@@ -25,7 +25,7 @@ tflint = "0.61.0"
 tfmigrate = "0.4.4"
 tfsec = "1.28.14"
 trivy = "0.69.1"
-yq = "4.52.2"
+yq = "4.52.4"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]
