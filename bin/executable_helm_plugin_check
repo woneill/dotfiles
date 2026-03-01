@@ -1,20 +1,48 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
 if command -v helm >/dev/null 2>&1; then
-    typeset -A a2
-    for k in $(helm plugin list | tail +2 | awk '{print $1}'); do
-        a2[$k]=1
-    done
-
-    for k in 'diff|https://github.com/databus23/helm-diff' 'helm-git|https://github.com/aslafy-z/helm-git' 's3|https://github.com/hypnoglow/helm-s3' 'secrets|https://github.com/jkroepke/helm-secrets' 'unittest|https://github.com/helm-unittest/helm-unittest.git'; do
-        plugin=("${(@s/|/)k}")
-        if [ ! "${a2[$plugin[1]]}" ]; then
-            helm plugin install $plugin[2]
+    # Version variables
+    HELM_SECRETS_VERSION="4.7.5"
+    
+    # Get list of installed plugins
+    installed_plugins=$(helm plugin list | tail -n +2 | awk '{print $1}')
+    
+    # Install missing plugins
+    # diff
+    if ! echo "$installed_plugins" | grep -q "^diff$"; then
+        helm plugin install --verify=false "https://github.com/databus23/helm-diff"
+    fi
+    
+    # helm-git
+    if ! echo "$installed_plugins" | grep -q "^helm-git$"; then
+        helm plugin install --verify=false "https://github.com/aslafy-z/helm-git"
+    fi
+    
+    # secrets
+    if ! echo "$installed_plugins" | grep -q "^secrets$"; then
+        helm plugin install --verify=false "https://github.com/jkroepke/helm-secrets/releases/download/v${HELM_SECRETS_VERSION}/secrets-${HELM_SECRETS_VERSION}.tgz"
+    fi
+    
+    # secrets-getter
+    if ! echo "$installed_plugins" | grep -q "^secrets-getter$"; then
+        helm plugin install --verify=false "https://github.com/jkroepke/helm-secrets/releases/download/v${HELM_SECRETS_VERSION}/secrets-getter-${HELM_SECRETS_VERSION}.tgz"
+    fi
+    
+    # secrets-post-renderer
+    if ! echo "$installed_plugins" | grep -q "^secrets-post-renderer$"; then
+        helm plugin install --verify=false "https://github.com/jkroepke/helm-secrets/releases/download/v${HELM_SECRETS_VERSION}/secrets-post-renderer-${HELM_SECRETS_VERSION}.tgz"
+    fi
+    
+    # Report unexpected plugins
+    expected_plugins="diff helm-git secrets secrets-getter secrets-post-renderer"
+    unexpected=""
+    for plugin in $installed_plugins; do
+        if ! echo "$expected_plugins" | grep -qw "$plugin"; then
+            unexpected="$unexpected $plugin"
         fi
-        unset "a2[$plugin[1]]"
     done
-
-    if [ ! -z "${(k)a2}" ]; then
-        echo "helm plugins installed but not expected: ${(k)a2}"
+    
+    if [ -n "$unexpected" ]; then
+        echo "helm plugins installed but not expected:$unexpected"
     fi
 fi
