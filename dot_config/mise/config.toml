@@ -24,7 +24,7 @@ terraformer = "0.8.30"
 tflint = "0.61.0"
 tfmigrate = "0.4.4"
 tfsec = "1.28.14"
-trivy = "0.69.2"
+trivy = "0.69.3"
 yq = "4.52.4"
 
 [settings]
