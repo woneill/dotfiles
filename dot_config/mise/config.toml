@@ -29,4 +29,4 @@ uv = "0.10.12"
 yq = "4.52.4"
 
 [settings]
-idiomatic_version_file_enable_tools = ["ruby"]
+idiomatic_version_file_enable_tools = ["ruby", "terraform"]
