@@ -1,5 +1,5 @@
 [tools]
-act = "0.2.86"
+act = "0.2.87"
 actionlint = "1.7.12"
 atuin = "18.8.0"
 container-structure-test = "1.22.1"
