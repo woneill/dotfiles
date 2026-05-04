@@ -13,7 +13,7 @@ helmfile = "1.5.0"
 k9s = "0.50.18"
 kustomize = "5.8.1"
 node = { version = "25.9.0", os = ["macos"] }
-poetry = "2.3.4"
+poetry = "2.4.0"
 python = "3.14.4"
 rust = "1.95.0"
 skaffold = "2.19.0"
