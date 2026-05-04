@@ -9,7 +9,7 @@ golangci-lint = "2.12.1"
 hadolint = "2.14.0"
 helm = "4.1.4"
 helm-docs = "1.14.2"
-helmfile = "1.4.5"
+helmfile = "1.5.0"
 k9s = "0.50.18"
 kustomize = "5.8.1"
 node = { version = "25.9.0", os = ["macos"] }
