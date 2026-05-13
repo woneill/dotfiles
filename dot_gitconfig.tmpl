@@ -15,12 +15,6 @@
 {{- if eq .chezmoi.os "darwin" }}
 	pager = delta
 {{- end }}
-[credential]
-	helper = {{ if eq .chezmoi.os "darwin" }}/usr/local/share/gcm-core/git-credential-manager{{ else }}store{{ end }}
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-[credential "https://github.com/woneill"]
-	username = woneill
 [delta]
 	navigate = true
 [diff]
@@ -74,3 +68,13 @@
 		BRANCH=${1-HEAD}; \
 		git stack $BRANCH | xargs -I {} git push --force-with-lease origin {}; \
 	};f "
+[credential "https://github.com/woneill"]
+	username = woneill
+{{- if eq .chezmoi.os "darwin" }}
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+{{- end }}
