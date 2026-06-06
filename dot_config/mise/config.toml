@@ -10,7 +10,7 @@ hadolint = "2.14.0"
 helm = "4.2.0"
 helm-docs = "1.14.2"
 helmfile = "1.5.2"
-k9s = "0.50.18"
+k9s = "0.51.0"
 kustomize = "5.8.1"
 node = { version = "25.9.0", os = ["macos"] }
 poetry = "2.4.1"
