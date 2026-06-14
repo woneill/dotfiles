@@ -4,6 +4,9 @@
 ".zsh/zsh-autosuggestions":
   type: "git-repo"
   url: "https://github.com/zsh-users/zsh-autosuggestions"
+".zsh/powerlevel10k":
+  type: "git-repo"
+  url: "https://github.com/romkatv/powerlevel10k"
 {{ if eq .chezmoi.os "darwin" -}}
 ".iterm2_shell_integration.zsh":
   type: "file"
