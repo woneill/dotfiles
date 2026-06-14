@@ -3,7 +3,6 @@ act = "0.2.89"
 actionlint = "1.7.12"
 atuin = "18.16.1"
 container-structure-test = "1.22.1"
-direnv = "2.37.1"
 fzf = "0.73.1"
 go = "1.26.4"
 golangci-lint = "2.12.2"
@@ -32,4 +31,5 @@ yq = "4.53.3"
 zoxide = "0.9.9"
 
 [settings]
+env_file=".envrc"
 idiomatic_version_file_enable_tools = ["ruby", "terraform"]

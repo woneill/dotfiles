@@ -1,5 +1,0 @@
-if command -v direnv &> /dev/null
-then
-    [ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/direnv
-fi
-
