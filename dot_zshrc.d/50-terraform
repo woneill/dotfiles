@@ -1,2 +1,0 @@
-[ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/terraform
-

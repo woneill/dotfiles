@@ -1,4 +1,0 @@
-if [ -n "$ZGENOM_LOAD" ]; then
-    zgenom ohmyzsh plugins/helm
-    zgenom ohmyzsh plugins/kubectl
-fi

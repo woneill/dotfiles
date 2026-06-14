@@ -1,1 +1,0 @@
-[ -n "$ZGENOM_LOAD" ] && zgenom load MichaelAquilina/zsh-autoswitch-virtualenv

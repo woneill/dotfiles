@@ -2,6 +2,5 @@
 alias camera_reset="sudo killall VDCAssistant"
 alias dns_reset="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
 
-[ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/brew
 fpath+=("$HOMEBREW_PREFIX/share/zsh-completions")
 {{ end -}}

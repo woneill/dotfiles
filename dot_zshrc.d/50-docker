@@ -1,4 +1,0 @@
-if [ -n "$ZGENOM_LOAD" ]; then
-    zgenom ohmyzsh plugins/docker
-    zgenom ohmyzsh plugins/docker-compose
-fi
