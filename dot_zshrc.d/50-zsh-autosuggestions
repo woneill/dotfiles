@@ -1,2 +1,1 @@
-[ -n "$ZGENOM_LOAD" ] && zgenom load zsh-users/zsh-autosuggestions
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

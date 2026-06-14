@@ -1,6 +1,9 @@
 ".zgenom":
   type: "git-repo"
   url: "https://github.com/jandamm/zgenom.git"
+".zsh/zsh-autosuggestions":
+  type: "git-repo"
+  url: "https://github.com/zsh-users/zsh-autosuggestions"
 {{ if eq .chezmoi.os "darwin" -}}
 ".iterm2_shell_integration.zsh":
   type: "file"
