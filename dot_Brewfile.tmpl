@@ -1,8 +1,8 @@
 {{ if eq .chezmoi.os "darwin" -}}
-tap "filippo.io/age", "https://filippo.io/age"
-tap "localstack/tap"
-tap "microsoft/git"
-tap "robscott/tap"
+tap "filippo.io/age", "https://filippo.io/age", trusted: true
+tap "localstack/tap", trusted: true
+tap "microsoft/git", trusted: true
+tap "robscott/tap", trusted: true
 {{ if eq .category "work" -}}
 brew "adr-tools"
 {{ end -}}
