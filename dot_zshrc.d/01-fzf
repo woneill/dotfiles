@@ -1,5 +1,6 @@
 if command -v fzf &> /dev/null
 then
-    [ -n "$ZGENOM_LOAD" ] && zgenom ohmyzsh plugins/fzf
+    # Set up fzf key bindings and fuzzy completion
+    source <(fzf --zsh)
 fi
 
