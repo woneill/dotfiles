@@ -29,4 +29,5 @@ yq = "4.53.3"
 
 [settings]
 env_file=".envrc"
+ruby.compile = false
 idiomatic_version_file_enable_tools = ["ruby", "terraform"]
