@@ -5,17 +5,20 @@
 add_newline = true
 command_timeout = 1000
 
-format = """$fill$all"""
-right_format = """$directory$time"""
+format = """$fill$all$directory$character"""
+#right_format = """$directory$time"""
 
 [aws]
-format = 'on [$symbol($profile )(\[$duration\] )]($style)'
+format = 'on [$symbol($profile)(\[$duration\])]($style)'
 
 [directory]
 fish_style_pwd_dir_length = 1
 
 [fill]
 symbol = ' '
+
+[gcloud]
+disabled = true
 
 [git_metrics]
 disabled = false
