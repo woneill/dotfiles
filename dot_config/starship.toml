@@ -1,0 +1,33 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# --- Global ---
+add_newline = true
+command_timeout = 1000
+
+format = """$fill$all"""
+right_format = """$directory$time"""
+
+[aws]
+format = 'on [$symbol($profile )(\[$duration\] )]($style)'
+
+[directory]
+fish_style_pwd_dir_length = 1
+
+[fill]
+symbol = ' '
+
+[git_metrics]
+disabled = false
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[status]
+disabled = false
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = "dimmed white"
