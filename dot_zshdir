@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-if [ -f /opt/homebrew/bin/brew ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 file=${ZDOTDIR-$HOME}/${(%):-%1N}.d
 
 if [ -d $file ]; then
@@ -11,12 +7,4 @@ if [ -d $file ]; then
         case $i in *~) continue;; esac
         source $i
     done
-fi
-
-autoload -Uz bashcompinit; bashcompinit
-autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qNmh-24) ]]; then
-  compinit -C
-else
-  compinit
 fi
