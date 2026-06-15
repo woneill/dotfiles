@@ -23,7 +23,7 @@ terraformer = "0.8.30"
 tflint = "0.63.1"
 tfmigrate = "0.4.5"
 tfsec = "1.28.14"
-trivy = "0.71.0"
+trivy = "0.71.1"
 uv = "0.11.21"
 yq = "4.53.3"
 
