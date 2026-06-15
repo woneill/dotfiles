@@ -1,4 +1,8 @@
 if command -v mise &> /dev/null
 then
-    eval "$(mise activate zsh)"
+    mise() {
+        unset -f mise
+        eval "$(command mise activate zsh)"
+        mise "$@"
+    }
 fi
