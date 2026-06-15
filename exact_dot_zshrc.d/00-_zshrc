@@ -4,12 +4,3 @@ SAVEHIST=1000
 setopt appendhistory histnostore histreduceblanks incappendhistory
 setopt autocd notify
 bindkey -v
-
-autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qNmh-24) ]]; then
-    compinit -C
-else
-    compinit
-fi
-
-autoload -Uz bashcompinit; bashcompinit

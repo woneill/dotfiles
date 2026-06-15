@@ -1,5 +1,6 @@
 {{ if eq .chezmoi.os "darwin" -}}
 tap "filippo.io/age", "https://filippo.io/age", trusted: true
+tap "fwdcloudsec/granted", trusted: true
 tap "localstack/tap", trusted: true
 tap "microsoft/git", trusted: true
 tap "robscott/tap", trusted: true
@@ -22,6 +23,7 @@ brew "dockutil"
 brew "entr"
 brew "freetype"
 brew "fontconfig"
+brew "fwdcloudsec/granted/granted"
 brew "fzf"
 brew "ghorg"
 brew "gh"
