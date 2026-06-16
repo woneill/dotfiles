@@ -114,7 +114,7 @@
 .zsh_sessions
 README.md
 {{- if ne .chezmoi.os "darwin" }}
-Library/Application Support
+Library/**
 .filebot
 .iterm2
 .iterm2_shell_integration.zsh
