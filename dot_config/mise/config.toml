@@ -1,7 +1,9 @@
 [tools]
 act = "0.2.89"
 actionlint = "1.7.12"
+atuin = "18.16.1"
 container-structure-test = "1.22.1"
+fzf = "0.73.1"
 go = "1.26.4"
 golangci-lint = "2.12.2"
 hadolint = "2.14.0"
@@ -26,6 +28,7 @@ tfsec = "1.28.14"
 trivy = "0.71.1"
 uv = "0.11.21"
 yq = "4.53.3"
+zoxide = "0.9.9"
 
 [settings]
 env_file=".envrc"
