@@ -121,3 +121,7 @@ Library/**
 {{- end }}
 renovate.json
 setup.sh
+{{ if eq .category "work" -}}
+.aws/config
+.aws/credentials
+{{ end -}}
