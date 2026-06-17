@@ -30,6 +30,11 @@ format = '[$symbol$context( \($namespace\))]($style) '
 [status]
 disabled = false
 
+[terraform]
+symbol = "󱁢"
+format = 'via [$symbol$version $workspace]($style) '
+version_format = '${raw}'
+
 [time]
 disabled = false
 format = '[$time]($style) '
