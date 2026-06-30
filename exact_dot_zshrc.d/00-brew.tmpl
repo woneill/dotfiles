@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "darwin" -}}
+# /etc/zprofile runs path_helper after ~/.zshenv, which puts /usr/bin ahead of
+# Homebrew on login shells. Run shellenv here (after zprofile, before mise).
+if [ -f /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+{{ end -}}
