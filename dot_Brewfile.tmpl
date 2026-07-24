@@ -1,18 +1,23 @@
 {{ if eq .chezmoi.os "darwin" -}}
+tap "aws/tap", trusted: true
 tap "filippo.io/age", "https://filippo.io/age", trusted: true
 tap "fwdcloudsec/granted", trusted: true
 tap "localstack/tap", trusted: true
 tap "microsoft/git", trusted: true
+tap "minamijoyo/tfupdate", trusted: true
 tap "robscott/tap", trusted: true
-{{ if eq .category "work" -}}
-brew "adr-tools"
-{{ end -}}
 brew "age"
 brew "arping"
+{{ if eq .category "work" -}}
+brew "aws/tap/eks-node-viewer"
+{{ end -}}
 brew "ca-certificates"
 brew "xz"
 brew "awscli"
 brew "p7zip"
+{{ if eq .category "work" -}}
+brew "cfn-lint"
+{{ end -}}
 brew "chart-testing"
 brew "chezmoi"
 brew "cookiecutter"
@@ -39,6 +44,7 @@ brew "kubectx"
 brew "kubernetes-cli"
 brew "ldns"
 brew "localstack/tap/localstack-cli"
+brew "minamijoyo/tfupdate/tfupdate"
 brew "minikube"
 brew "mise"
 brew "nmap"
@@ -99,7 +105,6 @@ cask "session-manager-plugin"
 cask "slack"
 cask "spotify"
 cask "tailscale-app"
-cask "visual-studio-code"
 cask "zed"
 cask "zoom"
 {{ if eq .category "home" -}}
@@ -111,6 +116,7 @@ cask "handbrake-app"
 cask "pocket-casts"
 cask "raspberry-pi-imager"
 cask "steam"
+cask "visual-studio-code"
 cask "vlc"
 {{ end -}}
 {{ end -}}

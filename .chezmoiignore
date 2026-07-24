@@ -1,10 +1,12 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash
+.agents
 .amp
 .ansible
 .ansible_async
 .asdf
+.atuin
 .aws/cli
 .awsume
 .bash_history
@@ -12,6 +14,7 @@
 .boto
 .bundle
 .cache
+.cargo
 .chef*
 .circleci
 .colima
@@ -49,6 +52,7 @@
 .gsutil
 .helm
 .histfile
+.homebrew
 .inspec
 .irb_history
 .jsonresume.json
@@ -80,6 +84,7 @@
 .python_history
 .rbenv
 .rd
+.rustup
 .saml2aws*
 .serverless*
 .shared_sync
@@ -88,6 +93,7 @@
 .skaffold
 .smproxy.md5
 .ssh/known_hosts*
+.ssh/agent
 .talos
 .terraform.d/checkpoint_*
 .terraform.d/plugin-cache/*
@@ -105,8 +111,10 @@
 .vscode-insiders
 .vscode-server
 .wget-hsts
+.yarn
 .yarnrc
 .z
+.zcompcache
 .zcompdump*
 .zoomus
 .zplug
