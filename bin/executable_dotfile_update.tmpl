@@ -1,22 +1,9 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 echo "==> Modified files in this repo..."
 chezmoi git status
-
-{{ if eq .chezmoi.os "darwin" -}}
-echo "==> Brew status..."
-brew bundle check --global --no-upgrade --verbose || true
-
-dumpfile=$( mktemp -d )/Brewfile
-# Everything except whalebrew and vscode
-brew bundle dump --taps --brews --casks --no-describe --file="$dumpfile"
-echo "==> Stuff installed but not in global brewfile..."
-grep -Fxv -f ~/.Brewfile "$dumpfile" || true
-echo "==> Stuff in global brewfile but not installed..."
-grep -Fxv -f "$dumpfile" ~/.Brewfile || true
-{{ end -}}
 
 echo "==> Unmanaged dotfiles that might need to be added..."
 chezmoi unmanaged | sed "s|$HOME/||g" | grep '^\.'

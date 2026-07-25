@@ -1,0 +1,50 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+BREWFILE="$HOME/.Brewfile"
+
+extract_brewfile() {
+    local type="$1"
+
+    grep "^${type} " "$BREWFILE" |
+        sed -E 's/^[^"]*"([^"]+)".*/\1/' |
+        sort -u
+}
+
+compare() {
+    local name="$1"
+    local installed="$2"
+    local declared="$3"
+
+    local differences
+
+    differences=$(comm -23 \
+        <($installed) \
+        <($declared) || true)
+
+    if [[ -n "$differences" ]]; then
+        echo "=== $name installed but not in Brewfile ==="
+        echo "$differences" | sed 's/^/  + /'
+        echo
+    fi
+}
+
+compare "Formulae" \
+    "brew leaves --installed-on-request" \
+    "extract_brewfile brew"
+
+compare "Casks" \
+    "brew list --cask" \
+    "extract_brewfile cask"
+
+compare "Taps" \
+    "brew tap" \
+    "extract_brewfile tap"
+
+echo "If you want to cleanup installed but not in Brewfile, run: brew bundle cleanup --global"
+echo ""
+{{ end -}}
+
+~/bin/dotfile_update
