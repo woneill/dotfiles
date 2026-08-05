@@ -1,6 +1,7 @@
 [tools]
 actionlint = "1.7.12"
 atuin = "18.19.0"
+bun = "1.3.14"
 container-structure-test = "1.22.1"
 fzf = "0.74.2"
 go = "1.26.5"
