@@ -5,7 +5,7 @@ aws-sam = { version = "1.165.0", symlink_bins = "true" }
 bun = "1.4.0"
 container-structure-test = "1.22.1"
 fzf = "0.74.3"
-go = "1.26.6"
+go = "1.27.0"
 golangci-lint = "2.12.2"
 hadolint = "2.15.1"
 helm = "4.2.4"
