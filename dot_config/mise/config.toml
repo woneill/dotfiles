@@ -16,7 +16,7 @@ kustomize = "5.8.1"
 node = { version = "25.9.0", os = ["macos"] }
 poetry = "2.4.1"
 python = "3.14.7"
-talhelper = "3.1.16"
+talhelper = "3.1.17"
 talosctl = "1.13.9"
 terraform = "1.15.9"
 terraform-docs = "0.24.0"
