@@ -23,7 +23,7 @@ terraform-docs = "0.24.0"
 tflint = "0.64.0"
 tfmigrate = "0.4.5"
 trivy = "0.74.0"
-uv = "0.12.6"
+uv = "0.12.7"
 yq = "4.53.6"
 zoxide = "0.10.0"
 
