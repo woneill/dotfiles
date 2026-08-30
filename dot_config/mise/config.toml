@@ -14,7 +14,7 @@ helmfile = "1.7.4"
 k9s = "0.51.0"
 kustomize = "5.8.1"
 node = { version = "25.9.0", os = ["macos"] }
-poetry = "2.4.1"
+poetry = "2.4.2"
 python = "3.14.7"
 talhelper = "3.1.17"
 talosctl = "1.13.9"
