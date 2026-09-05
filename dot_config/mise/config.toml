@@ -2,7 +2,7 @@
 actionlint = "1.7.12"
 atuin = "18.21.0"
 aws-sam = { version = "1.166.1", symlink_bins = "true" }
-bun = "1.4.0"
+bun = "1.4.2"
 container-structure-test = "1.22.1"
 fzf = "0.74.3"
 go = "1.27.1"
