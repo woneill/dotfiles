@@ -24,7 +24,7 @@ tflint = "0.64.0"
 tfmigrate = "0.4.5"
 trivy = "0.74.0"
 uv = "0.12.20"
-yq = "4.53.6"
+yq = "4.54.1"
 zoxide = "0.10.0"
 
 [settings]
