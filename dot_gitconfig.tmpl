@@ -70,11 +70,9 @@
 	};f "
 [credential "https://github.com/woneill"]
 	username = woneill
-{{- if eq .chezmoi.os "darwin" }}
 [credential "https://github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-{{- end }}
+	helper = !gh auth git-credential
