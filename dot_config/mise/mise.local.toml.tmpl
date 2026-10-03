@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.osRelease.id "qts" -}}
+{{ if eq (get .chezmoi.osRelease "id" | default "") "qts" -}}
 [settings]
 libc = "musl"
 {{ end -}}
