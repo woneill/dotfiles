@@ -16,7 +16,7 @@ k9s = "0.51.0"
 kustomize = "5.8.3"
 node = { version = "25.9.0", os = ["macos"] }
 poetry = "2.5.1"
-python = "3.14.8"
+python = "3.15.0"
 talhelper = "3.1.17"
 talosctl = "1.14.2"
 terraform = "1.16.5"
