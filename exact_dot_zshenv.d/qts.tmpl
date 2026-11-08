@@ -3,9 +3,11 @@
 path=("/opt/bin" "/opt/sbin" $path /share/CACHEDEV1_DATA/.qpkg/container-station/bin)
 export -U PATH
 
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 export TERMINFO=/opt/share/terminfo
 export TERM=xterm
 export TMP=/opt/tmp
+export TMPDIR=/opt/tmp
 export TEMP=/opt/tmp
 {{- end -}}
 {{- end -}}
