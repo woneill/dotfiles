@@ -11,9 +11,9 @@
   refreshPeriod: "168h"
 {{ if eq (get .chezmoi.osRelease "id" | default "") "qts" -}}
 {{ $version := "2.42.0" }}
-"bin/op"
-    type = "archive-file"
-    url = "https://cache.agilebits.com/dist/1P/op2/pkg/v{{ $version }}/op_linux_amd64_v{{ $version }}.zip"
-    path = "op"
-    executable = true
+"bin/op":
+  type: "archive-file"
+  url: "https://cache.agilebits.com/dist/1P/op2/pkg/v{{ $version }}/op_linux_amd64_v{{ $version }}.zip"
+  path: "op"
+  executable: true
 {{ end }}
