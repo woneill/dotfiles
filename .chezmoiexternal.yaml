@@ -9,7 +9,7 @@
   type: "git-repo"
   url: "https://github.com/mislav/gh-cp.git"
   refreshPeriod: "168h"
-{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.hostname "tvs-871") }}
+{{ if eq (get .chezmoi.osRelease "id" | default "") "qts" -}}
 {{ $version := "2.42.0" }}
 "bin/op"
     type = "archive-file"
