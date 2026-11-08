@@ -1,4 +1,8 @@
 {{ if eq (get .chezmoi.osRelease "id" | default "") "qts" -}}
+{{ $mise := fromToml (include (joinPath .chezmoi.sourceDir "dot_config/mise/config.toml")) -}}
 [settings]
 libc = "glibc"
+
+[tools]
+atuin = { version = {{ $mise.tools.atuin | quote }}, libc = "musl" }
 {{ end -}}
