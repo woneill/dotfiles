@@ -1,4 +1,4 @@
 {{ if eq (get .chezmoi.osRelease "id" | default "") "qts" -}}
 [settings]
-libc = "musl"
+libc = "glibc"
 {{ end -}}
