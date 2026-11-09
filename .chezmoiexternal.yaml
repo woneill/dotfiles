@@ -10,10 +10,28 @@
   url: "https://github.com/mislav/gh-cp.git"
   refreshPeriod: "168h"
 {{ if eq (get .chezmoi.osRelease "id" | default "") "qts" -}}
-{{ $version := "2.42.0" }}
+{{ $chezmoiVersion := "2.74.0" }}
+{{ $miseVersion := "2026.11.4" }}
+{{ $unisonVersion := "2.54.0" }}
+{{ $opVersion := "2.42.0" }}
+# Use musl/static builds to avoid depending on QTS's older glibc.
+"bin/chezmoi":
+  type: "file"
+  url: "https://github.com/twpayne/chezmoi/releases/download/v{{ $chezmoiVersion }}/chezmoi-linux-amd64-musl"
+  executable: true
+"bin/mise":
+  type: "file"
+  url: "https://github.com/jdx/mise/releases/download/v{{ $miseVersion }}/mise-v{{ $miseVersion }}-linux-x64-musl"
+  executable: true
+"bin/unison":
+  type: "archive-file"
+  url: "https://github.com/bcpierce00/unison/releases/download/v{{ $unisonVersion }}/unison-{{ $unisonVersion }}-ubuntu-22.04-x86_64-static.tar.gz"
+  stripComponents: 1
+  path: "bin/unison"
+  executable: true
 "bin/op":
   type: "archive-file"
-  url: "https://cache.agilebits.com/dist/1P/op2/pkg/v{{ $version }}/op_linux_amd64_v{{ $version }}.zip"
+  url: "https://cache.agilebits.com/dist/1P/op2/pkg/v{{ $opVersion }}/op_linux_amd64_v{{ $opVersion }}.zip"
   path: "op"
   executable: true
 {{ end }}
