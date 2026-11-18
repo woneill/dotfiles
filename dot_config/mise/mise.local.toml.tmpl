@@ -3,7 +3,11 @@
 [settings]
 libc = "glibc"
 
+[tool_alias]
+fnox = "github:jdx/fnox"
+
 [tools]
 atuin = { version = {{ $mise.tools.atuin | quote }}, libc = "musl" }
+fnox = { version = {{ $mise.tools.fnox | quote }}, matching = "musl" }
 zoxide = { version = {{ $mise.tools.zoxide | quote }}, libc = "musl" }
 {{ end -}}
