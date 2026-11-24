@@ -19,7 +19,7 @@ kustomize = "5.8.3"
 node = { version = "26.13.1", os = ["macos"] }
 poetry = "2.5.2"
 "pypi:pipenv" = "2026.11.0"
-"pypi:virtualenv" = "21.15.12"
+"pypi:virtualenv" = "21.15.13"
 python = "3.15.2"
 talhelper = "3.1.17"
 talosctl = "1.14.6"
