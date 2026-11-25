@@ -29,7 +29,7 @@ tflint = "0.66.0"
 tfmigrate = "0.4.6"
 tfupdate = "0.10.3"
 trivy = "0.76.2"
-uv = "0.13.9"
+uv = "0.13.10"
 yq = "4.54.3"
 zoxide = "0.10.0"
 
