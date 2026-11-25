@@ -2,7 +2,7 @@
 1password = "2.42.0"
 actionlint = "1.7.12"
 atuin = "18.25.1"
-aws-sam = { version = "1.174.0", symlink_bins = "true" }
+aws-sam = { version = "1.174.1", symlink_bins = "true" }
 bun = "1.4.5"
 container-structure-test = "1.22.1"
 fnox = "1.50.0"
