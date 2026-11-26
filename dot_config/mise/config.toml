@@ -18,7 +18,7 @@ k9s = "0.51.0"
 kustomize = "5.8.3"
 node = { version = "26.13.1", os = ["macos"] }
 poetry = "2.5.2"
-"pypi:pipenv" = "2026.11.0"
+"pypi:pipenv" = "2026.12.1"
 "pypi:virtualenv" = "21.15.13"
 python = "3.15.2"
 talhelper = "3.1.17"
